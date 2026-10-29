@@ -1,0 +1,46 @@
+# Test, then publish the public site to Cloudflare Pages on every push to main.
+# Secrets (set on the repo, never committed):
+#   CLOUDFLARE_API_TOKEN   Pages edit on the vikrant.singh1@outlook.com account
+#   CLOUDFLARE_ACCOUNT_ID  That account's ID
+name: deploy
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Check the feel lookup
+        run: node tests/feel-lookup.test.js
+
+  deploy:
+    needs: check
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Stage the public site
+        run: |
+          mkdir site
+          cp index.html style.css app.js feel-lookup.js feel-table.json bank.json favicon.svg robots.txt sitemap.xml _headers site/
+
+      - name: Publish to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy site --project-name=aircheck --branch=main --commit-dirty=true

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How it feels outside right now · aircheck.fyi</title>
+  <meta name="description" content="See how it feels outside right now. Enter a place, or share your location once. A fixed table turns live weather and air quality into one plain sentence.">
+  <link rel="canonical" href="https://aircheck.fyi/">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0f6e6b">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/style.css">
+  <meta property="og:title" content="How it feels outside right now · aircheck.fyi">
+  <meta property="og:description" content="See how it feels outside right now. Enter a place, or share your location once. A fixed table turns live weather and air quality into one plain sentence.">
+  <meta property="og:url" content="https://aircheck.fyi/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="aircheck.fyi">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="How it feels outside right now · aircheck.fyi">
+  <meta name="twitter:description" content="See how it feels outside right now. Enter a place, or share your location once. A fixed table turns live weather and air quality into one plain sentence.">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","name":"aircheck.fyi","url":"https://aircheck.fyi/","description":"See how it feels outside right now. Enter a place, or share your location once. A fixed table turns live weather and air quality into one plain sentence."},{"@type":"WebApplication","name":"aircheck.fyi","url":"https://aircheck.fyi/","description":"See how it feels outside right now. Enter a place, or share your location once. A fixed table turns live weather and air quality into one plain sentence.","applicationCategory":"UtilitiesApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"isAccessibleForFree":true}]}</script>
+</head>
+<body>
+  <a class="skip-link" href="#place-form">Skip to the place form</a>
+  <header class="site-header">
+    <p class="site-name">aircheck.fyi</p>
+    <a class="support-link" href="#support">Support this free tool</a>
+  </header>
+  <main>
+    <h1>How it feels outside right now</h1>
+    <p class="lead">Aircheck checks the weather and the air for a place you choose, then reads one sentence from a fixed table. The sentence is written ahead of time. Nothing on this page asks a model to describe your weather.</p>
+
+    <section>
+      <h2>Check a place</h2>
+      <form id="place-form" method="get" action="#reading" autocomplete="off" tabindex="-1">
+        <label for="place-input">Place</label>
+        <input id="place-input" name="place" type="text" required maxlength="120" placeholder="City and country, or a postal code" autocomplete="off" enterkeyhint="search">
+        <div class="form-actions">
+          <button type="submit">Check this place</button>
+          <button type="button" id="use-location">Use my location</button>
+        </div>
+      </form>
+      <p id="reading-status" role="status"></p>
+      <div id="reading" aria-live="polite">
+        <div id="reading-output"></div>
+        <ul id="place-choices"></ul>
+        <p class="reading-hint">A live reading shows up here after you check a place.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>An example sentence</h2>
+      <p class="feel-sentence">Mild, clear and dry with low air-quality risk — comfortable for most people.</p>
+      <p class="example-advice">Ideal for walking, cycling or outdoor sports.</p>
+      <p class="note">This is a sample from the table for mild weather, a clear dry sky, and low air-quality risk. It is not a live reading.</p>
+      <noscript>
+        <p class="note">This page explains the idea without JavaScript. To look up a live place, turn JavaScript on. The example above is a sample sentence from the table, not a live reading.</p>
+      </noscript>
+    </section>
+
+    <section>
+      <h2>How a reading works</h2>
+      <ol>
+        <li>You give a place, or you allow a one-time location reading.</li>
+        <li>The page asks Open-Meteo for the current weather and air quality.</li>
+        <li>It turns those readings into three bands and looks up a sentence in the table.</li>
+        <li>You see the sentence, the numbers, the time, and the source.</li>
+      </ol>
+    </section>
+
+    <section id="privacy">
+      <h2>Privacy</h2>
+      <p>No account. No history. If you use your location, the coordinates are used once for the request and then discarded. This page does not use cookies, local storage, or analytics.</p>
+    </section>
+
+    <section id="support">
+      <h2>Support this free tool</h2>
+      <p>This tool is free to use. A payment link is not connected on this page. Advertising and sponsorship slots are present in the markup and switched off.</p>
+      <!-- monetization:inactive affiliate slot -->
+      <!-- monetization:inactive sponsorship slot -->
+    </section>
+  </main>
+  <footer>
+    <p><a class="support-link" href="#support">Support this free tool</a></p>
+    <p class="attribution">Weather and air-quality data from <a href="https://open-meteo.com/" rel="noopener noreferrer">Open-Meteo</a> (CAMS global air quality). Not an official government source.</p>
+  </footer>
+  <script src="/feel-lookup.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>
