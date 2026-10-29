@@ -5,10 +5,10 @@
 **Last updated:** 2026-10-29
 
 ## Current state
-https://aircheck.fyi and https://www.aircheck.fyi serve Cloudflare Pages project `aircheck` on the vikrant.singh1@outlook.com account. The pages.dev hostname is https://aircheck-c4s.pages.dev. GitHub Actions on `main` runs the lookup test and publishes the public files. The repo secrets `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` are set.
+https://aircheck.fyi and https://www.aircheck.fyi serve Cloudflare Pages project `aircheck` on the vikrant.singh1@outlook.com account. The pages.dev hostname is https://aircheck-c4s.pages.dev. GitHub Actions on `main` runs the lookup test and publishes the public files. The repo secrets `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` are set. The support links open the Stripe payment page. Advertising and sponsorship stay off.
 
 ## Next concrete action
-- Connect a real payment URL for the support link when one exists.
+- Grow the optional city bank with an offline script when a place needs a saved note.
 
 ## Key decisions
 - Hostname: aircheck.fyi (apex).
@@ -25,7 +25,6 @@ https://aircheck.fyi and https://www.aircheck.fyi serve Cloudflare Pages project
 - Freshness: Live Open-Meteo data; bank entries dated 2026-10-29.
 
 ## Open issues
-- The contribution link points at the on-page support section. No payment URL is connected.
 - Bank growth process (offline script preferred).
 
 ## Kill check
