@@ -1,994 +1,994 @@
 {
   "*|*|*": {
-    "feel": "A written sentence for this combination is not in the table. The numbers below are the reading.",
-    "advice": "Decide from the numbers, and check a local source if you need a health decision."
+    "feel": "There isn't a sentence for this reading. The numbers below are what came back.",
+    "advice": "Use the numbers if you are deciding whether to go out. For a health decision, check a local source."
   },
   "freezing|*|*": {
     "feel": "Freezing conditions put a hard strain on the body.",
     "advice": "Dress for deep cold if you go out."
   },
   "freezing|*|low": {
-    "feel": "Freezing, with low air-quality risk — the cold puts a hard strain on the body.",
+    "feel": "Freezing conditions put a hard strain on the body.",
     "advice": "Dress for deep cold if you go out."
   },
   "freezing|*|moderate": {
-    "feel": "Freezing, with moderate air-quality risk — the cold puts a hard strain on the body.",
-    "advice": "Dress for deep cold if you go out, and take the air into account."
+    "feel": "Freezing conditions put a hard strain on the body.",
+    "advice": "Dress for deep cold if you go out. Check the air number before a long outing."
   },
   "freezing|*|high": {
-    "feel": "Freezing, with high air-quality risk — the cold puts a hard strain on the body.",
-    "advice": "Keep time outside shorter or choose an easier effort."
+    "feel": "Freezing conditions put a hard strain on the body.",
+    "advice": "Dress for deep cold if you go out. Keep time outside shorter, or choose an easier effort."
   },
   "freezing|*|very_high": {
-    "feel": "Freezing, with very high air-quality risk — the cold puts a hard strain on the body.",
-    "advice": "Keep time outside shorter and choose an easier effort."
+    "feel": "Freezing conditions put a hard strain on the body.",
+    "advice": "Dress for deep cold if you go out. Keep time outside shorter, and choose an easier effort."
   },
   "cold|*|*": {
     "feel": "It is cold outside.",
     "advice": "Wear warm layers if you go out."
   },
   "cold|*|low": {
-    "feel": "Cold, with low air-quality risk.",
+    "feel": "It is cold outside.",
     "advice": "Wear warm layers if you go out."
   },
   "cold|*|moderate": {
-    "feel": "Cold, with moderate air-quality risk.",
-    "advice": "Wear warm layers if you go out, and take the air into account."
+    "feel": "It is cold outside.",
+    "advice": "Wear warm layers if you go out. Check the air number before a long outing."
   },
   "cold|*|high": {
-    "feel": "Cold, with high air-quality risk.",
-    "advice": "Keep time outside shorter or choose an easier effort."
+    "feel": "It is cold outside.",
+    "advice": "Wear warm layers if you go out. Keep time outside shorter, or choose an easier effort."
   },
   "cold|*|very_high": {
-    "feel": "Cold, with very high air-quality risk.",
-    "advice": "Keep time outside shorter and choose an easier effort."
+    "feel": "It is cold outside.",
+    "advice": "Wear warm layers if you go out. Keep time outside shorter, and choose an easier effort."
   },
   "cool|*|*": {
     "feel": "It is cool outside.",
-    "advice": "A light jacket is enough for most people."
+    "advice": "A light jacket is enough."
   },
   "cool|*|low": {
-    "feel": "Cool, with low air-quality risk.",
-    "advice": "A light jacket is enough for most people."
+    "feel": "It is cool outside.",
+    "advice": "A light jacket is enough."
   },
   "cool|*|moderate": {
-    "feel": "Cool, with moderate air-quality risk.",
-    "advice": "A light jacket is enough for most people, and take the air into account."
+    "feel": "It is cool outside.",
+    "advice": "A light jacket is enough. Check the air number before a long outing."
   },
   "cool|*|high": {
-    "feel": "Cool, with high air-quality risk.",
-    "advice": "Keep time outside shorter or choose an easier effort."
+    "feel": "It is cool outside.",
+    "advice": "A light jacket is enough. Keep time outside shorter, or choose an easier effort."
   },
   "cool|*|very_high": {
-    "feel": "Cool, with very high air-quality risk.",
-    "advice": "Keep time outside shorter and choose an easier effort."
+    "feel": "It is cool outside.",
+    "advice": "A light jacket is enough. Keep time outside shorter, and choose an easier effort."
   },
   "mild|*|*": {
     "feel": "The temperature is mild.",
-    "advice": "Dress for easy time outside."
+    "advice": "Ordinary clothes are enough for an easy hour outside."
   },
   "mild|*|low": {
-    "feel": "Mild, with low air-quality risk.",
-    "advice": "Dress for easy time outside."
+    "feel": "The temperature is mild.",
+    "advice": "Ordinary clothes are enough for an easy hour outside."
   },
   "mild|*|moderate": {
-    "feel": "Mild, with moderate air-quality risk.",
-    "advice": "Dress for easy time outside, and take the air into account."
+    "feel": "The temperature is mild.",
+    "advice": "Ordinary clothes are enough for an easy hour outside. Check the air number before a long outing."
   },
   "mild|*|high": {
-    "feel": "Mild, with high air-quality risk.",
-    "advice": "Keep time outside shorter or choose an easier effort."
+    "feel": "The temperature is mild.",
+    "advice": "Ordinary clothes are enough for an easy hour outside. Keep time outside shorter, or choose an easier effort."
   },
   "mild|*|very_high": {
-    "feel": "Mild, with very high air-quality risk.",
-    "advice": "Keep time outside shorter and choose an easier effort."
+    "feel": "The temperature is mild.",
+    "advice": "Ordinary clothes are enough for an easy hour outside. Keep time outside shorter, and choose an easier effort."
   },
   "warm|*|*": {
     "feel": "It is warm outside.",
     "advice": "Light clothes should be enough."
   },
   "warm|*|low": {
-    "feel": "Warm, with low air-quality risk.",
+    "feel": "It is warm outside.",
     "advice": "Light clothes should be enough."
   },
   "warm|*|moderate": {
-    "feel": "Warm, with moderate air-quality risk.",
-    "advice": "Light clothes should be enough, and take the air into account."
+    "feel": "It is warm outside.",
+    "advice": "Light clothes should be enough. Check the air number before a long outing."
   },
   "warm|*|high": {
-    "feel": "Warm, with high air-quality risk.",
-    "advice": "Keep time outside shorter or choose an easier effort."
+    "feel": "It is warm outside.",
+    "advice": "Light clothes should be enough. Keep time outside shorter, or choose an easier effort."
   },
   "warm|*|very_high": {
-    "feel": "Warm, with very high air-quality risk.",
-    "advice": "Keep time outside shorter and choose an easier effort."
+    "feel": "It is warm outside.",
+    "advice": "Light clothes should be enough. Keep time outside shorter, and choose an easier effort."
   },
   "hot|*|*": {
     "feel": "It is hot outside.",
     "advice": "Take it slower and look for shade."
   },
   "hot|*|low": {
-    "feel": "Hot, with low air-quality risk.",
+    "feel": "It is hot outside.",
     "advice": "Take it slower and look for shade."
   },
   "hot|*|moderate": {
-    "feel": "Hot, with moderate air-quality risk.",
-    "advice": "Take it slower and look for shade, and take the air into account."
+    "feel": "It is hot outside.",
+    "advice": "Take it slower and look for shade. Check the air number before a long outing."
   },
   "hot|*|high": {
-    "feel": "Hot, with high air-quality risk.",
-    "advice": "Keep time outside shorter or choose an easier effort."
+    "feel": "It is hot outside.",
+    "advice": "Take it slower and look for shade. Keep time outside shorter, or choose an easier effort."
   },
   "hot|*|very_high": {
-    "feel": "Hot, with very high air-quality risk.",
-    "advice": "Keep time outside shorter and choose an easier effort."
+    "feel": "It is hot outside.",
+    "advice": "Take it slower and look for shade. Keep time outside shorter, and choose an easier effort."
   },
   "very_hot|*|*": {
     "feel": "Very hot conditions put a heavy strain on the body.",
     "advice": "Keep outdoor effort light and rest often."
   },
   "very_hot|*|low": {
-    "feel": "Very hot, with low air-quality risk — the heat puts a heavy strain on the body.",
+    "feel": "Very hot conditions put a heavy strain on the body.",
     "advice": "Keep outdoor effort light and rest often."
   },
   "very_hot|*|moderate": {
-    "feel": "Very hot, with moderate air-quality risk — the heat puts a heavy strain on the body.",
-    "advice": "Keep outdoor effort light and rest often, and take the air into account."
+    "feel": "Very hot conditions put a heavy strain on the body.",
+    "advice": "Keep outdoor effort light and rest often. Check the air number before a long outing."
   },
   "very_hot|*|high": {
-    "feel": "Very hot, with high air-quality risk — the heat puts a heavy strain on the body.",
-    "advice": "Keep time outside shorter or choose an easier effort."
+    "feel": "Very hot conditions put a heavy strain on the body.",
+    "advice": "Keep outdoor effort light and rest often. Keep time outside shorter."
   },
   "very_hot|*|very_high": {
-    "feel": "Very hot, with very high air-quality risk — the heat puts a heavy strain on the body.",
-    "advice": "Keep time outside shorter and choose an easier effort."
+    "feel": "Very hot conditions put a heavy strain on the body.",
+    "advice": "Keep outdoor effort light and rest often. Keep time outside shorter."
   },
   "freezing|clear_dry|low": {
-    "feel": "Freezing, clear and dry, with low air-quality risk — the cold puts a hard strain on the body.",
+    "feel": "Freezing, clear, and dry — the cold puts a hard strain on the body.",
     "advice": "Dress for deep cold if you go out."
   },
   "freezing|clear_dry|moderate": {
-    "feel": "Freezing, clear and dry, with moderate air-quality risk — the cold puts a hard strain on the body.",
-    "advice": "Dress for deep cold if you go out, and take the air into account."
+    "feel": "Freezing, clear, and dry — the cold puts a hard strain on the body.",
+    "advice": "Dress for deep cold if you go out. Check the air number before a long outing."
   },
   "freezing|clear_dry|high": {
-    "feel": "Freezing, clear and dry, with high air-quality risk — the cold puts a hard strain on the body.",
-    "advice": "Keep time outside shorter or choose an easier effort."
+    "feel": "Freezing, clear, and dry — the cold puts a hard strain on the body.",
+    "advice": "Dress for deep cold if you go out. Keep time outside shorter, or choose an easier effort."
   },
   "freezing|clear_dry|very_high": {
-    "feel": "Freezing, clear and dry, with very high air-quality risk — the cold puts a hard strain on the body.",
-    "advice": "Keep time outside shorter and choose an easier effort."
+    "feel": "Freezing, clear, and dry — the cold puts a hard strain on the body.",
+    "advice": "Dress for deep cold if you go out. Keep time outside shorter, and choose an easier effort."
   },
   "cold|clear_dry|low": {
-    "feel": "Cold, clear and dry, with low air-quality risk.",
+    "feel": "Cold, clear, and dry.",
     "advice": "Wear warm layers if you go out."
   },
   "cold|clear_dry|moderate": {
-    "feel": "Cold, clear and dry, with moderate air-quality risk.",
-    "advice": "Wear warm layers if you go out, and take the air into account."
+    "feel": "Cold, clear, and dry.",
+    "advice": "Wear warm layers if you go out. Check the air number before a long outing."
   },
   "cold|clear_dry|high": {
-    "feel": "Cold, clear and dry, with high air-quality risk.",
-    "advice": "Keep time outside shorter or choose an easier effort."
+    "feel": "Cold, clear, and dry.",
+    "advice": "Wear warm layers if you go out. Keep time outside shorter, or choose an easier effort."
   },
   "cold|clear_dry|very_high": {
-    "feel": "Cold, clear and dry, with very high air-quality risk.",
-    "advice": "Keep time outside shorter and choose an easier effort."
+    "feel": "Cold, clear, and dry.",
+    "advice": "Wear warm layers if you go out. Keep time outside shorter, and choose an easier effort."
   },
   "cool|clear_dry|low": {
-    "feel": "Cool, clear and dry, with low air-quality risk.",
+    "feel": "Cool, clear, and dry.",
     "advice": "A light jacket is enough for most people."
   },
   "cool|clear_dry|moderate": {
-    "feel": "Cool, clear and dry, with moderate air-quality risk.",
-    "advice": "A light jacket is enough for most people, and take the air into account."
+    "feel": "Cool, clear, and dry.",
+    "advice": "A light jacket is enough for most people. Check the air number before a long outing."
   },
   "cool|clear_dry|high": {
-    "feel": "Cool, clear and dry, with high air-quality risk.",
-    "advice": "Keep time outside shorter or choose an easier effort."
+    "feel": "Cool, clear, and dry.",
+    "advice": "A light jacket is enough for most people. Keep time outside shorter, or choose an easier effort."
   },
   "cool|clear_dry|very_high": {
-    "feel": "Cool, clear and dry, with very high air-quality risk.",
-    "advice": "Keep time outside shorter and choose an easier effort."
+    "feel": "Cool, clear, and dry.",
+    "advice": "A light jacket is enough for most people. Keep time outside shorter, and choose an easier effort."
   },
   "mild|clear_dry|low": {
     "feel": "Mild, clear and dry with low air-quality risk — comfortable for most people.",
     "advice": "Ideal for walking, cycling or outdoor sports."
   },
   "mild|clear_dry|moderate": {
-    "feel": "Mild, clear and dry, with moderate air-quality risk.",
-    "advice": "A good time for a walk or easy outdoor time, and take the air into account."
+    "feel": "Mild, clear, and dry.",
+    "advice": "A good time for a walk or easy time outside. Check the air number before a long outing."
   },
   "mild|clear_dry|high": {
-    "feel": "Mild, clear and dry, with high air-quality risk.",
-    "advice": "Keep time outside shorter or choose an easier effort."
+    "feel": "Mild, clear, and dry.",
+    "advice": "A good time for a walk or easy time outside. Keep time outside shorter, or choose an easier effort."
   },
   "mild|clear_dry|very_high": {
-    "feel": "Mild, clear and dry, with very high air-quality risk.",
-    "advice": "Keep time outside shorter and choose an easier effort."
+    "feel": "Mild, clear, and dry.",
+    "advice": "A good time for a walk or easy time outside. Keep time outside shorter, and choose an easier effort."
   },
   "warm|clear_dry|low": {
-    "feel": "Warm, clear and dry, with low air-quality risk.",
+    "feel": "Warm, clear, and dry.",
     "advice": "Light clothes should be enough for time outside."
   },
   "warm|clear_dry|moderate": {
-    "feel": "Warm, clear and dry, with moderate air-quality risk.",
-    "advice": "Light clothes should be enough for time outside, and take the air into account."
+    "feel": "Warm, clear, and dry.",
+    "advice": "Light clothes should be enough for time outside. Check the air number before a long outing."
   },
   "warm|clear_dry|high": {
-    "feel": "Warm, clear and dry, with high air-quality risk.",
-    "advice": "Keep time outside shorter or choose an easier effort."
+    "feel": "Warm, clear, and dry.",
+    "advice": "Light clothes should be enough for time outside. Keep time outside shorter, or choose an easier effort."
   },
   "warm|clear_dry|very_high": {
-    "feel": "Warm, clear and dry, with very high air-quality risk.",
-    "advice": "Keep time outside shorter and choose an easier effort."
+    "feel": "Warm, clear, and dry.",
+    "advice": "Light clothes should be enough for time outside. Keep time outside shorter, and choose an easier effort."
   },
   "hot|clear_dry|low": {
-    "feel": "Hot, clear and dry, with low air-quality risk.",
+    "feel": "Hot, clear, and dry.",
     "advice": "Take it slower and look for shade."
   },
   "hot|clear_dry|moderate": {
-    "feel": "Hot, clear and dry, with moderate air-quality risk.",
-    "advice": "Take it slower and look for shade, and take the air into account."
+    "feel": "Hot, clear, and dry.",
+    "advice": "Take it slower and look for shade. Check the air number before a long outing."
   },
   "hot|clear_dry|high": {
-    "feel": "Hot, clear and dry, with high air-quality risk.",
-    "advice": "Keep time outside shorter or choose an easier effort."
+    "feel": "Hot, clear, and dry.",
+    "advice": "Take it slower and look for shade. Keep time outside shorter, or choose an easier effort."
   },
   "hot|clear_dry|very_high": {
-    "feel": "Hot, clear and dry, with very high air-quality risk.",
-    "advice": "Keep time outside shorter and choose an easier effort."
+    "feel": "Hot, clear, and dry.",
+    "advice": "Take it slower and look for shade. Keep time outside shorter, and choose an easier effort."
   },
   "very_hot|clear_dry|low": {
-    "feel": "Very hot, clear and dry, with low air-quality risk — the heat puts a heavy strain on the body.",
+    "feel": "Very hot, clear, and dry — the heat puts a heavy strain on the body.",
     "advice": "Keep outdoor effort light and rest often."
   },
   "very_hot|clear_dry|moderate": {
-    "feel": "Very hot, clear and dry, with moderate air-quality risk — the heat puts a heavy strain on the body.",
-    "advice": "Keep outdoor effort light and rest often, and take the air into account."
+    "feel": "Very hot, clear, and dry — the heat puts a heavy strain on the body.",
+    "advice": "Keep outdoor effort light and rest often. Check the air number before a long outing."
   },
   "very_hot|clear_dry|high": {
-    "feel": "Very hot, clear and dry, with high air-quality risk — the heat puts a heavy strain on the body.",
-    "advice": "Keep time outside shorter or choose an easier effort."
+    "feel": "Very hot, clear, and dry — the heat puts a heavy strain on the body.",
+    "advice": "Keep outdoor effort light and rest often. Keep time outside shorter."
   },
   "very_hot|clear_dry|very_high": {
-    "feel": "Very hot, clear and dry, with very high air-quality risk — the heat puts a heavy strain on the body.",
-    "advice": "Keep time outside shorter and choose an easier effort."
+    "feel": "Very hot, clear, and dry — the heat puts a heavy strain on the body.",
+    "advice": "Keep outdoor effort light and rest often. Keep time outside shorter."
   },
   "freezing|cloudy|low": {
-    "feel": "Freezing and cloudy, with low air-quality risk — the cold puts a hard strain on the body.",
+    "feel": "Freezing and cloudy — the cold puts a hard strain on the body.",
     "advice": "Dress for deep cold under the cloudy sky."
   },
   "freezing|cloudy|moderate": {
-    "feel": "Freezing and cloudy, with moderate air-quality risk — the cold puts a hard strain on the body.",
-    "advice": "Dress for deep cold under the cloudy sky, and take the air into account."
+    "feel": "Freezing and cloudy — the cold puts a hard strain on the body.",
+    "advice": "Dress for deep cold under the cloudy sky. Check the air number before a long outing."
   },
   "freezing|cloudy|high": {
-    "feel": "Freezing and cloudy, with high air-quality risk — the cold puts a hard strain on the body.",
-    "advice": "Keep time outside shorter or choose an easier effort."
+    "feel": "Freezing and cloudy — the cold puts a hard strain on the body.",
+    "advice": "Dress for deep cold under the cloudy sky. Keep time outside shorter, or choose an easier effort."
   },
   "freezing|cloudy|very_high": {
-    "feel": "Freezing and cloudy, with very high air-quality risk — the cold puts a hard strain on the body.",
-    "advice": "Keep time outside shorter and choose an easier effort."
+    "feel": "Freezing and cloudy — the cold puts a hard strain on the body.",
+    "advice": "Dress for deep cold under the cloudy sky. Keep time outside shorter, and choose an easier effort."
   },
   "cold|cloudy|low": {
-    "feel": "Cold and cloudy, with low air-quality risk.",
+    "feel": "Cold and cloudy.",
     "advice": "Wear warm layers under the cloudy sky."
   },
   "cold|cloudy|moderate": {
-    "feel": "Cold and cloudy, with moderate air-quality risk.",
-    "advice": "Wear warm layers under the cloudy sky, and take the air into account."
+    "feel": "Cold and cloudy.",
+    "advice": "Wear warm layers under the cloudy sky. Check the air number before a long outing."
   },
   "cold|cloudy|high": {
-    "feel": "Cold and cloudy, with high air-quality risk.",
-    "advice": "Keep time outside shorter or choose an easier effort."
+    "feel": "Cold and cloudy.",
+    "advice": "Wear warm layers under the cloudy sky. Keep time outside shorter, or choose an easier effort."
   },
   "cold|cloudy|very_high": {
-    "feel": "Cold and cloudy, with very high air-quality risk.",
-    "advice": "Keep time outside shorter and choose an easier effort."
+    "feel": "Cold and cloudy.",
+    "advice": "Wear warm layers under the cloudy sky. Keep time outside shorter, and choose an easier effort."
   },
   "cool|cloudy|low": {
-    "feel": "Cool and cloudy, with low air-quality risk.",
+    "feel": "Cool and cloudy.",
     "advice": "A light jacket is enough under the cloudy sky."
   },
   "cool|cloudy|moderate": {
-    "feel": "Cool and cloudy, with moderate air-quality risk.",
-    "advice": "A light jacket is enough under the cloudy sky, and take the air into account."
+    "feel": "Cool and cloudy.",
+    "advice": "A light jacket is enough under the cloudy sky. Check the air number before a long outing."
   },
   "cool|cloudy|high": {
-    "feel": "Cool and cloudy, with high air-quality risk.",
-    "advice": "Keep time outside shorter or choose an easier effort."
+    "feel": "Cool and cloudy.",
+    "advice": "A light jacket is enough under the cloudy sky. Keep time outside shorter, or choose an easier effort."
   },
   "cool|cloudy|very_high": {
-    "feel": "Cool and cloudy, with very high air-quality risk.",
-    "advice": "Keep time outside shorter and choose an easier effort."
+    "feel": "Cool and cloudy.",
+    "advice": "A light jacket is enough under the cloudy sky. Keep time outside shorter, and choose an easier effort."
   },
   "mild|cloudy|low": {
-    "feel": "Mild and cloudy, with low air-quality risk.",
+    "feel": "Mild and cloudy.",
     "advice": "A walk is still pleasant under the cloudy sky."
   },
   "mild|cloudy|moderate": {
-    "feel": "Mild and cloudy, with moderate air-quality risk.",
-    "advice": "A walk is still pleasant under the cloudy sky, and take the air into account."
+    "feel": "Mild and cloudy.",
+    "advice": "A walk is still pleasant under the cloudy sky. Check the air number before a long outing."
   },
   "mild|cloudy|high": {
-    "feel": "Mild and cloudy, with high air-quality risk.",
-    "advice": "Keep time outside shorter or choose an easier effort."
+    "feel": "Mild and cloudy.",
+    "advice": "A walk is still pleasant under the cloudy sky. Keep time outside shorter, or choose an easier effort."
   },
   "mild|cloudy|very_high": {
-    "feel": "Mild and cloudy, with very high air-quality risk.",
-    "advice": "Keep time outside shorter and choose an easier effort."
+    "feel": "Mild and cloudy.",
+    "advice": "A walk is still pleasant under the cloudy sky. Keep time outside shorter, and choose an easier effort."
   },
   "warm|cloudy|low": {
-    "feel": "Warm and cloudy, with low air-quality risk.",
+    "feel": "Warm and cloudy.",
     "advice": "Light clothes should be enough under the cloudy sky."
   },
   "warm|cloudy|moderate": {
-    "feel": "Warm and cloudy, with moderate air-quality risk.",
-    "advice": "Light clothes should be enough under the cloudy sky, and take the air into account."
+    "feel": "Warm and cloudy.",
+    "advice": "Light clothes should be enough under the cloudy sky. Check the air number before a long outing."
   },
   "warm|cloudy|high": {
-    "feel": "Warm and cloudy, with high air-quality risk.",
-    "advice": "Keep time outside shorter or choose an easier effort."
+    "feel": "Warm and cloudy.",
+    "advice": "Light clothes should be enough under the cloudy sky. Keep time outside shorter, or choose an easier effort."
   },
   "warm|cloudy|very_high": {
-    "feel": "Warm and cloudy, with very high air-quality risk.",
-    "advice": "Keep time outside shorter and choose an easier effort."
+    "feel": "Warm and cloudy.",
+    "advice": "Light clothes should be enough under the cloudy sky. Keep time outside shorter, and choose an easier effort."
   },
   "hot|cloudy|low": {
-    "feel": "Hot and cloudy, with low air-quality risk.",
+    "feel": "Hot and cloudy.",
     "advice": "Look for shade even with the cloudy sky."
   },
   "hot|cloudy|moderate": {
-    "feel": "Hot and cloudy, with moderate air-quality risk.",
-    "advice": "Look for shade even with the cloudy sky, and take the air into account."
+    "feel": "Hot and cloudy.",
+    "advice": "Look for shade even with the cloudy sky. Check the air number before a long outing."
   },
   "hot|cloudy|high": {
-    "feel": "Hot and cloudy, with high air-quality risk.",
-    "advice": "Keep time outside shorter or choose an easier effort."
+    "feel": "Hot and cloudy.",
+    "advice": "Look for shade even with the cloudy sky. Keep time outside shorter, or choose an easier effort."
   },
   "hot|cloudy|very_high": {
-    "feel": "Hot and cloudy, with very high air-quality risk.",
-    "advice": "Keep time outside shorter and choose an easier effort."
+    "feel": "Hot and cloudy.",
+    "advice": "Look for shade even with the cloudy sky. Keep time outside shorter, and choose an easier effort."
   },
   "very_hot|cloudy|low": {
-    "feel": "Very hot and cloudy, with low air-quality risk — the heat puts a heavy strain on the body.",
+    "feel": "Very hot and cloudy — the heat puts a heavy strain on the body.",
     "advice": "Keep outdoor effort light and rest often under the cloudy sky."
   },
   "very_hot|cloudy|moderate": {
-    "feel": "Very hot and cloudy, with moderate air-quality risk — the heat puts a heavy strain on the body.",
-    "advice": "Keep outdoor effort light and rest often under the cloudy sky, and take the air into account."
+    "feel": "Very hot and cloudy — the heat puts a heavy strain on the body.",
+    "advice": "Keep outdoor effort light and rest often under the cloudy sky. Check the air number before a long outing."
   },
   "very_hot|cloudy|high": {
-    "feel": "Very hot and cloudy, with high air-quality risk — the heat puts a heavy strain on the body.",
-    "advice": "Keep time outside shorter or choose an easier effort."
+    "feel": "Very hot and cloudy — the heat puts a heavy strain on the body.",
+    "advice": "Keep outdoor effort light and rest often under the cloudy sky. Keep time outside shorter."
   },
   "very_hot|cloudy|very_high": {
-    "feel": "Very hot and cloudy, with very high air-quality risk — the heat puts a heavy strain on the body.",
-    "advice": "Keep time outside shorter and choose an easier effort."
+    "feel": "Very hot and cloudy — the heat puts a heavy strain on the body.",
+    "advice": "Keep outdoor effort light and rest often under the cloudy sky. Keep time outside shorter."
   },
   "freezing|light_rain|low": {
-    "feel": "Freezing, with light precipitation and low air-quality risk — the cold puts a hard strain on the body.",
-    "advice": "Dress for deep cold in this light precipitation."
+    "feel": "Freezing, with precipitation — the cold puts a hard strain on the body.",
+    "advice": "Dress for deep cold in this precipitation."
   },
   "freezing|light_rain|moderate": {
-    "feel": "Freezing, with light precipitation and moderate air-quality risk — the cold puts a hard strain on the body.",
-    "advice": "Dress for deep cold in this light precipitation, and take the air into account."
+    "feel": "Freezing, with precipitation — the cold puts a hard strain on the body.",
+    "advice": "Dress for deep cold in this precipitation. Check the air number before a long outing."
   },
   "freezing|light_rain|high": {
-    "feel": "Freezing, with light precipitation and high air-quality risk — the cold puts a hard strain on the body.",
-    "advice": "Keep time outside shorter or choose an easier effort."
+    "feel": "Freezing, with precipitation — the cold puts a hard strain on the body.",
+    "advice": "Dress for deep cold in this precipitation. Keep time outside shorter, or choose an easier effort."
   },
   "freezing|light_rain|very_high": {
-    "feel": "Freezing, with light precipitation and very high air-quality risk — the cold puts a hard strain on the body.",
-    "advice": "Keep time outside shorter and choose an easier effort."
+    "feel": "Freezing, with precipitation — the cold puts a hard strain on the body.",
+    "advice": "Dress for deep cold in this precipitation. Keep time outside shorter, and choose an easier effort."
   },
   "cold|light_rain|low": {
-    "feel": "Cold, with light precipitation and low air-quality risk.",
-    "advice": "Wear warm layers in this light precipitation."
+    "feel": "Cold, with precipitation.",
+    "advice": "Wear warm layers in this precipitation."
   },
   "cold|light_rain|moderate": {
-    "feel": "Cold, with light precipitation and moderate air-quality risk.",
-    "advice": "Wear warm layers in this light precipitation, and take the air into account."
+    "feel": "Cold, with precipitation.",
+    "advice": "Wear warm layers in this precipitation. Check the air number before a long outing."
   },
   "cold|light_rain|high": {
-    "feel": "Cold, with light precipitation and high air-quality risk.",
-    "advice": "Keep time outside shorter or choose an easier effort."
+    "feel": "Cold, with precipitation.",
+    "advice": "Wear warm layers in this precipitation. Keep time outside shorter, or choose an easier effort."
   },
   "cold|light_rain|very_high": {
-    "feel": "Cold, with light precipitation and very high air-quality risk.",
-    "advice": "Keep time outside shorter and choose an easier effort."
+    "feel": "Cold, with precipitation.",
+    "advice": "Wear warm layers in this precipitation. Keep time outside shorter, and choose an easier effort."
   },
   "cool|light_rain|low": {
-    "feel": "Cool, with light precipitation and low air-quality risk.",
-    "advice": "A waterproof layer is wise in this light precipitation."
+    "feel": "Cool, with precipitation.",
+    "advice": "A waterproof layer is wise in this precipitation."
   },
   "cool|light_rain|moderate": {
-    "feel": "Cool, with light precipitation and moderate air-quality risk.",
-    "advice": "A waterproof layer is wise in this light precipitation, and take the air into account."
+    "feel": "Cool, with precipitation.",
+    "advice": "A waterproof layer is wise in this precipitation. Check the air number before a long outing."
   },
   "cool|light_rain|high": {
-    "feel": "Cool, with light precipitation and high air-quality risk.",
-    "advice": "Keep time outside shorter or choose an easier effort."
+    "feel": "Cool, with precipitation.",
+    "advice": "A waterproof layer is wise in this precipitation. Keep time outside shorter, or choose an easier effort."
   },
   "cool|light_rain|very_high": {
-    "feel": "Cool, with light precipitation and very high air-quality risk.",
-    "advice": "Keep time outside shorter and choose an easier effort."
+    "feel": "Cool, with precipitation.",
+    "advice": "A waterproof layer is wise in this precipitation. Keep time outside shorter, and choose an easier effort."
   },
   "mild|light_rain|low": {
-    "feel": "Mild, with light precipitation and low air-quality risk.",
-    "advice": "A light waterproof layer is enough in this light precipitation."
+    "feel": "Mild, with precipitation.",
+    "advice": "A light waterproof layer is enough in this precipitation."
   },
   "mild|light_rain|moderate": {
-    "feel": "Mild, with light precipitation and moderate air-quality risk.",
-    "advice": "A light waterproof layer is enough in this light precipitation, and take the air into account."
+    "feel": "Mild, with precipitation.",
+    "advice": "A light waterproof layer is enough in this precipitation. Check the air number before a long outing."
   },
   "mild|light_rain|high": {
-    "feel": "Mild, with light precipitation and high air-quality risk.",
-    "advice": "Keep time outside shorter or choose an easier effort."
+    "feel": "Mild, with precipitation.",
+    "advice": "A light waterproof layer is enough in this precipitation. Keep time outside shorter, or choose an easier effort."
   },
   "mild|light_rain|very_high": {
-    "feel": "Mild, with light precipitation and very high air-quality risk.",
-    "advice": "Keep time outside shorter and choose an easier effort."
+    "feel": "Mild, with precipitation.",
+    "advice": "A light waterproof layer is enough in this precipitation. Keep time outside shorter, and choose an easier effort."
   },
   "warm|light_rain|low": {
-    "feel": "Warm, with light precipitation and low air-quality risk.",
+    "feel": "Warm, with precipitation.",
     "advice": "A light waterproof layer should be enough."
   },
   "warm|light_rain|moderate": {
-    "feel": "Warm, with light precipitation and moderate air-quality risk.",
-    "advice": "A light waterproof layer should be enough, and take the air into account."
+    "feel": "Warm, with precipitation.",
+    "advice": "A light waterproof layer should be enough. Check the air number before a long outing."
   },
   "warm|light_rain|high": {
-    "feel": "Warm, with light precipitation and high air-quality risk.",
-    "advice": "Keep time outside shorter or choose an easier effort."
+    "feel": "Warm, with precipitation.",
+    "advice": "A light waterproof layer should be enough. Keep time outside shorter, or choose an easier effort."
   },
   "warm|light_rain|very_high": {
-    "feel": "Warm, with light precipitation and very high air-quality risk.",
-    "advice": "Keep time outside shorter and choose an easier effort."
+    "feel": "Warm, with precipitation.",
+    "advice": "A light waterproof layer should be enough. Keep time outside shorter, and choose an easier effort."
   },
   "hot|light_rain|low": {
-    "feel": "Hot, with light precipitation and low air-quality risk.",
-    "advice": "Take it slower if you go out in this light precipitation."
+    "feel": "Hot, with precipitation.",
+    "advice": "Take it slower if you go out in this precipitation."
   },
   "hot|light_rain|moderate": {
-    "feel": "Hot, with light precipitation and moderate air-quality risk.",
-    "advice": "Take it slower if you go out in this light precipitation, and take the air into account."
+    "feel": "Hot, with precipitation.",
+    "advice": "Take it slower if you go out in this precipitation. Check the air number before a long outing."
   },
   "hot|light_rain|high": {
-    "feel": "Hot, with light precipitation and high air-quality risk.",
-    "advice": "Keep time outside shorter or choose an easier effort."
+    "feel": "Hot, with precipitation.",
+    "advice": "Take it slower if you go out in this precipitation. Keep time outside shorter, or choose an easier effort."
   },
   "hot|light_rain|very_high": {
-    "feel": "Hot, with light precipitation and very high air-quality risk.",
-    "advice": "Keep time outside shorter and choose an easier effort."
+    "feel": "Hot, with precipitation.",
+    "advice": "Take it slower if you go out in this precipitation. Keep time outside shorter, and choose an easier effort."
   },
   "very_hot|light_rain|low": {
-    "feel": "Very hot, with light precipitation and low air-quality risk — the heat puts a heavy strain on the body.",
-    "advice": "Keep outdoor effort light if you go out in this light precipitation."
+    "feel": "Very hot, with precipitation — the heat puts a heavy strain on the body.",
+    "advice": "Keep outdoor effort light if you go out in this precipitation."
   },
   "very_hot|light_rain|moderate": {
-    "feel": "Very hot, with light precipitation and moderate air-quality risk — the heat puts a heavy strain on the body.",
-    "advice": "Keep outdoor effort light if you go out in this light precipitation, and take the air into account."
+    "feel": "Very hot, with precipitation — the heat puts a heavy strain on the body.",
+    "advice": "Keep outdoor effort light if you go out in this precipitation. Check the air number before a long outing."
   },
   "very_hot|light_rain|high": {
-    "feel": "Very hot, with light precipitation and high air-quality risk — the heat puts a heavy strain on the body.",
-    "advice": "Keep time outside shorter or choose an easier effort."
+    "feel": "Very hot, with precipitation — the heat puts a heavy strain on the body.",
+    "advice": "Keep outdoor effort light if you go out in this precipitation. Keep time outside shorter."
   },
   "very_hot|light_rain|very_high": {
-    "feel": "Very hot, with light precipitation and very high air-quality risk — the heat puts a heavy strain on the body.",
-    "advice": "Keep time outside shorter and choose an easier effort."
+    "feel": "Very hot, with precipitation — the heat puts a heavy strain on the body.",
+    "advice": "Keep outdoor effort light if you go out in this precipitation. Keep time outside shorter."
   },
   "freezing|heavy_rain|low": {
-    "feel": "Freezing, with heavy precipitation and low air-quality risk — the cold puts a hard strain on the body.",
+    "feel": "Freezing, with heavy precipitation — the cold puts a hard strain on the body.",
     "advice": "Dress for deep cold and keep time in this heavy precipitation short."
   },
   "freezing|heavy_rain|moderate": {
-    "feel": "Freezing, with heavy precipitation and moderate air-quality risk — the cold puts a hard strain on the body.",
-    "advice": "Dress for deep cold and keep time in this heavy precipitation short, and take the air into account."
+    "feel": "Freezing, with heavy precipitation — the cold puts a hard strain on the body.",
+    "advice": "Dress for deep cold and keep time in this heavy precipitation short. Check the air number before a long outing."
   },
   "freezing|heavy_rain|high": {
-    "feel": "Freezing, with heavy precipitation and high air-quality risk — the cold puts a hard strain on the body.",
-    "advice": "Keep time outside shorter or choose an easier effort."
+    "feel": "Freezing, with heavy precipitation — the cold puts a hard strain on the body.",
+    "advice": "Dress for deep cold and keep time in this heavy precipitation short."
   },
   "freezing|heavy_rain|very_high": {
-    "feel": "Freezing, with heavy precipitation and very high air-quality risk — the cold puts a hard strain on the body.",
-    "advice": "Keep time outside shorter and choose an easier effort."
+    "feel": "Freezing, with heavy precipitation — the cold puts a hard strain on the body.",
+    "advice": "Dress for deep cold and keep time in this heavy precipitation short. Choose an easier effort."
   },
   "cold|heavy_rain|low": {
-    "feel": "Cold, with heavy precipitation and low air-quality risk.",
+    "feel": "Cold, with heavy precipitation.",
     "advice": "Wear warm layers and keep time in this heavy precipitation short."
   },
   "cold|heavy_rain|moderate": {
-    "feel": "Cold, with heavy precipitation and moderate air-quality risk.",
-    "advice": "Wear warm layers and keep time in this heavy precipitation short, and take the air into account."
+    "feel": "Cold, with heavy precipitation.",
+    "advice": "Wear warm layers and keep time in this heavy precipitation short. Check the air number before a long outing."
   },
   "cold|heavy_rain|high": {
-    "feel": "Cold, with heavy precipitation and high air-quality risk.",
-    "advice": "Keep time outside shorter or choose an easier effort."
+    "feel": "Cold, with heavy precipitation.",
+    "advice": "Wear warm layers and keep time in this heavy precipitation short."
   },
   "cold|heavy_rain|very_high": {
-    "feel": "Cold, with heavy precipitation and very high air-quality risk.",
-    "advice": "Keep time outside shorter and choose an easier effort."
+    "feel": "Cold, with heavy precipitation.",
+    "advice": "Wear warm layers and keep time in this heavy precipitation short. Choose an easier effort."
   },
   "cool|heavy_rain|low": {
-    "feel": "Cool, with heavy precipitation and low air-quality risk.",
+    "feel": "Cool, with heavy precipitation.",
     "advice": "Use a waterproof layer and keep the effort easy."
   },
   "cool|heavy_rain|moderate": {
-    "feel": "Cool, with heavy precipitation and moderate air-quality risk.",
-    "advice": "Use a waterproof layer and keep the effort easy, and take the air into account."
+    "feel": "Cool, with heavy precipitation.",
+    "advice": "Use a waterproof layer and keep the effort easy. Check the air number before a long outing."
   },
   "cool|heavy_rain|high": {
-    "feel": "Cool, with heavy precipitation and high air-quality risk.",
-    "advice": "Keep time outside shorter or choose an easier effort."
+    "feel": "Cool, with heavy precipitation.",
+    "advice": "Use a waterproof layer and keep the effort easy. Keep time outside shorter."
   },
   "cool|heavy_rain|very_high": {
-    "feel": "Cool, with heavy precipitation and very high air-quality risk.",
-    "advice": "Keep time outside shorter and choose an easier effort."
+    "feel": "Cool, with heavy precipitation.",
+    "advice": "Use a waterproof layer and keep the effort easy. Keep time outside shorter."
   },
   "mild|heavy_rain|low": {
-    "feel": "Mild, with heavy precipitation and low air-quality risk.",
+    "feel": "Mild, with heavy precipitation.",
     "advice": "A waterproof layer helps, and keep the effort easy."
   },
   "mild|heavy_rain|moderate": {
-    "feel": "Mild, with heavy precipitation and moderate air-quality risk.",
-    "advice": "A waterproof layer helps, and keep the effort easy, and take the air into account."
+    "feel": "Mild, with heavy precipitation.",
+    "advice": "A waterproof layer helps, and keep the effort easy. Check the air number before a long outing."
   },
   "mild|heavy_rain|high": {
-    "feel": "Mild, with heavy precipitation and high air-quality risk.",
-    "advice": "Keep time outside shorter or choose an easier effort."
+    "feel": "Mild, with heavy precipitation.",
+    "advice": "A waterproof layer helps, and keep the effort easy. Keep time outside shorter."
   },
   "mild|heavy_rain|very_high": {
-    "feel": "Mild, with heavy precipitation and very high air-quality risk.",
-    "advice": "Keep time outside shorter and choose an easier effort."
+    "feel": "Mild, with heavy precipitation.",
+    "advice": "A waterproof layer helps, and keep the effort easy. Keep time outside shorter."
   },
   "warm|heavy_rain|low": {
-    "feel": "Warm, with heavy precipitation and low air-quality risk.",
+    "feel": "Warm, with heavy precipitation.",
     "advice": "A waterproof layer should be enough, with an easy effort."
   },
   "warm|heavy_rain|moderate": {
-    "feel": "Warm, with heavy precipitation and moderate air-quality risk.",
-    "advice": "A waterproof layer should be enough, with an easy effort, and take the air into account."
+    "feel": "Warm, with heavy precipitation.",
+    "advice": "A waterproof layer should be enough, with an easy effort. Check the air number before a long outing."
   },
   "warm|heavy_rain|high": {
-    "feel": "Warm, with heavy precipitation and high air-quality risk.",
-    "advice": "Keep time outside shorter or choose an easier effort."
+    "feel": "Warm, with heavy precipitation.",
+    "advice": "A waterproof layer should be enough, with an easy effort. Keep time outside shorter."
   },
   "warm|heavy_rain|very_high": {
-    "feel": "Warm, with heavy precipitation and very high air-quality risk.",
-    "advice": "Keep time outside shorter and choose an easier effort."
+    "feel": "Warm, with heavy precipitation.",
+    "advice": "A waterproof layer should be enough, with an easy effort. Keep time outside shorter."
   },
   "hot|heavy_rain|low": {
-    "feel": "Hot, with heavy precipitation and low air-quality risk.",
+    "feel": "Hot, with heavy precipitation.",
     "advice": "Keep the effort easy in this heavy precipitation."
   },
   "hot|heavy_rain|moderate": {
-    "feel": "Hot, with heavy precipitation and moderate air-quality risk.",
-    "advice": "Keep the effort easy in this heavy precipitation, and take the air into account."
+    "feel": "Hot, with heavy precipitation.",
+    "advice": "Keep the effort easy in this heavy precipitation. Check the air number before a long outing."
   },
   "hot|heavy_rain|high": {
-    "feel": "Hot, with heavy precipitation and high air-quality risk.",
-    "advice": "Keep time outside shorter or choose an easier effort."
+    "feel": "Hot, with heavy precipitation.",
+    "advice": "Keep the effort easy in this heavy precipitation. Keep time outside shorter."
   },
   "hot|heavy_rain|very_high": {
-    "feel": "Hot, with heavy precipitation and very high air-quality risk.",
-    "advice": "Keep time outside shorter and choose an easier effort."
+    "feel": "Hot, with heavy precipitation.",
+    "advice": "Keep the effort easy in this heavy precipitation. Keep time outside shorter."
   },
   "very_hot|heavy_rain|low": {
-    "feel": "Very hot, with heavy precipitation and low air-quality risk — the heat puts a heavy strain on the body.",
+    "feel": "Very hot, with heavy precipitation — the heat puts a heavy strain on the body.",
     "advice": "Keep outdoor effort light and rest often in this heavy precipitation."
   },
   "very_hot|heavy_rain|moderate": {
-    "feel": "Very hot, with heavy precipitation and moderate air-quality risk — the heat puts a heavy strain on the body.",
-    "advice": "Keep outdoor effort light and rest often in this heavy precipitation, and take the air into account."
+    "feel": "Very hot, with heavy precipitation — the heat puts a heavy strain on the body.",
+    "advice": "Keep outdoor effort light and rest often in this heavy precipitation. Check the air number before a long outing."
   },
   "very_hot|heavy_rain|high": {
-    "feel": "Very hot, with heavy precipitation and high air-quality risk — the heat puts a heavy strain on the body.",
-    "advice": "Keep time outside shorter or choose an easier effort."
+    "feel": "Very hot, with heavy precipitation — the heat puts a heavy strain on the body.",
+    "advice": "Keep outdoor effort light and rest often in this heavy precipitation. Keep time outside shorter."
   },
   "very_hot|heavy_rain|very_high": {
-    "feel": "Very hot, with heavy precipitation and very high air-quality risk — the heat puts a heavy strain on the body.",
-    "advice": "Keep time outside shorter and choose an easier effort."
+    "feel": "Very hot, with heavy precipitation — the heat puts a heavy strain on the body.",
+    "advice": "Keep outdoor effort light and rest often in this heavy precipitation. Keep time outside shorter."
   },
   "freezing|stormy|low": {
-    "feel": "Freezing and stormy, with low air-quality risk — the cold puts a hard strain on the body.",
+    "feel": "Freezing and stormy — the cold puts a hard strain on the body.",
     "advice": "Dress for deep cold and stay near shelter while it is stormy."
   },
   "freezing|stormy|moderate": {
-    "feel": "Freezing and stormy, with moderate air-quality risk — the cold puts a hard strain on the body.",
-    "advice": "Dress for deep cold and stay near shelter while it is stormy, and take the air into account."
+    "feel": "Freezing and stormy — the cold puts a hard strain on the body.",
+    "advice": "Dress for deep cold and stay near shelter while it is stormy. Check the air number before a long outing."
   },
   "freezing|stormy|high": {
-    "feel": "Freezing and stormy, with high air-quality risk — the cold puts a hard strain on the body.",
-    "advice": "Keep time outside shorter or choose an easier effort."
+    "feel": "Freezing and stormy — the cold puts a hard strain on the body.",
+    "advice": "Dress for deep cold and stay near shelter while it is stormy. Keep time outside shorter, or choose an easier effort."
   },
   "freezing|stormy|very_high": {
-    "feel": "Freezing and stormy, with very high air-quality risk — the cold puts a hard strain on the body.",
-    "advice": "Keep time outside shorter and choose an easier effort."
+    "feel": "Freezing and stormy — the cold puts a hard strain on the body.",
+    "advice": "Dress for deep cold and stay near shelter while it is stormy. Keep time outside shorter, and choose an easier effort."
   },
   "cold|stormy|low": {
-    "feel": "Cold and stormy, with low air-quality risk.",
+    "feel": "Cold and stormy.",
     "advice": "Stay near shelter while it is stormy."
   },
   "cold|stormy|moderate": {
-    "feel": "Cold and stormy, with moderate air-quality risk.",
-    "advice": "Stay near shelter while it is stormy, and take the air into account."
+    "feel": "Cold and stormy.",
+    "advice": "Stay near shelter while it is stormy. Check the air number before a long outing."
   },
   "cold|stormy|high": {
-    "feel": "Cold and stormy, with high air-quality risk.",
-    "advice": "Keep time outside shorter or choose an easier effort."
+    "feel": "Cold and stormy.",
+    "advice": "Stay near shelter while it is stormy. Keep time outside shorter, or choose an easier effort."
   },
   "cold|stormy|very_high": {
-    "feel": "Cold and stormy, with very high air-quality risk.",
-    "advice": "Keep time outside shorter and choose an easier effort."
+    "feel": "Cold and stormy.",
+    "advice": "Stay near shelter while it is stormy. Keep time outside shorter, and choose an easier effort."
   },
   "cool|stormy|low": {
-    "feel": "Cool and stormy, with low air-quality risk.",
+    "feel": "Cool and stormy.",
     "advice": "Stay near shelter while it is stormy."
   },
   "cool|stormy|moderate": {
-    "feel": "Cool and stormy, with moderate air-quality risk.",
-    "advice": "Stay near shelter while it is stormy, and take the air into account."
+    "feel": "Cool and stormy.",
+    "advice": "Stay near shelter while it is stormy. Check the air number before a long outing."
   },
   "cool|stormy|high": {
-    "feel": "Cool and stormy, with high air-quality risk.",
-    "advice": "Keep time outside shorter or choose an easier effort."
+    "feel": "Cool and stormy.",
+    "advice": "Stay near shelter while it is stormy. Keep time outside shorter, or choose an easier effort."
   },
   "cool|stormy|very_high": {
-    "feel": "Cool and stormy, with very high air-quality risk.",
-    "advice": "Keep time outside shorter and choose an easier effort."
+    "feel": "Cool and stormy.",
+    "advice": "Stay near shelter while it is stormy. Keep time outside shorter, and choose an easier effort."
   },
   "mild|stormy|low": {
-    "feel": "Mild and stormy, with low air-quality risk.",
+    "feel": "Mild and stormy.",
     "advice": "Stay near shelter while it is stormy."
   },
   "mild|stormy|moderate": {
-    "feel": "Mild and stormy, with moderate air-quality risk.",
-    "advice": "Stay near shelter while it is stormy, and take the air into account."
+    "feel": "Mild and stormy.",
+    "advice": "Stay near shelter while it is stormy. Check the air number before a long outing."
   },
   "mild|stormy|high": {
-    "feel": "Mild and stormy, with high air-quality risk.",
-    "advice": "Keep time outside shorter or choose an easier effort."
+    "feel": "Mild and stormy.",
+    "advice": "Stay near shelter while it is stormy. Keep time outside shorter, or choose an easier effort."
   },
   "mild|stormy|very_high": {
-    "feel": "Mild and stormy, with very high air-quality risk.",
-    "advice": "Keep time outside shorter and choose an easier effort."
+    "feel": "Mild and stormy.",
+    "advice": "Stay near shelter while it is stormy. Keep time outside shorter, and choose an easier effort."
   },
   "warm|stormy|low": {
-    "feel": "Warm and stormy, with low air-quality risk.",
+    "feel": "Warm and stormy.",
     "advice": "Stay near shelter while it is stormy."
   },
   "warm|stormy|moderate": {
-    "feel": "Warm and stormy, with moderate air-quality risk.",
-    "advice": "Stay near shelter while it is stormy, and take the air into account."
+    "feel": "Warm and stormy.",
+    "advice": "Stay near shelter while it is stormy. Check the air number before a long outing."
   },
   "warm|stormy|high": {
-    "feel": "Warm and stormy, with high air-quality risk.",
-    "advice": "Keep time outside shorter or choose an easier effort."
+    "feel": "Warm and stormy.",
+    "advice": "Stay near shelter while it is stormy. Keep time outside shorter, or choose an easier effort."
   },
   "warm|stormy|very_high": {
-    "feel": "Warm and stormy, with very high air-quality risk.",
-    "advice": "Keep time outside shorter and choose an easier effort."
+    "feel": "Warm and stormy.",
+    "advice": "Stay near shelter while it is stormy. Keep time outside shorter, and choose an easier effort."
   },
   "hot|stormy|low": {
-    "feel": "Hot and stormy, with low air-quality risk.",
+    "feel": "Hot and stormy.",
     "advice": "Stay near shelter and take the heat slowly."
   },
   "hot|stormy|moderate": {
-    "feel": "Hot and stormy, with moderate air-quality risk.",
-    "advice": "Stay near shelter and take the heat slowly, and take the air into account."
+    "feel": "Hot and stormy.",
+    "advice": "Stay near shelter and take the heat slowly. Check the air number before a long outing."
   },
   "hot|stormy|high": {
-    "feel": "Hot and stormy, with high air-quality risk.",
-    "advice": "Keep time outside shorter or choose an easier effort."
+    "feel": "Hot and stormy.",
+    "advice": "Stay near shelter and take the heat slowly. Keep time outside shorter."
   },
   "hot|stormy|very_high": {
-    "feel": "Hot and stormy, with very high air-quality risk.",
-    "advice": "Keep time outside shorter and choose an easier effort."
+    "feel": "Hot and stormy.",
+    "advice": "Stay near shelter and take the heat slowly. Keep time outside shorter."
   },
   "very_hot|stormy|low": {
-    "feel": "Very hot and stormy, with low air-quality risk — the heat puts a heavy strain on the body.",
+    "feel": "Very hot and stormy — the heat puts a heavy strain on the body.",
     "advice": "Stay near shelter and keep the effort light in this heat."
   },
   "very_hot|stormy|moderate": {
-    "feel": "Very hot and stormy, with moderate air-quality risk — the heat puts a heavy strain on the body.",
-    "advice": "Stay near shelter and keep the effort light in this heat, and take the air into account."
+    "feel": "Very hot and stormy — the heat puts a heavy strain on the body.",
+    "advice": "Stay near shelter and keep the effort light in this heat. Check the air number before a long outing."
   },
   "very_hot|stormy|high": {
-    "feel": "Very hot and stormy, with high air-quality risk — the heat puts a heavy strain on the body.",
-    "advice": "Keep time outside shorter or choose an easier effort."
+    "feel": "Very hot and stormy — the heat puts a heavy strain on the body.",
+    "advice": "Stay near shelter and keep the effort light in this heat. Keep time outside shorter."
   },
   "very_hot|stormy|very_high": {
-    "feel": "Very hot and stormy, with very high air-quality risk — the heat puts a heavy strain on the body.",
-    "advice": "Keep time outside shorter and choose an easier effort."
+    "feel": "Very hot and stormy — the heat puts a heavy strain on the body.",
+    "advice": "Stay near shelter and keep the effort light in this heat. Keep time outside shorter."
   },
   "freezing|windy|low": {
-    "feel": "Freezing and windy, with low air-quality risk — the cold puts a hard strain on the body.",
+    "feel": "Freezing and windy — the cold puts a hard strain on the body.",
     "advice": "Dress for deep cold and a strong wind."
   },
   "freezing|windy|moderate": {
-    "feel": "Freezing and windy, with moderate air-quality risk — the cold puts a hard strain on the body.",
-    "advice": "Dress for deep cold and a strong wind, and take the air into account."
+    "feel": "Freezing and windy — the cold puts a hard strain on the body.",
+    "advice": "Dress for deep cold and a strong wind. Check the air number before a long outing."
   },
   "freezing|windy|high": {
-    "feel": "Freezing and windy, with high air-quality risk — the cold puts a hard strain on the body.",
-    "advice": "Keep time outside shorter or choose an easier effort."
+    "feel": "Freezing and windy — the cold puts a hard strain on the body.",
+    "advice": "Dress for deep cold and a strong wind. Keep time outside shorter, or choose an easier effort."
   },
   "freezing|windy|very_high": {
-    "feel": "Freezing and windy, with very high air-quality risk — the cold puts a hard strain on the body.",
-    "advice": "Keep time outside shorter and choose an easier effort."
+    "feel": "Freezing and windy — the cold puts a hard strain on the body.",
+    "advice": "Dress for deep cold and a strong wind. Keep time outside shorter, and choose an easier effort."
   },
   "cold|windy|low": {
-    "feel": "Cold and windy, with low air-quality risk.",
+    "feel": "Cold and windy.",
     "advice": "Wear warm layers against the wind."
   },
   "cold|windy|moderate": {
-    "feel": "Cold and windy, with moderate air-quality risk.",
-    "advice": "Wear warm layers against the wind, and take the air into account."
+    "feel": "Cold and windy.",
+    "advice": "Wear warm layers against the wind. Check the air number before a long outing."
   },
   "cold|windy|high": {
-    "feel": "Cold and windy, with high air-quality risk.",
-    "advice": "Keep time outside shorter or choose an easier effort."
+    "feel": "Cold and windy.",
+    "advice": "Wear warm layers against the wind. Keep time outside shorter, or choose an easier effort."
   },
   "cold|windy|very_high": {
-    "feel": "Cold and windy, with very high air-quality risk.",
-    "advice": "Keep time outside shorter and choose an easier effort."
+    "feel": "Cold and windy.",
+    "advice": "Wear warm layers against the wind. Keep time outside shorter, and choose an easier effort."
   },
   "cool|windy|low": {
-    "feel": "Cool and windy, with low air-quality risk.",
+    "feel": "Cool and windy.",
     "advice": "A windproof layer is wise."
   },
   "cool|windy|moderate": {
-    "feel": "Cool and windy, with moderate air-quality risk.",
-    "advice": "A windproof layer is wise, and take the air into account."
+    "feel": "Cool and windy.",
+    "advice": "A windproof layer is wise. Check the air number before a long outing."
   },
   "cool|windy|high": {
-    "feel": "Cool and windy, with high air-quality risk.",
-    "advice": "Keep time outside shorter or choose an easier effort."
+    "feel": "Cool and windy.",
+    "advice": "A windproof layer is wise. Keep time outside shorter, or choose an easier effort."
   },
   "cool|windy|very_high": {
-    "feel": "Cool and windy, with very high air-quality risk.",
-    "advice": "Keep time outside shorter and choose an easier effort."
+    "feel": "Cool and windy.",
+    "advice": "A windproof layer is wise. Keep time outside shorter, and choose an easier effort."
   },
   "mild|windy|low": {
-    "feel": "Mild and windy, with low air-quality risk.",
+    "feel": "Mild and windy.",
     "advice": "Hold onto loose items and keep an easy pace."
   },
   "mild|windy|moderate": {
-    "feel": "Mild and windy, with moderate air-quality risk.",
-    "advice": "Hold onto loose items and keep an easy pace, and take the air into account."
+    "feel": "Mild and windy.",
+    "advice": "Hold onto loose items and keep an easy pace. Check the air number before a long outing."
   },
   "mild|windy|high": {
-    "feel": "Mild and windy, with high air-quality risk.",
-    "advice": "Keep time outside shorter or choose an easier effort."
+    "feel": "Mild and windy.",
+    "advice": "Hold onto loose items and keep an easy pace. Keep time outside shorter."
   },
   "mild|windy|very_high": {
-    "feel": "Mild and windy, with very high air-quality risk.",
-    "advice": "Keep time outside shorter and choose an easier effort."
+    "feel": "Mild and windy.",
+    "advice": "Hold onto loose items and keep an easy pace. Keep time outside shorter."
   },
   "warm|windy|low": {
-    "feel": "Warm and windy, with low air-quality risk.",
+    "feel": "Warm and windy.",
     "advice": "Keep an easy pace in the wind."
   },
   "warm|windy|moderate": {
-    "feel": "Warm and windy, with moderate air-quality risk.",
-    "advice": "Keep an easy pace in the wind, and take the air into account."
+    "feel": "Warm and windy.",
+    "advice": "Keep an easy pace in the wind. Check the air number before a long outing."
   },
   "warm|windy|high": {
-    "feel": "Warm and windy, with high air-quality risk.",
-    "advice": "Keep time outside shorter or choose an easier effort."
+    "feel": "Warm and windy.",
+    "advice": "Keep an easy pace in the wind. Keep time outside shorter."
   },
   "warm|windy|very_high": {
-    "feel": "Warm and windy, with very high air-quality risk.",
-    "advice": "Keep time outside shorter and choose an easier effort."
+    "feel": "Warm and windy.",
+    "advice": "Keep an easy pace in the wind. Keep time outside shorter."
   },
   "hot|windy|low": {
-    "feel": "Hot and windy, with low air-quality risk.",
+    "feel": "Hot and windy.",
     "advice": "Take it slower even if the wind is up."
   },
   "hot|windy|moderate": {
-    "feel": "Hot and windy, with moderate air-quality risk.",
-    "advice": "Take it slower even if the wind is up, and take the air into account."
+    "feel": "Hot and windy.",
+    "advice": "Take it slower even if the wind is up. Check the air number before a long outing."
   },
   "hot|windy|high": {
-    "feel": "Hot and windy, with high air-quality risk.",
-    "advice": "Keep time outside shorter or choose an easier effort."
+    "feel": "Hot and windy.",
+    "advice": "Take it slower even if the wind is up. Keep time outside shorter, or choose an easier effort."
   },
   "hot|windy|very_high": {
-    "feel": "Hot and windy, with very high air-quality risk.",
-    "advice": "Keep time outside shorter and choose an easier effort."
+    "feel": "Hot and windy.",
+    "advice": "Take it slower even if the wind is up. Keep time outside shorter, and choose an easier effort."
   },
   "very_hot|windy|low": {
-    "feel": "Very hot and windy, with low air-quality risk — the heat puts a heavy strain on the body.",
+    "feel": "Very hot and windy — the heat puts a heavy strain on the body.",
     "advice": "Keep outdoor effort light, because the wind does not remove the heat strain."
   },
   "very_hot|windy|moderate": {
-    "feel": "Very hot and windy, with moderate air-quality risk — the heat puts a heavy strain on the body.",
-    "advice": "Keep outdoor effort light, because the wind does not remove the heat strain, and take the air into account."
+    "feel": "Very hot and windy — the heat puts a heavy strain on the body.",
+    "advice": "Keep outdoor effort light, because the wind does not remove the heat strain. Check the air number before a long outing."
   },
   "very_hot|windy|high": {
-    "feel": "Very hot and windy, with high air-quality risk — the heat puts a heavy strain on the body.",
-    "advice": "Keep time outside shorter or choose an easier effort."
+    "feel": "Very hot and windy — the heat puts a heavy strain on the body.",
+    "advice": "Keep outdoor effort light, because the wind does not remove the heat strain. Keep time outside shorter."
   },
   "very_hot|windy|very_high": {
-    "feel": "Very hot and windy, with very high air-quality risk — the heat puts a heavy strain on the body.",
-    "advice": "Keep time outside shorter and choose an easier effort."
+    "feel": "Very hot and windy — the heat puts a heavy strain on the body.",
+    "advice": "Keep outdoor effort light, because the wind does not remove the heat strain. Keep time outside shorter."
   },
   "freezing|foggy|low": {
-    "feel": "Freezing and foggy, with low air-quality risk — the cold puts a hard strain on the body.",
+    "feel": "Freezing and foggy — the cold puts a hard strain on the body.",
     "advice": "Dress for deep cold and leave extra time to see ahead."
   },
   "freezing|foggy|moderate": {
-    "feel": "Freezing and foggy, with moderate air-quality risk — the cold puts a hard strain on the body.",
-    "advice": "Dress for deep cold and leave extra time to see ahead, and take the air into account."
+    "feel": "Freezing and foggy — the cold puts a hard strain on the body.",
+    "advice": "Dress for deep cold and leave extra time to see ahead. Check the air number before a long outing."
   },
   "freezing|foggy|high": {
-    "feel": "Freezing and foggy, with high air-quality risk — the cold puts a hard strain on the body.",
-    "advice": "Keep time outside shorter or choose an easier effort."
+    "feel": "Freezing and foggy — the cold puts a hard strain on the body.",
+    "advice": "Dress for deep cold and leave extra time to see ahead. Keep time outside shorter, or choose an easier effort."
   },
   "freezing|foggy|very_high": {
-    "feel": "Freezing and foggy, with very high air-quality risk — the cold puts a hard strain on the body.",
-    "advice": "Keep time outside shorter and choose an easier effort."
+    "feel": "Freezing and foggy — the cold puts a hard strain on the body.",
+    "advice": "Dress for deep cold and leave extra time to see ahead. Keep time outside shorter, and choose an easier effort."
   },
   "cold|foggy|low": {
-    "feel": "Cold and foggy, with low air-quality risk.",
+    "feel": "Cold and foggy.",
     "advice": "Wear warm layers and leave extra time to see ahead."
   },
   "cold|foggy|moderate": {
-    "feel": "Cold and foggy, with moderate air-quality risk.",
-    "advice": "Wear warm layers and leave extra time to see ahead, and take the air into account."
+    "feel": "Cold and foggy.",
+    "advice": "Wear warm layers and leave extra time to see ahead. Check the air number before a long outing."
   },
   "cold|foggy|high": {
-    "feel": "Cold and foggy, with high air-quality risk.",
-    "advice": "Keep time outside shorter or choose an easier effort."
+    "feel": "Cold and foggy.",
+    "advice": "Wear warm layers and leave extra time to see ahead. Keep time outside shorter, or choose an easier effort."
   },
   "cold|foggy|very_high": {
-    "feel": "Cold and foggy, with very high air-quality risk.",
-    "advice": "Keep time outside shorter and choose an easier effort."
+    "feel": "Cold and foggy.",
+    "advice": "Wear warm layers and leave extra time to see ahead. Keep time outside shorter, and choose an easier effort."
   },
   "cool|foggy|low": {
-    "feel": "Cool and foggy, with low air-quality risk.",
-    "advice": "A light jacket is enough, so leave extra time to see ahead."
+    "feel": "Cool and foggy.",
+    "advice": "A light jacket is enough. Leave extra time to see ahead."
   },
   "cool|foggy|moderate": {
-    "feel": "Cool and foggy, with moderate air-quality risk.",
-    "advice": "A light jacket is enough, so leave extra time to see ahead, and take the air into account."
+    "feel": "Cool and foggy.",
+    "advice": "A light jacket is enough. Leave extra time to see ahead. Check the air number before a long outing."
   },
   "cool|foggy|high": {
-    "feel": "Cool and foggy, with high air-quality risk.",
-    "advice": "Keep time outside shorter or choose an easier effort."
+    "feel": "Cool and foggy.",
+    "advice": "A light jacket is enough. Leave extra time to see ahead. Keep time outside shorter, or choose an easier effort."
   },
   "cool|foggy|very_high": {
-    "feel": "Cool and foggy, with very high air-quality risk.",
-    "advice": "Keep time outside shorter and choose an easier effort."
+    "feel": "Cool and foggy.",
+    "advice": "A light jacket is enough. Leave extra time to see ahead. Keep time outside shorter, and choose an easier effort."
   },
   "mild|foggy|low": {
-    "feel": "Mild and foggy, with low air-quality risk.",
+    "feel": "Mild and foggy.",
     "advice": "Leave extra time to see ahead."
   },
   "mild|foggy|moderate": {
-    "feel": "Mild and foggy, with moderate air-quality risk.",
-    "advice": "Leave extra time to see ahead, and take the air into account."
+    "feel": "Mild and foggy.",
+    "advice": "Leave extra time to see ahead. Check the air number before a long outing."
   },
   "mild|foggy|high": {
-    "feel": "Mild and foggy, with high air-quality risk.",
-    "advice": "Keep time outside shorter or choose an easier effort."
+    "feel": "Mild and foggy.",
+    "advice": "Leave extra time to see ahead. Keep time outside shorter, or choose an easier effort."
   },
   "mild|foggy|very_high": {
-    "feel": "Mild and foggy, with very high air-quality risk.",
-    "advice": "Keep time outside shorter and choose an easier effort."
+    "feel": "Mild and foggy.",
+    "advice": "Leave extra time to see ahead. Keep time outside shorter, and choose an easier effort."
   },
   "warm|foggy|low": {
-    "feel": "Warm and foggy, with low air-quality risk.",
+    "feel": "Warm and foggy.",
     "advice": "Leave extra time to see ahead."
   },
   "warm|foggy|moderate": {
-    "feel": "Warm and foggy, with moderate air-quality risk.",
-    "advice": "Leave extra time to see ahead, and take the air into account."
+    "feel": "Warm and foggy.",
+    "advice": "Leave extra time to see ahead. Check the air number before a long outing."
   },
   "warm|foggy|high": {
-    "feel": "Warm and foggy, with high air-quality risk.",
-    "advice": "Keep time outside shorter or choose an easier effort."
+    "feel": "Warm and foggy.",
+    "advice": "Leave extra time to see ahead. Keep time outside shorter, or choose an easier effort."
   },
   "warm|foggy|very_high": {
-    "feel": "Warm and foggy, with very high air-quality risk.",
-    "advice": "Keep time outside shorter and choose an easier effort."
+    "feel": "Warm and foggy.",
+    "advice": "Leave extra time to see ahead. Keep time outside shorter, and choose an easier effort."
   },
   "hot|foggy|low": {
-    "feel": "Hot and foggy, with low air-quality risk.",
+    "feel": "Hot and foggy.",
     "advice": "Take it slower and leave extra time to see ahead."
   },
   "hot|foggy|moderate": {
-    "feel": "Hot and foggy, with moderate air-quality risk.",
-    "advice": "Take it slower and leave extra time to see ahead, and take the air into account."
+    "feel": "Hot and foggy.",
+    "advice": "Take it slower and leave extra time to see ahead. Check the air number before a long outing."
   },
   "hot|foggy|high": {
-    "feel": "Hot and foggy, with high air-quality risk.",
-    "advice": "Keep time outside shorter or choose an easier effort."
+    "feel": "Hot and foggy.",
+    "advice": "Take it slower and leave extra time to see ahead. Keep time outside shorter, or choose an easier effort."
   },
   "hot|foggy|very_high": {
-    "feel": "Hot and foggy, with very high air-quality risk.",
-    "advice": "Keep time outside shorter and choose an easier effort."
+    "feel": "Hot and foggy.",
+    "advice": "Take it slower and leave extra time to see ahead. Keep time outside shorter, and choose an easier effort."
   },
   "very_hot|foggy|low": {
-    "feel": "Very hot and foggy, with low air-quality risk — the heat puts a heavy strain on the body.",
+    "feel": "Very hot and foggy — the heat puts a heavy strain on the body.",
     "advice": "Keep outdoor effort light and leave extra time to see ahead."
   },
   "very_hot|foggy|moderate": {
-    "feel": "Very hot and foggy, with moderate air-quality risk — the heat puts a heavy strain on the body.",
-    "advice": "Keep outdoor effort light and leave extra time to see ahead, and take the air into account."
+    "feel": "Very hot and foggy — the heat puts a heavy strain on the body.",
+    "advice": "Keep outdoor effort light and leave extra time to see ahead. Check the air number before a long outing."
   },
   "very_hot|foggy|high": {
-    "feel": "Very hot and foggy, with high air-quality risk — the heat puts a heavy strain on the body.",
-    "advice": "Keep time outside shorter or choose an easier effort."
+    "feel": "Very hot and foggy — the heat puts a heavy strain on the body.",
+    "advice": "Keep outdoor effort light and leave extra time to see ahead. Keep time outside shorter."
   },
   "very_hot|foggy|very_high": {
-    "feel": "Very hot and foggy, with very high air-quality risk — the heat puts a heavy strain on the body.",
-    "advice": "Keep time outside shorter and choose an easier effort."
+    "feel": "Very hot and foggy — the heat puts a heavy strain on the body.",
+    "advice": "Keep outdoor effort light and leave extra time to see ahead. Keep time outside shorter."
   },
   "mild|humid|low": {
-    "feel": "Mild and humid, with low air-quality risk.",
+    "feel": "Mild and humid.",
     "advice": "Light clothes help in this humid air."
   },
   "mild|humid|moderate": {
-    "feel": "Mild and humid, with moderate air-quality risk.",
-    "advice": "Light clothes help in this humid air, and take the air into account."
+    "feel": "Mild and humid.",
+    "advice": "Light clothes help in this humid air. Check the air number before a long outing."
   },
   "mild|humid|high": {
-    "feel": "Mild and humid, with high air-quality risk.",
-    "advice": "Keep time outside shorter or choose an easier effort."
+    "feel": "Mild and humid.",
+    "advice": "Light clothes help in this humid air. Keep time outside shorter, or choose an easier effort."
   },
   "mild|humid|very_high": {
-    "feel": "Mild and humid, with very high air-quality risk.",
-    "advice": "Keep time outside shorter and choose an easier effort."
+    "feel": "Mild and humid.",
+    "advice": "Light clothes help in this humid air. Keep time outside shorter, and choose an easier effort."
   },
   "warm|humid|low": {
-    "feel": "Warm and humid, with low air-quality risk.",
+    "feel": "Warm and humid.",
     "advice": "Light clothes should be enough in this humid air."
   },
   "warm|humid|moderate": {
-    "feel": "Warm and humid, with moderate air-quality risk.",
-    "advice": "Light clothes should be enough in this humid air, and take the air into account."
+    "feel": "Warm and humid.",
+    "advice": "Light clothes should be enough in this humid air. Check the air number before a long outing."
   },
   "warm|humid|high": {
-    "feel": "Warm and humid, with high air-quality risk.",
-    "advice": "Keep time outside shorter or choose an easier effort."
+    "feel": "Warm and humid.",
+    "advice": "Light clothes should be enough in this humid air. Keep time outside shorter, or choose an easier effort."
   },
   "warm|humid|very_high": {
-    "feel": "Warm and humid, with very high air-quality risk.",
-    "advice": "Keep time outside shorter and choose an easier effort."
+    "feel": "Warm and humid.",
+    "advice": "Light clothes should be enough in this humid air. Keep time outside shorter, and choose an easier effort."
   },
   "hot|humid|low": {
-    "feel": "Hot and humid, with low air-quality risk.",
+    "feel": "Hot and humid.",
     "advice": "Take it slower, because humid heat feels heavier."
   },
   "hot|humid|moderate": {
-    "feel": "Hot and humid, with moderate air-quality risk.",
-    "advice": "Take it slower, because humid heat feels heavier, and take the air into account."
+    "feel": "Hot and humid.",
+    "advice": "Take it slower, because humid heat feels heavier. Check the air number before a long outing."
   },
   "hot|humid|high": {
-    "feel": "Hot and humid, with high air-quality risk.",
-    "advice": "Keep time outside shorter or choose an easier effort."
+    "feel": "Hot and humid.",
+    "advice": "Take it slower, because humid heat feels heavier. Keep time outside shorter, or choose an easier effort."
   },
   "hot|humid|very_high": {
-    "feel": "Hot and humid, with very high air-quality risk.",
-    "advice": "Keep time outside shorter and choose an easier effort."
+    "feel": "Hot and humid.",
+    "advice": "Take it slower, because humid heat feels heavier. Keep time outside shorter, and choose an easier effort."
   },
   "very_hot|humid|low": {
-    "feel": "Very hot and humid, with low air-quality risk — the heat puts a heavy strain on the body.",
+    "feel": "Very hot and humid — the heat puts a heavy strain on the body.",
     "advice": "Keep outdoor effort light and rest often in this humid heat."
   },
   "very_hot|humid|moderate": {
-    "feel": "Very hot and humid, with moderate air-quality risk — the heat puts a heavy strain on the body.",
-    "advice": "Keep outdoor effort light and rest often in this humid heat, and take the air into account."
+    "feel": "Very hot and humid — the heat puts a heavy strain on the body.",
+    "advice": "Keep outdoor effort light and rest often in this humid heat. Check the air number before a long outing."
   },
   "very_hot|humid|high": {
-    "feel": "Very hot and humid, with high air-quality risk — the heat puts a heavy strain on the body.",
-    "advice": "Keep time outside shorter or choose an easier effort."
+    "feel": "Very hot and humid — the heat puts a heavy strain on the body.",
+    "advice": "Keep outdoor effort light and rest often in this humid heat. Keep time outside shorter."
   },
   "very_hot|humid|very_high": {
-    "feel": "Very hot and humid, with very high air-quality risk — the heat puts a heavy strain on the body.",
-    "advice": "Keep time outside shorter and choose an easier effort."
+    "feel": "Very hot and humid — the heat puts a heavy strain on the body.",
+    "advice": "Keep outdoor effort light and rest often in this humid heat. Keep time outside shorter."
   }
 }

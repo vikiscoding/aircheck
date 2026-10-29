@@ -13,18 +13,9 @@
   var NO_TEMPERATURE = "The weather service returned no temperature. Nothing here was estimated.";
   var AIR_FAILED = "Air quality did not load. The sentence does not use an air-quality number.";
   var PLACE_FAILED = "The place service did not respond. Nothing here was estimated.";
-  var TABLE_FAILED = "The sentence table did not load. The numbers below are the reading, and there is no table sentence.";
+  var TABLE_FAILED = "No sentence loaded. The numbers below are the reading.";
   var ASKING_LOCATION = "Asking for your location…";
-  var READY = "Reading ready.";
   var CITATION = "Weather and air-quality data from Open-Meteo (CAMS global air quality). Not an official government source.";
-
-  var MATCH_NOTES = {
-    exact: "Table match: this temperature, sky, and air combination.",
-    weather_dropped: "Table match: this temperature and air, for any sky.",
-    aqi_dropped: "Table match: this temperature, for any sky and any air.",
-    generic: "Table match: the general sentence.",
-    fallback: "Table match: none. This is the written fallback."
-  };
 
   var AQI_CLASSES = {
     low: "aqi-low",
@@ -65,6 +56,18 @@
       if (statusNode) statusNode.textContent = text;
     }
 
+    function clearChoices() {
+      clearChildren(choices);
+      var label = document.getElementById("choices-label");
+      if (label) label.hidden = true;
+    }
+
+    function showChoicesLabel() {
+      var label = document.getElementById("choices-label");
+      if (!label || !choices) return;
+      label.hidden = choices.children.length === 0;
+    }
+
     function setBusy(isBusy) {
       requestBusy = isBusy;
       if (submitButton) submitButton.disabled = isBusy;
@@ -98,7 +101,7 @@
       setBusy(true);
       setStatus(CHECKING);
       clearChildren(output);
-      clearChildren(choices);
+      clearChoices();
 
       var url = "https://geocoding-api.open-meteo.com/v1/search?name=" +
         encodeURIComponent(query) + "&count=5&language=en&format=json";
@@ -119,7 +122,7 @@
         if (data && data.error === true && !Array.isArray(data.results)) {
           setStatus(PLACE_FAILED);
           clearChildren(output);
-          clearChildren(choices);
+          clearChoices();
           return null;
         }
         var results = data && Array.isArray(data.results) ? data.results : null;
@@ -127,7 +130,7 @@
         if (!results || !place) {
           setStatus(NOT_FOUND);
           clearChildren(output);
-          clearChildren(choices);
+          clearChoices();
           return null;
         }
         fillChoices(results.slice(1, 5));
@@ -138,7 +141,7 @@
         if (serial !== activeRequest) return;
         setStatus(PLACE_FAILED);
         clearChildren(output);
-        clearChildren(choices);
+        clearChoices();
       }).finally(function () {
         if (serial === activeRequest) setBusy(false);
       });
@@ -156,7 +159,7 @@
       setBusy(true);
       setStatus(ASKING_LOCATION);
       clearChildren(output);
-      clearChildren(choices);
+      clearChoices();
 
       new Promise(function (resolve, reject) {
         navigator.geolocation.getCurrentPosition(resolve, reject, {
@@ -189,7 +192,7 @@
     }
 
     function fillChoices(results) {
-      clearChildren(choices);
+      clearChoices();
       if (!choices || !results) return;
       results.forEach(function (result) {
         var place = placeFromResult(result);
@@ -219,6 +222,7 @@
         item.appendChild(button);
         choices.appendChild(item);
       });
+      showChoicesLabel();
     }
 
     function renderReading(serial, place) {
@@ -290,7 +294,8 @@
         });
 
         if (!table) setStatus(TABLE_FAILED);
-        else setStatus(air.ok ? READY : AIR_FAILED);
+        else if (!air.ok) setStatus(AIR_FAILED);
+        else setStatus("");
       }).catch(function () {
         if (serial !== activeRequest) return;
         console.error("weather");
@@ -318,8 +323,13 @@
     if (typeof result.name !== "string" || !result.name) return null;
 
     var parts = [result.name];
-    if (typeof result.admin1 === "string" && result.admin1) parts.push(result.admin1);
-    if (typeof result.country_code === "string" && result.country_code) parts.push(result.country_code);
+    if (typeof result.admin1 === "string" && result.admin1 && result.admin1 !== result.name) {
+      parts.push(result.admin1);
+    }
+    var country = "";
+    if (typeof result.country === "string" && result.country) country = result.country;
+    else if (typeof result.country_code === "string" && result.country_code) country = result.country_code;
+    if (country && country !== result.name && country !== result.admin1) parts.push(country);
 
     var bankKey = null;
     if (typeof result.country_code === "string" && result.country_code) {
@@ -404,18 +414,8 @@
       output.appendChild(el("p", "feel-advice", reading.lookedUp.advice));
     }
 
-    var matchNote = MATCH_NOTES[reading.lookedUp.match];
-    if (matchNote && reading.lookedUp.feel) {
-      output.appendChild(el("p", "match-note", matchNote));
-    }
-
     if (reading.bankText) {
-      var note = el("p", "bank-note", "");
-      var prefix = document.createElement("strong");
-      prefix.textContent = "Saved note. ";
-      note.appendChild(prefix);
-      note.appendChild(document.createTextNode(reading.bankText));
-      output.appendChild(note);
+      output.appendChild(el("p", "bank-note", reading.bankText));
     }
 
     var facts = el("dl", "facts", "");
@@ -430,14 +430,23 @@
     if (aqiNumber !== null) {
       addFact(facts, "US AQI", formatAqi(aqiNumber), AQI_CLASSES[reading.lookedUp.aqiBand] || "");
     }
-    if (reading.airCurrent) {
-      addFact(facts, "PM2.5", formatPollutant(finiteOrNull(reading.airCurrent.pm2_5)));
-      addFact(facts, "PM10", formatPollutant(finiteOrNull(reading.airCurrent.pm10)));
-      addFact(facts, "Nitrogen dioxide", formatPollutant(finiteOrNull(reading.airCurrent.nitrogen_dioxide)));
-      addFact(facts, "Ozone", formatPollutant(finiteOrNull(reading.airCurrent.ozone)));
-    }
-    addFact(facts, "Observed", formatObserved(current.time, reading.weatherData));
+    addFact(facts, "Weather time", formatObserved(current.time, reading.weatherData));
     output.appendChild(facts);
+
+    if (reading.airCurrent) {
+      var pollutantList = el("dl", "facts", "");
+      addFact(pollutantList, "PM2.5", formatPollutant(finiteOrNull(reading.airCurrent.pm2_5)));
+      addFact(pollutantList, "PM10", formatPollutant(finiteOrNull(reading.airCurrent.pm10)));
+      addFact(pollutantList, "Nitrogen dioxide", formatPollutant(finiteOrNull(reading.airCurrent.nitrogen_dioxide)));
+      addFact(pollutantList, "Ozone", formatPollutant(finiteOrNull(reading.airCurrent.ozone)));
+      if (pollutantList.childNodes.length) {
+        var details = el("details", "pollutants", "");
+        details.appendChild(el("summary", "", "More air readings"));
+        details.appendChild(pollutantList);
+        output.appendChild(details);
+      }
+    }
+
     output.appendChild(el("p", "citation", CITATION));
   }
 

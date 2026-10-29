@@ -9,8 +9,8 @@
   "use strict";
 
   var WRITTEN_FALLBACK = {
-    feel: "There is no written sentence for this reading yet.",
-    advice: "Use the numbers below, and check a local source if you need a health decision."
+    feel: "There isn't a sentence for this reading.",
+    advice: "Use the numbers if you are deciding whether to go out. For a health decision, check a local source."
   };
 
   var WEATHER_LABELS = {
@@ -45,9 +45,9 @@
   };
 
   var STORMY_CODES = [95, 96, 99];
-  var HEAVY_CODES = [55, 57, 63, 65, 67, 73, 75, 81, 82, 86];
+  var HEAVY_CODES = [55, 57, 65, 67, 75, 82, 86];
   var FOG_CODES = [45, 48];
-  var LIGHT_CODES = [51, 53, 56, 61, 66, 80, 71, 77, 85];
+  var LIGHT_CODES = [51, 53, 56, 61, 63, 66, 71, 73, 77, 80, 81, 85];
   var HUMID_CODES = [0, 1, 2, 3];
   var CLOUDY_CODES = [2, 3];
   var CLEAR_CODES = [0, 1];
@@ -97,7 +97,7 @@
   function weatherBand(reading) {
     // Product constraint: first match wins, in this order:
     // stormy; heavy_rain (heavy precipitation, including heavy snow; not rain-only);
-    // foggy; windy (finite wind >= 40); light_rain (light precipitation, including light freezing rain and light snow);
+    // foggy; windy (finite wind >= 40); light_rain (precipitation that is not heavy: drizzle, moderate rain, moderate snow, showers, light freezing rain, and light snow);
     // humid; cloudy; clear_dry; otherwise null.
     var code = reading ? reading.weatherCode : undefined;
     var wind = reading ? reading.windSpeedKmh : undefined;

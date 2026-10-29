@@ -29,13 +29,12 @@
   </header>
   <main>
     <h1>How it feels outside right now</h1>
-    <p class="lead">Aircheck checks the weather and the air for a place you choose, then reads one sentence from a fixed table. The sentence is written ahead of time. Nothing on this page asks a model to describe your weather.</p>
+    <p class="lead">Enter a place, or share your location once. You get one sentence for how it feels outside, then the weather and air numbers behind it.</p>
 
     <section>
-      <h2>Check a place</h2>
       <form id="place-form" method="get" action="#reading" autocomplete="off" tabindex="-1">
         <label for="place-input">Place</label>
-        <input id="place-input" name="place" type="text" required maxlength="120" placeholder="City and country, or a postal code" autocomplete="off" enterkeyhint="search">
+        <input id="place-input" name="place" type="text" required maxlength="120" placeholder="City and country" autocomplete="off" enterkeyhint="search">
         <div class="form-actions">
           <button type="submit">Check this place</button>
           <button type="button" id="use-location">Use my location</button>
@@ -43,17 +42,17 @@
       </form>
       <p id="reading-status" role="status"></p>
       <div id="reading" aria-live="polite">
+        <p id="choices-label" class="choices-label" hidden>Other matches</p>
+        <ul id="place-choices" aria-labelledby="choices-label"></ul>
         <div id="reading-output"></div>
-        <ul id="place-choices"></ul>
-        <p class="reading-hint">A live reading shows up here after you check a place.</p>
       </div>
     </section>
 
     <section>
       <h2>An example sentence</h2>
-      <p class="feel-sentence">Mild, clear and dry with low air-quality risk — comfortable for most people.</p>
+      <p class="note example-label">This is a sample from the table for mild weather, a clear dry sky, and low air-quality risk. It is not a live reading.</p>
+      <p class="example-sentence">Mild, clear and dry with low air-quality risk — comfortable for most people.</p>
       <p class="example-advice">Ideal for walking, cycling or outdoor sports.</p>
-      <p class="note">This is a sample from the table for mild weather, a clear dry sky, and low air-quality risk. It is not a live reading.</p>
       <noscript>
         <p class="note">This page explains the idea without JavaScript. To look up a live place, turn JavaScript on. The example above is a sample sentence from the table, not a live reading.</p>
       </noscript>
@@ -61,6 +60,7 @@
 
     <section>
       <h2>How a reading works</h2>
+      <p>The sentence comes from a fixed table written ahead of time. Nothing on this page asks a model to describe the weather.</p>
       <ol>
         <li>You give a place, or you allow a one-time location reading.</li>
         <li>The page asks Open-Meteo for the current weather and air quality.</li>
@@ -76,7 +76,7 @@
 
     <section id="support">
       <h2>Support this free tool</h2>
-      <p>This tool is free to use. <a href="https://buy.stripe.com/9B6dR9cXu2Pm5Pyc174sE01" rel="noopener noreferrer">Support this free tool</a> through Stripe. Advertising and sponsorship slots are present in the markup and switched off.</p>
+      <p>This tool is free to use. <a href="https://buy.stripe.com/9B6dR9cXu2Pm5Pyc174sE01" rel="noopener noreferrer">Support this free tool</a> through Stripe.</p>
       <!-- monetization:inactive affiliate slot -->
       <!-- monetization:inactive sponsorship slot -->
     </section>

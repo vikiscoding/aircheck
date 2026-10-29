@@ -130,6 +130,12 @@ a:visited {
   text-decoration-thickness: 2px;
 }
 
+.site-header .support-link {
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration-thickness: 1px;
+}
+
 h1 {
   margin: 1.35rem 0 0.75rem;
   font-size: clamp(1.75rem, 4vw, 2.3rem);
@@ -154,7 +160,7 @@ p {
 }
 
 section {
-  margin-top: 2.25rem;
+  margin-top: 1.35rem;
 }
 
 .feel-sentence {
@@ -164,6 +170,19 @@ section {
   font-weight: 400;
   line-height: 1.35;
   text-wrap: balance;
+}
+
+.example-sentence {
+  margin: 0.85rem 0 0;
+  font-family: Georgia, "Iowan Old Style", "Palatino Linotype", Palatino, serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.4;
+  text-wrap: balance;
+}
+
+.example-label {
+  margin-top: 0;
 }
 
 .example-advice,
@@ -198,7 +217,7 @@ section {
 }
 
 ol {
-  margin: 0;
+  margin: 0.75rem 0 0;
   padding-left: 1.35rem;
 }
 
@@ -321,27 +340,26 @@ button:disabled {
   overflow-wrap: break-word;
 }
 
-#reading-output:empty + #place-choices:empty + .reading-hint {
-  margin-top: 0;
+#reading:not(:has(#reading-output:not(:empty))):not(:has(#place-choices:not(:empty))) {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
 }
 
-#reading-output:not(:empty) ~ .reading-hint {
-  display: none;
+.choices-label {
+  margin: 0 0 0.45rem;
+  font-weight: 700;
 }
 
-.reading-hint {
-  margin: 0.85rem 0 0;
-  color: var(--secondary);
+#place-choices:not(:empty) + #reading-output:not(:empty) {
+  margin-top: 1rem;
 }
 
 #place-choices {
   list-style: none;
   margin: 0;
   padding: 0;
-}
-
-#place-choices:not(:empty) {
-  margin-top: 0.85rem;
 }
 
 #place-choices li + li,
@@ -410,7 +428,7 @@ button:disabled {
   }
 }
 
-/* Border plus a text label. Color is not the only signal. */
+/* The category name sits in the value. The border is a second cue. */
 .aqi-low,
 .aqi-moderate,
 .aqi-high,
@@ -435,33 +453,24 @@ button:disabled {
   border-left-color: #8c1f1f;
 }
 
-.aqi-low::before,
-.aqi-moderate::before,
-.aqi-high::before,
-.aqi-very_high::before {
-  display: block;
-  margin-bottom: 0.15rem;
+.pollutants {
+  margin-top: 0.85rem;
+}
+
+.pollutants summary {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
   font-weight: 700;
+  cursor: pointer;
 }
 
-.aqi-low::before {
-  content: "Low";
-}
-
-.aqi-moderate::before {
-  content: "Moderate";
-}
-
-.aqi-high::before {
-  content: "High";
-}
-
-.aqi-very_high::before {
-  content: "Very high";
+.pollutants .facts {
+  margin-top: 0;
 }
 
 footer {
-  margin-top: 2.75rem;
+  margin-top: 2rem;
   padding-top: 0.35rem;
   border-top: 1px solid var(--line);
 }

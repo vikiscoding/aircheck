@@ -81,8 +81,8 @@ check(
 var fallbackHit = feel.lookupFeel(fixture, bands);
 check(
   "same bands fall through to the written fallback",
-  fallbackHit.feel === "There is no written sentence for this reading yet." &&
-    fallbackHit.advice === "Use the numbers below, and check a local source if you need a health decision." &&
+  fallbackHit.feel === "There isn't a sentence for this reading." &&
+    fallbackHit.advice === "Use the numbers if you are deciding whether to go out. For a health decision, check a local source." &&
     fallbackHit.feel === feel.WRITTEN_FALLBACK.feel &&
     fallbackHit.advice === feel.WRITTEN_FALLBACK.advice &&
     fallbackHit.match === "fallback" &&
@@ -173,6 +173,11 @@ check("code 95 with wind 80 is stormy", feel.weatherBand({ weatherCode: 95, wind
 check("code 96 is stormy", feel.weatherBand({ weatherCode: 96 }) === "stormy");
 check("code 99 is stormy", feel.weatherBand({ weatherCode: 99 }) === "stormy");
 check("code 65 is heavy_rain", feel.weatherBand({ weatherCode: 65 }) === "heavy_rain");
+check("code 63 moderate rain is light_rain", feel.weatherBand({ weatherCode: 63 }) === "light_rain");
+check("code 73 moderate snow is light_rain", feel.weatherBand({ weatherCode: 73 }) === "light_rain");
+check("code 81 moderate rain showers is light_rain", feel.weatherBand({ weatherCode: 81 }) === "light_rain");
+check("code 55 dense drizzle stays heavy_rain", feel.weatherBand({ weatherCode: 55 }) === "heavy_rain");
+check("code 57 dense freezing drizzle stays heavy_rain", feel.weatherBand({ weatherCode: 57 }) === "heavy_rain");
 check("code 75 snow is heavy_rain", feel.weatherBand({ weatherCode: 75 }) === "heavy_rain");
 check("code 45 is foggy", feel.weatherBand({ weatherCode: 45 }) === "foggy");
 check("code 48 is foggy", feel.weatherBand({ weatherCode: 48 }) === "foggy");
@@ -209,3 +214,68 @@ check("aqiCategory 301 is Hazardous", feel.aqiCategory(301) === "Hazardous");
 check("weatherLabel 0 is Clear sky", feel.weatherLabel(0) === "Clear sky");
 check("weatherLabel 99 is Thunderstorm with heavy hail", feel.weatherLabel(99) === "Thunderstorm with heavy hail");
 check("weatherLabel unknown is null", feel.weatherLabel(999) === null);
+
+check(
+  "production generic sentence names the missing row",
+  table["*|*|*"].feel === "There isn't a sentence for this reading. The numbers below are what came back." &&
+    table["*|*|*"].advice === feel.WRITTEN_FALLBACK.advice
+);
+check(
+  "production mild clear dry moderate is not the ideal line",
+  table["mild|clear_dry|moderate"].feel === "Mild, clear, and dry." &&
+    table["mild|clear_dry|moderate"].advice === "A good time for a walk or easy time outside. Check the air number before a long outing." &&
+    table["mild|clear_dry|moderate"].advice.indexOf("Ideal") === -1
+);
+check(
+  "production mild clear dry high keeps a walk and adds shorter time",
+  table["mild|clear_dry|high"].advice === "A good time for a walk or easy time outside. Keep time outside shorter, or choose an easier effort." &&
+    table["mild|clear_dry|very_high"].advice === "A good time for a walk or easy time outside. Keep time outside shorter, and choose an easier effort."
+);
+check(
+  "production freezing storm high keeps the cold and the shelter",
+  table["freezing|stormy|high"].feel.indexOf("hard strain") !== -1 &&
+    table["freezing|stormy|high"].advice.indexOf("Dress for deep cold") === 0 &&
+    table["freezing|stormy|high"].advice.indexOf("shelter") !== -1
+);
+check(
+  "production heavy rain does not say shorter twice",
+  table["freezing|heavy_rain|high"].advice === table["freezing|heavy_rain|low"].advice &&
+    table["freezing|heavy_rain|very_high"].advice.indexOf("Choose an easier effort.") !== -1 &&
+    table["freezing|heavy_rain|very_high"].advice.indexOf("Keep time outside shorter") === -1
+);
+check(
+  "production cool fog advice is two sentences",
+  table["cool|foggy|low"].advice === "A light jacket is enough. Leave extra time to see ahead."
+);
+check(
+  "production mild fallback is plain temperature speech",
+  table["mild|*|low"].feel === "The temperature is mild." &&
+    table["mild|*|low"].advice === "Ordinary clothes are enough for an easy hour outside." &&
+    table["mild|*|*"].feel === table["mild|*|low"].feel
+);
+check(
+  "production light rain sentence does not say light precipitation",
+  table["mild|light_rain|low"].feel.indexOf("light precipitation") === -1 &&
+    table["mild|light_rain|low"].feel.indexOf("precipitation") !== -1 &&
+    table["mild|heavy_rain|low"].feel.indexOf("heavy precipitation") !== -1
+);
+
+var bannedWord = /\b(safe|cure|guaranteed|official|healthy|everyone)\b/i;
+var skyClaim = /\b(clear|cloudy|fog|foggy|storm|stormy|wind|windy|precipitation|humid|rain|snow)\b/;
+Object.keys(table).forEach(function (key) {
+  var row = table[key];
+  check("no forbidden word in " + key, !bannedWord.test(row.feel) && !bannedWord.test(row.advice));
+  check(
+    "no light precipitation wording in " + key,
+    row.feel.indexOf("light precipitation") === -1 && row.advice.indexOf("light precipitation") === -1
+  );
+  if (key !== "mild|clear_dry|low") {
+    check(
+      "air-quality slot and Ideal stay off " + key,
+      row.feel.indexOf("air-quality risk") === -1 && row.advice.indexOf("Ideal") === -1
+    );
+  }
+  if (key.indexOf("*") !== -1 && key !== "*|*|*") {
+    check("fallback feel makes no sky claim " + key, !skyClaim.test(row.feel));
+  }
+});

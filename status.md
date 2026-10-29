@@ -5,7 +5,7 @@
 **Last updated:** 2026-10-29
 
 ## Current state
-https://aircheck.fyi and https://www.aircheck.fyi serve Cloudflare Pages project `aircheck` on the vikrant.singh1@outlook.com account. The pages.dev hostname is https://aircheck-c4s.pages.dev. GitHub Actions on `main` runs the lookup test and publishes the public files. The repo secrets `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` are set. The support links open the Stripe payment page. Advertising and sponsorship stay off.
+https://aircheck.fyi and https://www.aircheck.fyi serve Cloudflare Pages project `aircheck` on the vikrant.singh1@outlook.com account. The pages.dev hostname is https://aircheck-c4s.pages.dev. GitHub Actions on `main` runs the lookup test and publishes the public files. The repo secrets `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` are set. The support links open the Stripe payment page. Advertising and sponsorship stay off. A reading is the table sentence, the weather and air numbers, the weather time, and the Open-Meteo citation. The site files do not load an analytics script. Cloudflare may still inject Web Analytics until that account setting is switched off. The city bank is empty until a place needs a saved note.
 
 ## Next concrete action
 - Grow the optional city bank with an offline script when a place needs a saved note.
@@ -22,7 +22,7 @@ https://aircheck.fyi and https://www.aircheck.fyi serve Cloudflare Pages project
 ## Metrics / signals
 - Usage: live at https://aircheck.fyi
 - Cost: Low (static + domain)
-- Freshness: Live Open-Meteo data; bank entries dated 2026-10-29.
+- Freshness: Live Open-Meteo data. The city bank has no saved notes.
 
 ## Open issues
 - Bank growth process (offline script preferred).
