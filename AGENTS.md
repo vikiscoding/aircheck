@@ -26,7 +26,7 @@ Read `implementation.md` for the build. Read `status.md` for what is live. Leave
 
 - The feel sentence comes from `feel-table.json` plus the live Open-Meteo numbers. No model runs on the request path.
 - A miss in `bank.json` shows the table sentence only. The bank is optional and is not required for the first deploy.
-- Geolocation is one-time. Discard the coordinates after the fetch. No `localStorage` of location, no cookies, no analytics.
+- Geolocation is one-time. Discard the coordinates after the fetch. No `localStorage` of location, no cookies, and no third-party analytics. A first-party visit counter may add one count for a browser session and must skip known bots. It stores no place, no coordinates, and no skin type. `sessionStorage` key `aircheck-visit` may remember that this tab already counted.
 - Do not invent a feel sentence, an AQI number, or a pollutant value. If the table has no row, use the written fallback. If the fetch fails, say so.
 - The attribution line stays visible: "Weather and air-quality data from Open-Meteo (CAMS global air quality). Not an official government source."
 - The contribution link stays visible. Monetization slots stay inactive: no ad script, no tracker.

@@ -28,7 +28,10 @@
   var bankPromise = null;
   var activeRequest = 0;
 
-  document.addEventListener("DOMContentLoaded", init);
+  document.addEventListener("DOMContentLoaded", function () {
+    countVisit();
+    init();
+  });
 
   function init() {
     if (typeof FeelLookup === "undefined" || !FeelLookup) return;
@@ -634,6 +637,53 @@
   function clearStaticSlot(slot) {
     if (slot === "table") tablePromise = null;
     if (slot === "bank") bankPromise = null;
+  }
+
+  function countVisit() {
+    var node = document.getElementById("visit-count");
+    if (!node) return;
+    if (document.prerendering) {
+      document.addEventListener("prerenderingchange", countVisit, { once: true });
+      return;
+    }
+
+    var countedKey = "aircheck-visit";
+    var already = false;
+    try {
+      already = sessionStorage.getItem(countedKey) === "1";
+    } catch (err) {
+      already = false;
+    }
+    var automated = navigator.webdriver === true;
+    var method = already || automated ? "GET" : "POST";
+
+    fetch("/api/visits", {
+      method: method,
+      headers: { accept: "application/json" }
+    }).then(function (response) {
+      if (!response.ok) throw new Error("visits");
+      return response.json();
+    }).then(function (data) {
+      if (!data || typeof data.count !== "number" || !isFinite(data.count) || data.count < 0) {
+        throw new Error("visits");
+      }
+      node.textContent = formatVisits(data.count);
+      if (method === "POST" && data.counted === true) {
+        try {
+          sessionStorage.setItem(countedKey, "1");
+        } catch (err) {
+          // The count was recorded. This tab may count once more if storage is blocked.
+        }
+      }
+    }).catch(function () {
+      node.textContent = "Visit count did not load.";
+    });
+  }
+
+  function formatVisits(count) {
+    var whole = Math.floor(count);
+    var text = String(whole).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    return text + (whole === 1 ? " visit" : " visits");
   }
 
   function callOrNull(fn) {

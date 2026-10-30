@@ -1,0 +1,7 @@
+name = "aircheck"
+compatibility_date = "2026-10-30"
+pages_build_output_dir = "./site"
+
+[[kv_namespaces]]
+binding = "VISITS"
+id = "65afa681040f477d89891d5369168fa9"

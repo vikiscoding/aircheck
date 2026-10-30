@@ -537,6 +537,12 @@ footer {
   border-top: 1px solid var(--line);
 }
 
+.visit-count {
+  margin-top: 0.85rem;
+  color: var(--secondary);
+  font-size: 0.95rem;
+}
+
 .attribution {
   margin-top: 0.35rem;
 }

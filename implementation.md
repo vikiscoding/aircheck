@@ -87,7 +87,7 @@ Always show alongside the feel sentence:
 ## 7. Privacy & static fallback
 - Privacy statement in static HTML.
 - Page remains informative with JS disabled.
-- No cookies or analytics. Location is never stored. Skin type is stored only after an explicit Remember choice.
+- No cookies and no third-party analytics. A first-party visit counter at `/api/visits` adds one count for a browser session and skips known bots. It stores no place, no coordinates, and no skin type. Location is never stored. Skin type is stored only after an explicit Remember choice.
 
 ## 8. Deployment
 - Cloudflare Pages → aircheck.fyi (apex).

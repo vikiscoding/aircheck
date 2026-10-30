@@ -26,6 +26,9 @@ jobs:
       - name: Check the feel lookup
         run: node tests/feel-lookup.test.js
 
+      - name: Check the visit counter
+        run: node tests/visits.test.mjs
+
   deploy:
     needs: check
     if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
