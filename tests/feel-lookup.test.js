@@ -345,3 +345,111 @@ check(
     );
   });
 });
+
+var heatUpgrade = feel.heatLine(22, 31);
+check(
+  "feels-like heat above the air band",
+  heatUpgrade && heatUpgrade.band === "hot" &&
+    heatUpgrade.sentence === "Feels hotter than the air temperature: hot." &&
+    !bannedWord.test(heatUpgrade.sentence)
+);
+check(
+  "the top feels-like band is named very hot",
+  feel.heatLine(32, 35).sentence === "Feels hotter than the air temperature: very hot."
+);
+check("the same temperature band has no heat line", feel.heatLine(31, 33) === null);
+check("a cooler feels-like band has no heat line", feel.heatLine(22, 16) === null);
+check("a missing feels-like temperature has no heat line", feel.heatLine(22, null) === null);
+check("a missing air temperature has no heat line", feel.heatLine(null, 31) === null);
+check("band edges stay exclusive", feel.heatLine(29.9, 30).band === "hot" && feel.heatLine(35, 35) === null);
+
+var heatBands = { weather: "clear_dry", aqi: "low", temp: "warm", apparent: "hot", uv: "low" };
+check(
+  "heat is the activity line when it is the tightest limit",
+  feel.activityLine(heatBands).key === "heat" &&
+    feel.activityLine(heatBands).sentence === "The heat is the limit on a long effort."
+);
+check(
+  "a storm wins over air and heat",
+  feel.activityLine({ weather: "stormy", aqi: "very_high", temp: "warm", apparent: "hot" }).sentence ===
+    "The storm is the limit on time outside."
+);
+check(
+  "heavy precipitation wins over a very high air band",
+  feel.activityLine({ weather: "heavy_rain", aqi: "very_high", temp: "mild", apparent: "mild" }).sentence ===
+    "The precipitation is the limit on a long outing."
+);
+check(
+  "a very high air band wins over heat",
+  feel.activityLine({ weather: "clear_dry", aqi: "very_high", temp: "warm", apparent: "very_hot" }).key === "air"
+);
+check(
+  "a warm feels-like upgrade is not an activity limit",
+  feel.activityLine({ weather: "clear_dry", aqi: "low", temp: "mild", apparent: "warm" }) === null
+);
+check(
+  "heat that matches the air band is not an activity limit",
+  feel.activityLine({ weather: "clear_dry", aqi: "low", temp: "hot", apparent: "hot" }) === null
+);
+check(
+  "an ordinary mild reading has no activity line",
+  feel.activityLine({ weather: "clear_dry", aqi: "low", temp: "mild", apparent: "mild", uv: "low" }) === null
+);
+["storm", "precipitation", "air", "heat"].forEach(function (key) {
+  var sample = {
+    storm: { weather: "stormy" },
+    precipitation: { weather: "heavy_rain" },
+    air: { aqi: "very_high" },
+    heat: heatBands
+  }[key];
+  var line = feel.activityLine(sample);
+  check("activity " + key + " avoids a forbidden word", line && !bannedWord.test(line.sentence));
+});
+
+var easeBands = { weather: "clear_dry", aqi: "low", temp: "mild", apparent: "mild", uv: "low" };
+check(
+  "mild clear low UV is easier conditions",
+  feel.resultTone(easeBands).tone === "ease" && feel.resultTone(easeBands).label === "Easier conditions"
+);
+check(
+  "cloudy mild low UV is easier conditions",
+  feel.resultTone({ weather: "cloudy", aqi: "low", temp: "mild", apparent: "mild", uv: "low" }).tone === "ease"
+);
+check(
+  "a storm is limiting even on a mild air temperature",
+  feel.resultTone({ weather: "stormy", aqi: "low", temp: "mild", apparent: "mild", uv: "low" }).tone === "limit"
+);
+check(
+  "very high UV blocks the easier tint",
+  feel.resultTone({ weather: "clear_dry", aqi: "low", temp: "mild", apparent: "mild", uv: "very_high" }).label ===
+    "Limiting conditions"
+);
+check(
+  "extreme UV is limiting",
+  feel.resultTone({ weather: "clear_dry", aqi: "low", temp: "mild", apparent: "mild", uv: "extreme" }).tone === "limit"
+);
+check(
+  "very hot air is limiting without a heat upgrade",
+  feel.resultTone({ weather: "clear_dry", aqi: "low", temp: "very_hot", apparent: "very_hot", uv: "low" }).tone === "limit"
+);
+check(
+  "a hot day below very hot keeps the plain card",
+  feel.resultTone({ weather: "clear_dry", aqi: "low", temp: "warm", apparent: "hot", uv: "low" }) === null
+);
+check(
+  "a missing UV index keeps the card plain",
+  feel.resultTone({ weather: "clear_dry", aqi: "low", temp: "mild", apparent: "mild", uv: null }) === null
+);
+check(
+  "a missing air number keeps the card plain",
+  feel.resultTone({ weather: "clear_dry", aqi: null, temp: "mild", apparent: "mild", uv: "low" }) === null
+);
+check(
+  "a feels-like band above mild keeps the card plain",
+  feel.resultTone({ weather: "clear_dry", aqi: "low", temp: "mild", apparent: "warm", uv: "low" }) === null
+);
+check(
+  "tone labels avoid a forbidden word",
+  !bannedWord.test(feel.resultTone(easeBands).label) &&
+    !bannedWord.test(feel.resultTone({ weather: "heavy_rain" }).label)
+);

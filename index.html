@@ -29,7 +29,7 @@
   </header>
   <main>
     <h1>How it feels outside right now</h1>
-    <p class="lead">Enter a place, or share your location once. You get one sentence for how it feels outside, the weather and air numbers behind it, and a burn-time range when the UV index is 3 or higher.</p>
+    <p class="lead">Enter a place, or share your location once. You get one sentence for how it feels outside, the weather and air numbers behind it, a heat line when it feels hotter than the air temperature, one activity line when a written limit is met, and a burn-time range when the UV index is 3 or higher.</p>
 
     <section>
       <form id="place-form" method="get" action="#reading" autocomplete="off" tabindex="-1">
@@ -84,7 +84,7 @@
         <li>You give a place, or you allow a one-time location reading.</li>
         <li>The page asks Open-Meteo for the current weather, UV index, cloud cover, and air quality.</li>
         <li>It turns those readings into bands and looks up a sentence in the table.</li>
-        <li>You see the sentence, the sun line when the UV index is 3 or higher, the numbers, the time, and the source.</li>
+        <li>You see the sentence, the heat line when the feels-like band is hotter, one activity line when a written limit is met, the sun line when the UV index is 3 or higher, the numbers, the time, and the source.</li>
       </ol>
       <p>The sentence describes that reading. It is not a forecast for later in the day. If the table has no row, the numbers stay on the page with a note that no sentence was written for them.</p>
     </section>
@@ -93,6 +93,13 @@
       <h2>UV index and burn time</h2>
       <p>The sun line sits under the feel sentence when the rounded UV index is 3 or higher. A rounded index of 0, 1, or 2 is low, so the page shows the number and no sun sentence. Above that, moderate is 3–5, high is 6–7, very high is 8–10, and extreme is 11 or above.</p>
       <p>The minutes use the UV index that already includes cloud cover. Clear-sky UV is shown as its own number. Choose a Fitzpatrick type to see the range. With no type selected, the line names the band.</p>
+    </section>
+
+    <section>
+      <h2>Heat, activity, and the card</h2>
+      <p>Feels-like temperature uses the same bands as the air temperature. Freezing is under 0°C, cold under 10, cool under 18, mild under 24, warm under 30, hot under 35, and very hot from 35. A heat line appears only when the feels-like band is hotter than the air-temperature band.</p>
+      <p>One activity line names a single limit, in this order: a storm, heavy precipitation, a very high US AQI band, then heat when the feels-like band is hot or very hot and hotter than the air. On any other reading the table advice and the sun line stand on their own.</p>
+      <p>The result card is tinted only at the two ends, and the tint has a written label. Limiting conditions are a storm, heavy precipitation, very hot air or a very hot feels-like temperature, a very high US AQI band, or a very high or extreme UV band. Easier conditions need all of these at once: mild air, a mild feels-like temperature, a clear or cloudy sky, low US AQI, and a low UV index. A missing number keeps the card plain. Every reading between those ends keeps the plain card too. The sentences carry the meaning.</p>
     </section>
 
     <section id="privacy">

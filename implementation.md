@@ -62,9 +62,9 @@ Seed at least 30–40 common combinations.
 3. Fetch in parallel:
    - Weather: `https://api.open-meteo.com/v1/forecast?latitude=...&longitude=...&current=temperature_2m,relative_humidity_2m,weather_code,wind_speed_10m,apparent_temperature,uv_index,uv_index_clear_sky,cloud_cover&timezone=auto`
    - Air quality: `https://air-quality-api.open-meteo.com/v1/air-quality?latitude=...&longitude=...&current=us_aqi,pm2_5,pm10,nitrogen_dioxide,ozone&timezone=auto`
-4. Compute the three bands. A separate written rule turns the UV index into a sun line when the rounded index is 3 or higher. Burn time uses the cloud-adjusted `uv_index`. A Fitzpatrick type, if the visitor set one, only refines that range. Clear-sky UV is a displayed number and is not used when `uv_index` is missing.
+4. Compute the three bands. A separate written rule turns the UV index into a sun line when the rounded index is 3 or higher. Burn time uses the cloud-adjusted `uv_index`. A Fitzpatrick type, if the visitor set one, only refines that range. Clear-sky UV is a displayed number and is not used when `uv_index` is missing. A heat line uses apparent temperature and the same temperature bands, and it appears only when that band is hotter than the air-temperature band. One activity line names the first matching limit: stormy, heavy precipitation, very high US AQI, then heat when the feels-like band is hot or very hot and hotter than the air. The result card is labeled Limiting conditions or Easier conditions only when that written rule matches. A missing UV or AQI number cannot make the easier tint.
 5. Look up feel-table (with fallback). The table keys stay temperature, weather, and air quality.
-6. Render place name, feel sentence + advice, the sun line when the UV index is 3 or higher, simple facts, timestamp, citation.
+6. Render place name, the card label when the tone rule matches, feel sentence + advice, the heat line, the activity line, the sun line when the UV index is 3 or higher, simple facts, timestamp, citation.
 7. Optionally append bank.json entry if present.
 
 ## 5. Simple facts display

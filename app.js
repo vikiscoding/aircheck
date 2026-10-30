@@ -24,8 +24,10 @@
     very_high: "aqi-very_high"
   };
 
-  var tablePromise = null;
-  var bankPromise = null;
+  var staticPromises = {
+    table: null,
+    bank: null
+  };
   var activeRequest = 0;
 
   document.addEventListener("DOMContentLoaded", function () {
@@ -145,7 +147,7 @@
       var serial = ++activeRequest;
       setBusy(true);
       setStatus(CHECKING);
-      clearChildren(output);
+      clearReading(output);
       clearChoices();
 
       var url = "https://geocoding-api.open-meteo.com/v1/search?name=" +
@@ -166,7 +168,7 @@
         if (serial !== activeRequest) return null;
         if (data && data.error === true && !Array.isArray(data.results)) {
           setStatus(PLACE_FAILED);
-          clearChildren(output);
+          clearReading(output);
           clearChoices();
           return null;
         }
@@ -174,7 +176,7 @@
         var place = results && results.length ? placeFromResult(results[0]) : null;
         if (!results || !place) {
           setStatus(NOT_FOUND);
-          clearChildren(output);
+          clearReading(output);
           clearChoices();
           return null;
         }
@@ -185,7 +187,7 @@
         console.error("geocoding");
         if (serial !== activeRequest) return;
         setStatus(PLACE_FAILED);
-        clearChildren(output);
+        clearReading(output);
         clearChoices();
       }).finally(function () {
         if (serial === activeRequest) setBusy(false);
@@ -203,7 +205,7 @@
       var serial = ++activeRequest;
       setBusy(true);
       setStatus(ASKING_LOCATION);
-      clearChildren(output);
+      clearReading(output);
       clearChoices();
 
       new Promise(function (resolve, reject) {
@@ -282,7 +284,7 @@
       return Promise.resolve().then(function () {
         if (serial !== activeRequest) return null;
         setStatus(CHECKING);
-        clearChildren(output);
+        clearReading(output);
         return Promise.all([
           fetchService(weatherUrl, "weather"),
           fetchService(airUrl, "air-quality"),
@@ -298,12 +300,12 @@
 
         if (!weather.ok && !air.ok) {
           setStatus(BOTH_FAILED);
-          clearChildren(output);
+          clearReading(output);
           return;
         }
         if (!weather.ok) {
           setStatus(WEATHER_FAILED);
-          clearChildren(output);
+          clearReading(output);
           return;
         }
 
@@ -313,7 +315,7 @@
         var tempC = finiteOrNull(current && current.temperature_2m);
         if (tempC === null) {
           setStatus(NO_TEMPERATURE);
-          clearChildren(output);
+          clearReading(output);
           return;
         }
 
@@ -347,7 +349,7 @@
         if (serial !== activeRequest) return;
         console.error("weather");
         setStatus(BOTH_FAILED);
-        clearChildren(output);
+        clearReading(output);
       });
     }
   }
@@ -419,7 +421,8 @@
           feel: result.feel,
           advice: typeof result.advice === "string" ? result.advice : "",
           match: result.match,
-          aqiBand: bands.aqi
+          aqiBand: bands.aqi,
+          weather: bands.weather
         };
       }
     } catch (err) {
@@ -430,7 +433,8 @@
       feel: fallbackFeel(),
       advice: fallbackAdvice(),
       match: "fallback",
-      aqiBand: bands.aqi
+      aqiBand: bands.aqi,
+      weather: bands.weather
     };
   }
 
@@ -447,11 +451,58 @@
     return "";
   }
 
+  function setResultTone(tone) {
+    var card = document.getElementById("reading");
+    if (!card) return;
+    card.classList.remove("result-limit", "result-ease");
+    if (tone === "limit" || tone === "ease") card.classList.add("result-" + tone);
+  }
+
+  function clearReading(node) {
+    clearChildren(node);
+    setResultTone(null);
+  }
+
+  function decisionBands(reading, uvIndex, apparentC) {
+    var current = reading.current || {};
+    var weather = callOrNull(function () {
+      return FeelLookup.weatherBand({
+        weatherCode: finiteOrNull(current.weather_code),
+        windSpeedKmh: finiteOrNull(current.wind_speed_10m),
+        humidityPct: finiteOrNull(current.relative_humidity_2m),
+        tempC: reading.tempC
+      });
+    });
+    var aqi = null;
+    if (reading.airCurrent) {
+      aqi = callOrNull(function () {
+        return FeelLookup.aqiBand(finiteOrNull(reading.airCurrent.us_aqi));
+      });
+    }
+    return {
+      weather: weather,
+      aqi: aqi,
+      temp: callOrNull(function () { return FeelLookup.tempBand(reading.tempC); }),
+      apparent: callOrNull(function () { return FeelLookup.tempBand(apparentC); }),
+      uv: uvIndex === null ? null : callOrNull(function () { return FeelLookup.uvBand(uvIndex); })
+    };
+  }
+
   function paintReading(output, reading) {
     if (!output) return;
-    clearChildren(output);
+    clearReading(output);
 
     output.appendChild(el("p", "place-name", reading.label));
+
+    var currentForSun = reading.current || {};
+    var uvIndex = finiteOrNull(currentForSun.uv_index);
+    var apparentC = finiteOrNull(currentForSun.apparent_temperature);
+    var bands = decisionBands(reading, uvIndex, apparentC);
+    var tone = callOrNull(function () { return FeelLookup.resultTone(bands); });
+    setResultTone(tone && tone.tone);
+    if (tone && tone.label) {
+      output.appendChild(el("p", "result-tone", tone.label));
+    }
 
     if (reading.lookedUp.feel) {
       output.appendChild(el("p", "feel-sentence", reading.lookedUp.feel));
@@ -461,8 +512,15 @@
       output.appendChild(el("p", "feel-advice", reading.lookedUp.advice));
     }
 
-    var currentForSun = reading.current || {};
-    var uvIndex = finiteOrNull(currentForSun.uv_index);
+    var heat = callOrNull(function () { return FeelLookup.heatLine(reading.tempC, apparentC); });
+    if (heat && heat.sentence) {
+      output.appendChild(el("p", "heat-line", heat.sentence));
+    }
+    var activity = callOrNull(function () { return FeelLookup.activityLine(bands); });
+    if (activity && activity.sentence) {
+      output.appendChild(el("p", "activity-line", activity.sentence));
+    }
+
     if (uvIndex === null) {
       output.appendChild(el("p", "sun-note", "UV did not load. The sun line was not estimated."));
     } else if (typeof FeelLookup.sunLine === "function") {
@@ -610,8 +668,8 @@
   }
 
   function loadStatic(url, serviceName, slot) {
-    var existing = slot === "table" ? tablePromise : bankPromise;
-    if (existing) return existing;
+    if (!Object.prototype.hasOwnProperty.call(staticPromises, slot)) return Promise.resolve(null);
+    if (staticPromises[slot]) return staticPromises[slot];
 
     var promise = fetch(url).then(function (response) {
       if (!response.ok) return null;
@@ -619,24 +677,18 @@
     }).then(function (data) {
       if (!data || typeof data !== "object") {
         console.error(serviceName);
-        clearStaticSlot(slot);
+        staticPromises[slot] = null;
         return null;
       }
       return data;
     }).catch(function () {
       console.error(serviceName);
-      clearStaticSlot(slot);
+      staticPromises[slot] = null;
       return null;
     });
 
-    if (slot === "table") tablePromise = promise;
-    if (slot === "bank") bankPromise = promise;
+    staticPromises[slot] = promise;
     return promise;
-  }
-
-  function clearStaticSlot(slot) {
-    if (slot === "table") tablePromise = null;
-    if (slot === "bank") bankPromise = null;
   }
 
   function countVisit() {

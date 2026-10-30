@@ -241,6 +241,78 @@
     return "~" + formatMinutes(low) + "\u2013" + formatMinutes(high);
   }
 
+  var TEMP_ORDER = ["freezing", "cold", "cool", "mild", "warm", "hot", "very_hot"];
+
+  var BAND_WORD = {
+    freezing: "freezing",
+    cold: "cold",
+    cool: "cool",
+    mild: "mild",
+    warm: "warm",
+    hot: "hot",
+    very_hot: "very hot"
+  };
+
+  function bandRank(band) {
+    var index = TEMP_ORDER.indexOf(band);
+    return index === -1 ? null : index;
+  }
+
+  // Same edges as tempBand. The line speaks only when feels-like is a hotter band.
+  function heatLine(tempC, apparentC) {
+    var air = tempBand(tempC);
+    var feels = tempBand(apparentC);
+    var airRank = bandRank(air);
+    var feelsRank = bandRank(feels);
+    if (airRank === null || feelsRank === null || feelsRank <= airRank) return null;
+    return {
+      band: feels,
+      sentence: "Feels hotter than the air temperature: " + BAND_WORD[feels] + "."
+    };
+  }
+
+  // One limit. Storm, then heavy precipitation, then very high AQI, then heat.
+  function activityLine(bands) {
+    var weather = bands && bands.weather;
+    var aqi = bands && bands.aqi;
+    if (weather === "stormy") {
+      return { key: "storm", sentence: "The storm is the limit on time outside." };
+    }
+    if (weather === "heavy_rain") {
+      return { key: "precipitation", sentence: "The precipitation is the limit on a long outing." };
+    }
+    if (aqi === "very_high") {
+      return { key: "air", sentence: "The air number is the limit on a long effort." };
+    }
+    var feels = bands && bands.apparent;
+    var airRank = bandRank(bands && bands.temp);
+    var feelsRank = bandRank(feels);
+    if ((feels === "hot" || feels === "very_hot") &&
+        airRank !== null && feelsRank !== null && feelsRank > airRank) {
+      return { key: "heat", sentence: "The heat is the limit on a long effort." };
+    }
+    return null;
+  }
+
+  // Limit wins. Ease needs every easy signal present. Anything between stays unmarked.
+  function resultTone(bands) {
+    var weather = bands && bands.weather;
+    var aqi = bands && bands.aqi;
+    var temp = bands && bands.temp;
+    var apparent = bands && bands.apparent;
+    var uv = bands && bands.uv;
+    var limit = weather === "stormy" || weather === "heavy_rain" ||
+      aqi === "very_high" || temp === "very_hot" || apparent === "very_hot" ||
+      uv === "very_high" || uv === "extreme";
+    if (limit) return { tone: "limit", label: "Limiting conditions" };
+    if (temp === "mild" && apparent === "mild" &&
+        (weather === "clear_dry" || weather === "cloudy") &&
+        aqi === "low" && uv === "low") {
+      return { tone: "ease", label: "Easier conditions" };
+    }
+    return null;
+  }
+
   function sunLine(uvIndex, skinType) {
     var band = uvBand(uvIndex);
     if (!band || band === "low") return null;
@@ -268,6 +340,9 @@
     lookupFeel: lookupFeel,
     uvBand: uvBand,
     burnWindow: burnWindow,
+    heatLine: heatLine,
+    activityLine: activityLine,
+    resultTone: resultTone,
     sunLine: sunLine,
     WRITTEN_FALLBACK: WRITTEN_FALLBACK
   };

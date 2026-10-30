@@ -5,6 +5,12 @@
   --hairline: #ddd6c8;
   --line: #8a8174;
   --card: #fffdf8;
+  --limit-card: #f8e6e2;
+  --limit-line: #8c1f1f;
+  --limit-ink: #6e1818;
+  --ease-card: #e3f0e2;
+  --ease-line: #1f6b34;
+  --ease-ink: #145026;
   --action: #0f6e6b;
   --action-text: #ffffff;
   --link: #0f6e6b;
@@ -20,6 +26,12 @@
     --hairline: #3f3a33;
     --line: #6e675c;
     --card: #221f1a;
+    --limit-card: #3a221f;
+    --limit-line: #e7a8a2;
+    --limit-ink: #f6d2cd;
+    --ease-card: #1a2c20;
+    --ease-line: #8dcea0;
+    --ease-ink: #d5f0dc;
     --action: #0f6e6b;
     --action-text: #ffffff;
     --link: #4aa9a5;
@@ -190,11 +202,19 @@ section ol + p {
   margin-top: 0;
 }
 
-.sun-sentence {
+.sun-sentence,
+.heat-line,
+.activity-line {
   margin-top: 0.85rem;
   font-family: Georgia, "Iowan Old Style", "Palatino Linotype", Palatino, serif;
   font-size: 1.15rem;
   line-height: 1.45;
+}
+
+.result-tone {
+  margin: 0 0 0.65rem;
+  font-size: 0.95rem;
+  font-weight: 700;
 }
 
 .sun-note {
@@ -400,6 +420,24 @@ button:disabled {
   border: 1px solid var(--line);
   border-radius: 2px;
   overflow-wrap: break-word;
+}
+
+#reading.result-limit {
+  background: var(--limit-card);
+  border-color: var(--limit-line);
+}
+
+#reading.result-ease {
+  background: var(--ease-card);
+  border-color: var(--ease-line);
+}
+
+.result-limit .result-tone {
+  color: var(--limit-ink);
+}
+
+.result-ease .result-tone {
+  color: var(--ease-ink);
 }
 
 #reading:not(:has(#reading-output:not(:empty))):not(:has(#place-choices:not(:empty))) {
