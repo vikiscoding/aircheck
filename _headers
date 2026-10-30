@@ -3,7 +3,7 @@
   Referrer-Policy: no-referrer
   X-Frame-Options: DENY
   Permissions-Policy: geolocation=(self), camera=(), microphone=()
-  Content-Security-Policy: default-src 'self'; img-src 'self'; style-src 'self'; connect-src 'self' https://api.open-meteo.com https://air-quality-api.open-meteo.com https://geocoding-api.open-meteo.com; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; script-src 'self' 'sha256-mw0Nnz3YEKadam8NWgglecRyyMKywDd4EVl2bBASPJw='
+  Content-Security-Policy: default-src 'self'; img-src 'self'; style-src 'self'; connect-src 'self' https://api.open-meteo.com https://air-quality-api.open-meteo.com https://geocoding-api.open-meteo.com; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; script-src 'self' 'sha256-kcWMfRBbMFeE9Kis+QBuI2iXh7Q0i+NQ1QbFuxtEJFo='
 
 /feel-table.json
   Cache-Control: public, max-age=3600
