@@ -42,7 +42,14 @@
     var output = document.getElementById("reading-output");
     var choices = document.getElementById("place-choices");
     var submitButton = findSubmitButton(form, locationButton);
+    var skinSelect = document.getElementById("skin-type");
+    var rememberSkin = document.getElementById("remember-skin");
+    var lastPaint = null;
     var requestBusy = false;
+
+    restoreSkin();
+    if (skinSelect) skinSelect.addEventListener("change", onSkinChange);
+    if (rememberSkin) rememberSkin.addEventListener("change", onSkinChange);
 
     form.addEventListener("submit", onSubmit);
     if (submitButton) {
@@ -54,6 +61,41 @@
 
     function setStatus(text) {
       if (statusNode) statusNode.textContent = text;
+    }
+
+    function chosenSkin() {
+      var value = skinSelect && typeof skinSelect.value === "string" ? skinSelect.value : "";
+      return /^(I|II|III|IV|V|VI)$/.test(value) ? value : "";
+    }
+
+    function readStoredSkin() {
+      try {
+        var value = localStorage.getItem("aircheck-skin-type");
+        return /^(I|II|III|IV|V|VI)$/.test(value) ? value : "";
+      } catch (err) {
+        return "";
+      }
+    }
+
+    function restoreSkin() {
+      var stored = readStoredSkin();
+      if (!stored || !skinSelect) return;
+      skinSelect.value = stored;
+      if (rememberSkin) rememberSkin.checked = true;
+    }
+
+    function onSkinChange() {
+      var type = chosenSkin();
+      if (rememberSkin && !type) rememberSkin.checked = false;
+      try {
+        if (rememberSkin && rememberSkin.checked && type) localStorage.setItem("aircheck-skin-type", type);
+        else localStorage.removeItem("aircheck-skin-type");
+      } catch (err) {
+        // Private browsing can refuse storage. The choice still lasts for this page.
+      }
+      if (!lastPaint) return;
+      lastPaint.skinType = type;
+      paintReading(output, lastPaint);
     }
 
     function clearChoices() {
@@ -228,7 +270,7 @@
     function renderReading(serial, place) {
       var weatherUrl = "https://api.open-meteo.com/v1/forecast?latitude=" +
         encodeURIComponent(place.lat) + "&longitude=" + encodeURIComponent(place.lon) +
-        "&current=temperature_2m,relative_humidity_2m,weather_code,wind_speed_10m,apparent_temperature" +
+        "&current=temperature_2m,relative_humidity_2m,weather_code,wind_speed_10m,apparent_temperature,uv_index,uv_index_clear_sky,cloud_cover" +
         "&timezone=auto&temperature_unit=celsius&wind_speed_unit=kmh";
       var airUrl = "https://air-quality-api.open-meteo.com/v1/air-quality?latitude=" +
         encodeURIComponent(place.lat) + "&longitude=" + encodeURIComponent(place.lon) +
@@ -283,15 +325,17 @@
           usAqi: air.ok ? finiteOrNull(airCurrent && airCurrent.us_aqi) : null
         }) : { feel: "", advice: "", match: "", aqiBand: null };
 
-        paintReading(output, {
+        lastPaint = {
           label: place.label,
           lookedUp: lookedUp,
           bankText: bankNote(bank, place.bankKey),
           current: current,
           weatherData: weather.data,
           airCurrent: air.ok ? airCurrent : null,
-          tempC: tempC
-        });
+          tempC: tempC,
+          skinType: chosenSkin()
+        };
+        paintReading(output, lastPaint);
 
         if (!table) setStatus(TABLE_FAILED);
         else if (!air.ok) setStatus(AIR_FAILED);
@@ -414,6 +458,17 @@
       output.appendChild(el("p", "feel-advice", reading.lookedUp.advice));
     }
 
+    var currentForSun = reading.current || {};
+    var uvIndex = finiteOrNull(currentForSun.uv_index);
+    if (uvIndex === null) {
+      output.appendChild(el("p", "sun-note", "UV did not load. The sun line was not estimated."));
+    } else if (typeof FeelLookup.sunLine === "function") {
+      var sun = callOrNull(function () { return FeelLookup.sunLine(uvIndex, reading.skinType); });
+      if (sun && typeof sun.sentence === "string" && sun.sentence) {
+        output.appendChild(el("p", "sun-sentence", sun.sentence));
+      }
+    }
+
     if (reading.bankText) {
       output.appendChild(el("p", "bank-note", reading.bankText));
     }
@@ -425,6 +480,10 @@
     addFact(facts, "Humidity", formatHumidity(finiteOrNull(current.relative_humidity_2m)));
     addFact(facts, "Wind", formatWind(finiteOrNull(current.wind_speed_10m)));
     addFact(facts, "Weather", weatherText(finiteOrNull(current.weather_code)));
+    if (uvIndex !== null) addFact(facts, "UV index", formatQuantity(uvIndex));
+    addFact(facts, "Clear-sky UV", formatQuantity(finiteOrNull(current.uv_index_clear_sky)));
+    var cloudCover = finiteOrNull(current.cloud_cover);
+    if (cloudCover !== null) addFact(facts, "Cloud cover", formatQuantity(cloudCover) + "%");
 
     var aqiNumber = reading.airCurrent ? finiteOrNull(reading.airCurrent.us_aqi) : null;
     if (aqiNumber !== null) {

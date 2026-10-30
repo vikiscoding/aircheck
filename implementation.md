@@ -4,7 +4,7 @@
 **Purpose:** Detailed instructions for an agentic AI or developer to build the site.
 
 ## Core product rules (must not be violated)
-- Pure client-side for all user data. Nothing about the user is stored (no localStorage of location, no cookies, no analytics by default).
+- Pure client-side for all user data. Location is never stored. A Fitzpatrick skin type is saved in localStorage only after an explicit Remember choice, and it is never sent. No cookies, no analytics.
 - Geolocation is one-time, explicit, and discarded after the request.
 - Core “how it feels” result always comes from the deterministic feel-table + live Open-Meteo data. No AI on the request path.
 - Static HTML must remain fully informative with JavaScript disabled.
@@ -60,11 +60,11 @@ Seed at least 30–40 common combinations.
 1. “Use my location” → `navigator.geolocation.getCurrentPosition` (never store coordinates).
 2. Place-name submit → Open-Meteo geocoding API → lat/lon + name + country.
 3. Fetch in parallel:
-   - Weather: `https://api.open-meteo.com/v1/forecast?latitude=...&longitude=...&current=temperature_2m,relative_humidity_2m,weather_code,wind_speed_10m,apparent_temperature&timezone=auto`
+   - Weather: `https://api.open-meteo.com/v1/forecast?latitude=...&longitude=...&current=temperature_2m,relative_humidity_2m,weather_code,wind_speed_10m,apparent_temperature,uv_index,uv_index_clear_sky,cloud_cover&timezone=auto`
    - Air quality: `https://air-quality-api.open-meteo.com/v1/air-quality?latitude=...&longitude=...&current=us_aqi,pm2_5,pm10,nitrogen_dioxide,ozone&timezone=auto`
-4. Compute the three bands.
-5. Look up feel-table (with fallback).
-6. Render place name, feel sentence + advice, simple facts, timestamp, citation.
+4. Compute the three bands. A separate written rule turns the UV index into a sun line when the rounded index is 3 or higher. Burn time uses the cloud-adjusted `uv_index`. A Fitzpatrick type, if the visitor set one, only refines that range. Clear-sky UV is a displayed number and is not used when `uv_index` is missing.
+5. Look up feel-table (with fallback). The table keys stay temperature, weather, and air quality.
+6. Render place name, feel sentence + advice, the sun line when the UV index is 3 or higher, simple facts, timestamp, citation.
 7. Optionally append bank.json entry if present.
 
 ## 5. Simple facts display
@@ -73,6 +73,9 @@ Always show alongside the feel sentence:
 - Humidity
 - Wind
 - Weather condition (from weather_code)
+- UV index, when the reading includes it
+- Clear-sky UV, when the reading includes it
+- Cloud cover, when the reading includes it
 - US AQI + category
 - Key pollutants if available
 - Observation time
@@ -84,7 +87,7 @@ Always show alongside the feel sentence:
 ## 7. Privacy & static fallback
 - Privacy statement in static HTML.
 - Page remains informative with JS disabled.
-- No localStorage, cookies, or analytics.
+- No cookies or analytics. Location is never stored. Skin type is stored only after an explicit Remember choice.
 
 ## 8. Deployment
 - Cloudflare Pages → aircheck.fyi (apex).
@@ -100,5 +103,5 @@ Visible text: “Weather and air-quality data from Open-Meteo (CAMS global air q
 - No AI calls on the request path.
 - Static HTML is informative.
 - Contribution link is prominent.
-- Nothing about the user is stored.
+- Location is never stored. A skin type is stored only after an explicit Remember choice, and it is never sent.
 - Deployed to aircheck.fyi.

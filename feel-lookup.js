@@ -166,6 +166,99 @@
     };
   }
 
+  // WHO UV index bands use the nearest whole index.
+  // 1 UV index = 0.025 W/m², so one minute delivers 1.5 J/m².
+  // MED ranges are the published SED spans (1 SED = 100 J/m²).
+  var SKIN_MED_J = {
+    I: [200, 300],
+    II: [250, 300],
+    III: [300, 500],
+    IV: [400, 700],
+    V: [600, 2000],
+    VI: [600, 2000]
+  };
+
+  var SKIN_NAME = {
+    I: "very fair skin",
+    II: "fair skin",
+    III: "medium skin",
+    IV: "olive skin",
+    V: "brown skin",
+    VI: "dark skin"
+  };
+
+  var SUN_BAND_WORD = {
+    moderate: "Moderate",
+    high: "High",
+    very_high: "Very high",
+    extreme: "Extreme"
+  };
+
+  function uvBand(uvIndex) {
+    if (!isFiniteNumber(uvIndex) || uvIndex < 0) return null;
+    var index = Math.round(uvIndex);
+    if (index <= 2) return "low";
+    if (index <= 5) return "moderate";
+    if (index <= 7) return "high";
+    if (index <= 10) return "very_high";
+    return "extreme";
+  }
+
+  function burnWindow(uvIndex, skinType) {
+    var med = SKIN_MED_J[skinType];
+    if (!med || !isFiniteNumber(uvIndex) || uvIndex <= 0) return null;
+    return {
+      lowMinutes: med[0] / (uvIndex * 1.5),
+      highMinutes: med[1] / (uvIndex * 1.5)
+    };
+  }
+
+  function stepDown(minutes) {
+    if (minutes < 5) return 0;
+    return Math.floor((minutes + 1e-9) / 5) * 5;
+  }
+
+  function stepUp(minutes) {
+    return Math.ceil((minutes - 1e-9) / 5) * 5;
+  }
+
+  function formatMinutes(total) {
+    var minutes = Math.round(total);
+    if (minutes < 60) return minutes + " min";
+    var hours = Math.floor(minutes / 60);
+    var rest = minutes % 60;
+    if (rest === 0) return hours + " hr";
+    return hours + " hr " + rest + " min";
+  }
+
+  function formatBurnRange(lowMinutes, highMinutes) {
+    var low = stepDown(lowMinutes);
+    var high = stepUp(highMinutes);
+    if (high < 5) return "under 5 min";
+    if (low < 5) return "under " + formatMinutes(high);
+    if (low === high) return "about " + formatMinutes(low);
+    if (high < 60) return "~" + low + "\u2013" + high + " min";
+    return "~" + formatMinutes(low) + "\u2013" + formatMinutes(high);
+  }
+
+  function sunLine(uvIndex, skinType) {
+    var band = uvBand(uvIndex);
+    if (!band || band === "low") return null;
+    var word = SUN_BAND_WORD[band];
+    var window = burnWindow(uvIndex, skinType);
+    if (!window) {
+      return {
+        band: band,
+        sentence: word + " UV. Choose a skin type to see a burn-time range. The type stays on this device."
+      };
+    }
+    return {
+      band: band,
+      sentence: word + " burn risk in " + formatBurnRange(window.lowMinutes, window.highMinutes) +
+        " of direct sun for " + SKIN_NAME[skinType] + "."
+    };
+  }
+
   return {
     tempBand: tempBand,
     aqiBand: aqiBand,
@@ -173,6 +266,9 @@
     weatherLabel: weatherLabel,
     weatherBand: weatherBand,
     lookupFeel: lookupFeel,
+    uvBand: uvBand,
+    burnWindow: burnWindow,
+    sunLine: sunLine,
     WRITTEN_FALLBACK: WRITTEN_FALLBACK
   };
 }));

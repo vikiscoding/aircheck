@@ -279,3 +279,69 @@ Object.keys(table).forEach(function (key) {
     check("fallback feel makes no sky claim " + key, !skyClaim.test(row.feel));
   }
 });
+
+var uvEdges = [
+  [0, "low"],
+  [2, "low"],
+  [2.4, "low"],
+  [2.5, "moderate"],
+  [5, "moderate"],
+  [5.4, "moderate"],
+  [5.5, "high"],
+  [7, "high"],
+  [7.4, "high"],
+  [7.5, "very_high"],
+  [10, "very_high"],
+  [10.4, "very_high"],
+  [10.5, "extreme"],
+  [11, "extreme"],
+  [null, null],
+  [-1, null]
+];
+uvEdges.forEach(function (pair) {
+  check("uvBand " + pair[0] + " is " + pair[1], feel.uvBand(pair[0]) === pair[1]);
+});
+check("uvBand non-finite is null", feel.uvBand(NaN) === null && feel.uvBand(Infinity) === null);
+
+var typeOneAtTen = feel.burnWindow(10, "I");
+check(
+  "UV 10 type I uses 200 and 300 J over 1.5 J per minute",
+  Math.abs(typeOneAtTen.lowMinutes - (200 / 15)) < 1e-9 &&
+    Math.abs(typeOneAtTen.highMinutes - 20) < 1e-9
+);
+check("unknown skin type has no burn window", feel.burnWindow(10, "VII") === null);
+check("UV 0 has no burn window", feel.burnWindow(0, "I") === null);
+
+check(
+  "UV 10 type I sun line",
+  feel.sunLine(10, "I").sentence === "Very high burn risk in ~10\u201320 min of direct sun for very fair skin." &&
+    feel.sunLine(10, "I").band === "very_high"
+);
+check(
+  "UV 7 type II sun line",
+  feel.sunLine(7, "II").sentence === "High burn risk in ~20\u201330 min of direct sun for fair skin."
+);
+check(
+  "UV 10 type V keeps the wide published range",
+  feel.sunLine(10, "V").sentence === "Very high burn risk in ~40 min\u20132 hr 15 min of direct sun for brown skin."
+);
+check(
+  "very strong UV stays under 5 minutes",
+  feel.sunLine(50, "I").sentence === "Extreme burn risk in under 5 min of direct sun for very fair skin."
+);
+check("low UV does not add a sun line", feel.sunLine(2, "I") === null && feel.sunLine(0, "II") === null);
+check(
+  "moderate UV without a skin type asks for one",
+  feel.sunLine(3, "").sentence === "Moderate UV. Choose a skin type to see a burn-time range. The type stays on this device." &&
+    feel.sunLine(3, null).sentence === feel.sunLine(3, "").sentence
+);
+
+["I", "II", "III", "IV", "V", "VI"].forEach(function (skin) {
+  [3, 6, 8, 11].forEach(function (uv) {
+    var line = feel.sunLine(uv, skin);
+    check(
+      "sun line " + uv + " " + skin + " avoids a forbidden word",
+      line && !bannedWord.test(line.sentence)
+    );
+  });
+});

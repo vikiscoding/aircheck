@@ -39,6 +39,24 @@
           <button type="submit">Check this place</button>
           <button type="button" id="use-location">Use my location</button>
         </div>
+        <fieldset class="skin-type">
+          <legend>Skin type for the sun line</legend>
+          <label for="skin-type">Fitzpatrick type</label>
+          <select id="skin-type">
+            <option value="">Not set</option>
+            <option value="I">I, very fair</option>
+            <option value="II">II, fair</option>
+            <option value="III">III, medium</option>
+            <option value="IV">IV, olive</option>
+            <option value="V">V, brown</option>
+            <option value="VI">VI, dark</option>
+          </select>
+          <label class="remember-skin" for="remember-skin">
+            <input id="remember-skin" type="checkbox">
+            Remember this skin type on this device
+          </label>
+          <p class="note">The type is used only to refine the burn-time range. It is not sent with the place.</p>
+        </fieldset>
       </form>
       <p id="reading-status" role="status"></p>
       <div id="reading" aria-live="polite">
@@ -53,6 +71,7 @@
       <p class="note example-label">This is a sample from the table for mild weather, a clear dry sky, and low air-quality risk. It is not a live reading.</p>
       <p class="example-sentence">Mild, clear and dry with low air-quality risk — comfortable for most people.</p>
       <p class="example-advice">Ideal for walking, cycling or outdoor sports.</p>
+      <p class="note">A sun line is separate from that sentence. At UV index 10, for very fair skin, the rule says: Very high burn risk in ~10–20 min of direct sun for very fair skin. That line is a sample of the rule, not a live reading.</p>
       <noscript>
         <p class="note">This page explains the idea without JavaScript. To look up a live place, turn JavaScript on. The example above is a sample sentence from the table, not a live reading.</p>
       </noscript>
@@ -60,18 +79,18 @@
 
     <section>
       <h2>How a reading works</h2>
-      <p>The sentence comes from a fixed table written ahead of time. Nothing on this page asks a model to describe the weather.</p>
+      <p>The sentence comes from a fixed table written ahead of time. Nothing on this page asks a model to describe the weather. The UV index and cloud cover come from that same reading. A fixed rule turns the UV index, and a skin type if you set one, into a burn-time range. Minutes equal a published skin-type dose divided by the UV index times 1.5. The range is an estimate for unprotected skin in the sun, not a personal limit.</p>
       <ol>
         <li>You give a place, or you allow a one-time location reading.</li>
-        <li>The page asks Open-Meteo for the current weather and air quality.</li>
-        <li>It turns those readings into three bands and looks up a sentence in the table.</li>
-        <li>You see the sentence, the numbers, the time, and the source.</li>
+        <li>The page asks Open-Meteo for the current weather, UV index, cloud cover, and air quality.</li>
+        <li>It turns those readings into bands and looks up a sentence in the table.</li>
+        <li>You see the sentence, the sun line when the UV index is 3 or higher, the numbers, the time, and the source.</li>
       </ol>
     </section>
 
     <section id="privacy">
       <h2>Privacy</h2>
-      <p>No account. No history. If you use your location, the coordinates are used once for the request and then discarded. This page does not use cookies, local storage, or analytics.</p>
+      <p>No account. No history. If you use your location, the coordinates are used once for the request and then discarded. This page does not use cookies or analytics. A skin type is saved on this device only if you choose Remember.</p>
     </section>
 
     <section id="support">

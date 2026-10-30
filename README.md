@@ -1,8 +1,8 @@
 # aircheck.fyi
 
-A static page that says how it feels outside right now. Enter a place, or share your location once. The page fetches live weather and air quality from Open-Meteo and reads a sentence from `feel-table.json`.
+A static page that says how it feels outside right now. Enter a place, or share your location once. The page fetches live weather, UV index, cloud cover, and air quality from Open-Meteo and reads a sentence from `feel-table.json`. When the UV index is 3 or higher, a second written rule gives a burn-time range.
 
-There is no account, no cookie, and no analytics. Geolocation is used once for that request and then discarded. The feel sentence is not written by a model during the page request.
+There is no account, no cookie, and no analytics. Geolocation is used once for that request and then discarded. A Fitzpatrick skin type is saved on this device only if you choose Remember, and it is never sent with the place. The feel sentence is not written by a model during the page request.
 
 ## Preview
 
