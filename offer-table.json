@@ -1,0 +1,17 @@
+{
+  "cover": {
+    "sentence": "A layer against the precipitation is the usual companion to this reading.",
+    "label": "",
+    "href": ""
+  },
+  "air": {
+    "sentence": "A well-fitted mask or an indoor air filter is the usual companion to this air reading.",
+    "label": "",
+    "href": ""
+  },
+  "sun": {
+    "sentence": "Shade, a hat, or sunscreen is the usual companion to this UV index.",
+    "label": "",
+    "href": ""
+  }
+}

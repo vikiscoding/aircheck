@@ -267,7 +267,7 @@
     if (airRank === null || feelsRank === null || feelsRank <= airRank) return null;
     return {
       band: feels,
-      sentence: "Feels hotter than the air temperature: " + BAND_WORD[feels] + "."
+      sentence: "It feels " + BAND_WORD[feels] + ", a step hotter than the air temperature."
     };
   }
 
@@ -276,20 +276,20 @@
     var weather = bands && bands.weather;
     var aqi = bands && bands.aqi;
     if (weather === "stormy") {
-      return { key: "storm", sentence: "The storm is the limit on time outside." };
+      return { key: "storm", sentence: "The storm is the main limit on time outside." };
     }
     if (weather === "heavy_rain") {
-      return { key: "precipitation", sentence: "The precipitation is the limit on a long outing." };
+      return { key: "precipitation", sentence: "The heavy precipitation is the main limit on a long outing." };
     }
     if (aqi === "very_high") {
-      return { key: "air", sentence: "The air number is the limit on a long effort." };
+      return { key: "air", sentence: "The air is the main limit on a long effort." };
     }
     var feels = bands && bands.apparent;
     var airRank = bandRank(bands && bands.temp);
     var feelsRank = bandRank(feels);
     if ((feels === "hot" || feels === "very_hot") &&
         airRank !== null && feelsRank !== null && feelsRank > airRank) {
-      return { key: "heat", sentence: "The heat is the limit on a long effort." };
+      return { key: "heat", sentence: "The heat is the main limit on a long effort." };
     }
     return null;
   }
@@ -321,7 +321,7 @@
     if (!window) {
       return {
         band: band,
-        sentence: word + " UV. Choose a skin type to see a burn-time range. The type stays on this device."
+        sentence: word + " UV. Open Sun settings and choose a skin type to see a burn-time range."
       };
     }
     return {
@@ -329,6 +329,83 @@
       sentence: word + " burn risk in " + formatBurnRange(window.lowMinutes, window.highMinutes) +
         " of direct sun for " + SKIN_NAME[skinType] + "."
     };
+  }
+
+  // One offer for the whole world. Cover wins, then air, then sun. No row means silence.
+  function offerKey(bands) {
+    var weather = bands && bands.weather;
+    var aqi = bands && bands.aqi;
+    var uv = bands && bands.uv;
+    if (weather === "stormy" || weather === "heavy_rain") return "cover";
+    if (aqi === "high" || aqi === "very_high") return "air";
+    if (uv === "moderate" || uv === "high" || uv === "very_high" || uv === "extreme") return "sun";
+    return null;
+  }
+
+  var MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+  // Open-Meteo gives local wall time as YYYY-MM-DDTHH:MM. Anything else is shown as sent.
+  function readableTime(time, zone) {
+    if (typeof time !== "string" || !time) return null;
+    var label = typeof zone === "string" && zone ? " " + zone : "";
+    var parts = /^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2})/.exec(time);
+    if (!parts) return time + label;
+    var month = Number(parts[2]);
+    if (month < 1 || month > 12) return time + label;
+    return parts[4] + ":" + parts[5] + label + ", " + Number(parts[3]) + " " + MONTHS[month - 1] + " " + parts[1];
+  }
+
+  // A shared link names a geocoded place by its Open-Meteo id. Coordinates never go in a link.
+  function placeLink(name, id) {
+    if (!isFiniteNumber(id) || id <= 0 || Math.floor(id) !== id) return null;
+    var text = typeof name === "string" ? name.trim().slice(0, 120) : "";
+    return "/?" + (text ? "place=" + encodeURIComponent(text) + "&" : "") + "id=" + id;
+  }
+
+  function placeRequest(search) {
+    if (typeof search !== "string" || !search) return null;
+    var params;
+    try {
+      params = new URLSearchParams(search);
+    } catch (err) {
+      return null;
+    }
+    var id = params.get("id");
+    if (id && /^[1-9]\d{0,11}$/.test(id)) return { id: Number(id) };
+    var place = (params.get("place") || "").trim().slice(0, 120);
+    return place ? { query: place } : null;
+  }
+
+  function httpsLink(href) {
+    if (typeof href !== "string") return "";
+    var value = href.trim();
+    if (!/^https:\/\/\S+$/.test(value)) return "";
+    var rest = value.slice("https://".length);
+    if (!rest || rest.charAt(0) === "/") return "";
+    return value;
+  }
+
+  function offerLine(table, bands) {
+    var key = offerKey(bands);
+    if (!key || !table || typeof table !== "object") return null;
+    var row = table[key];
+    if (!row || typeof row !== "object") return null;
+    var sentence = typeof row.sentence === "string" ? row.sentence.trim() : "";
+    var label = typeof row.label === "string" ? row.label.trim() : "";
+    var href = httpsLink(row.href);
+    if (!sentence || !label || !href) return null;
+    return { key: key, sentence: sentence, label: label, href: href };
+  }
+
+  function sponsorLine(record, today) {
+    if (!record || typeof record !== "object") return null;
+    if (typeof today !== "string" || !/^\d{4}-\d{2}-\d{2}$/.test(today)) return null;
+    var name = typeof record.name === "string" ? record.name.trim() : "";
+    var href = httpsLink(record.href);
+    var until = typeof record.until === "string" ? record.until.trim() : "";
+    if (!name || !href || !/^\d{4}-\d{2}-\d{2}$/.test(until)) return null;
+    if (today > until) return null;
+    return { name: name, href: href, until: until };
   }
 
   return {
@@ -344,6 +421,11 @@
     activityLine: activityLine,
     resultTone: resultTone,
     sunLine: sunLine,
+    offerLine: offerLine,
+    sponsorLine: sponsorLine,
+    readableTime: readableTime,
+    placeLink: placeLink,
+    placeRequest: placeRequest,
     WRITTEN_FALLBACK: WRITTEN_FALLBACK
   };
 }));

@@ -223,13 +223,13 @@ check(
 check(
   "production mild clear dry moderate is not the ideal line",
   table["mild|clear_dry|moderate"].feel === "Mild, clear, and dry." &&
-    table["mild|clear_dry|moderate"].advice === "A good time for a walk or easy time outside. Check the air number before a long outing." &&
+    table["mild|clear_dry|moderate"].advice === "A good time for a walk or easy time outside. If you are sensitive to air pollution, go easier on a long outing." &&
     table["mild|clear_dry|moderate"].advice.indexOf("Ideal") === -1
 );
 check(
-  "production mild clear dry high keeps a walk and adds shorter time",
-  table["mild|clear_dry|high"].advice === "A good time for a walk or easy time outside. Keep time outside shorter, or choose an easier effort." &&
-    table["mild|clear_dry|very_high"].advice === "A good time for a walk or easy time outside. Keep time outside shorter, and choose an easier effort."
+  "production mild clear dry high says the weather suits a walk but the air does not",
+  table["mild|clear_dry|high"].advice === "The weather suits a walk, but the air does not. Keep outdoor time shorter or the effort easier." &&
+    table["mild|clear_dry|very_high"].advice === "The weather suits a walk, but the air does not. Keep outdoor time short and the effort easy."
 );
 check(
   "production freezing storm high keeps the cold and the shelter",
@@ -240,8 +240,8 @@ check(
 check(
   "production heavy rain does not say shorter twice",
   table["freezing|heavy_rain|high"].advice === table["freezing|heavy_rain|low"].advice &&
-    table["freezing|heavy_rain|very_high"].advice.indexOf("Choose an easier effort.") !== -1 &&
-    table["freezing|heavy_rain|very_high"].advice.indexOf("Keep time outside shorter") === -1
+    table["freezing|heavy_rain|very_high"].advice.indexOf("Because of the air, choose an easier effort.") !== -1 &&
+    table["freezing|heavy_rain|very_high"].advice.indexOf("keep outdoor time") === -1
 );
 check(
   "production cool fog advice is two sentences",
@@ -332,7 +332,7 @@ check(
 check("low UV does not add a sun line", feel.sunLine(2, "I") === null && feel.sunLine(0, "II") === null);
 check(
   "moderate UV without a skin type asks for one",
-  feel.sunLine(3, "").sentence === "Moderate UV. Choose a skin type to see a burn-time range. The type stays on this device." &&
+  feel.sunLine(3, "").sentence === "Moderate UV. Open Sun settings and choose a skin type to see a burn-time range." &&
     feel.sunLine(3, null).sentence === feel.sunLine(3, "").sentence
 );
 
@@ -346,16 +346,119 @@ check(
   });
 });
 
+var offerFixture = {
+  cover: {
+    sentence: "A layer against the precipitation is the usual companion to this reading.",
+    label: "Cover",
+    href: "https://example.com/cover"
+  },
+  air: {
+    sentence: "A well-fitted mask or an indoor air filter is the usual companion to this air reading.",
+    label: "Air",
+    href: "https://example.com/air"
+  },
+  sun: {
+    sentence: "Shade, a hat, or sunscreen is the usual companion to this UV index.",
+    label: "Sun",
+    href: "https://example.com/sun"
+  }
+};
+check(
+  "storm with high air uses the cover offer",
+  feel.offerLine(offerFixture, { weather: "stormy", aqi: "very_high", uv: "high" }).key === "cover"
+);
+check(
+  "high air with high UV uses the air offer",
+  feel.offerLine(offerFixture, { weather: "clear_dry", aqi: "high", uv: "very_high" }).key === "air"
+);
+check(
+  "moderate air with high UV uses the sun offer",
+  feel.offerLine(offerFixture, { weather: "clear_dry", aqi: "moderate", uv: "high" }).key === "sun"
+);
+check(
+  "storm with high UV uses the cover offer",
+  feel.offerLine(offerFixture, { weather: "stormy", uv: "extreme" }).key === "cover"
+);
+check(
+  "heavy precipitation uses the cover offer",
+  feel.offerLine(offerFixture, { weather: "heavy_rain", uv: "low" }).key === "cover"
+);
+check(
+  "light precipitation with high UV uses the sun offer",
+  feel.offerLine(offerFixture, { weather: "light_rain", uv: "high" }).key === "sun"
+);
+check(
+  "clear low UV has no offer",
+  feel.offerLine(offerFixture, { weather: "clear_dry", uv: "low" }) === null
+);
+check(
+  "an http offer link is refused",
+  feel.offerLine({
+    sun: { sentence: offerFixture.sun.sentence, label: "Sun", href: "http://example.com/sun" }
+  }, { weather: "clear_dry", uv: "high" }) === null
+);
+check(
+  "an offer without a label is silent",
+  feel.offerLine({
+    sun: { sentence: offerFixture.sun.sentence, label: "", href: "https://example.com/sun" }
+  }, { weather: "clear_dry", uv: "high" }) === null
+);
+
+var productionOffers = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "offer-table.json"), "utf8"));
+check(
+  "production cover sentence",
+  productionOffers.cover.sentence === offerFixture.cover.sentence &&
+    !bannedWord.test(productionOffers.cover.sentence)
+);
+check(
+  "production air sentence",
+  productionOffers.air.sentence === offerFixture.air.sentence &&
+    !bannedWord.test(productionOffers.air.sentence) &&
+    productionOffers.air.href === "" && productionOffers.air.label === "" &&
+    feel.offerLine(productionOffers, { weather: "clear_dry", aqi: "very_high" }) === null
+);
+check(
+  "production sun sentence",
+  productionOffers.sun.sentence === offerFixture.sun.sentence &&
+    !bannedWord.test(productionOffers.sun.sentence)
+);
+check(
+  "production offer links stay blank",
+  productionOffers.cover.href === "" && productionOffers.cover.label === "" &&
+    productionOffers.sun.href === "" && productionOffers.sun.label === "" &&
+    feel.offerLine(productionOffers, { weather: "stormy", uv: "extreme" }) === null
+);
+
+var sponsorFixture = { name: "Northwind", href: "https://example.com/sponsor", until: "2026-10-30" };
+check(
+  "sponsor shows on the until date",
+  feel.sponsorLine(sponsorFixture, "2026-10-30").name === "Northwind"
+);
+check(
+  "sponsor hides the day after until",
+  feel.sponsorLine(sponsorFixture, "2026-10-31") === null
+);
+check(
+  "sponsor refuses an http link",
+  feel.sponsorLine({ name: "Northwind", href: "http://example.com", until: "2026-10-30" }, "2026-10-30") === null
+);
+var productionSponsor = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "sponsor.json"), "utf8"));
+check(
+  "production sponsor stays blank",
+  productionSponsor.name === "" && productionSponsor.href === "" && productionSponsor.until === "" &&
+    feel.sponsorLine(productionSponsor, "2026-10-30") === null
+);
+
 var heatUpgrade = feel.heatLine(22, 31);
 check(
   "feels-like heat above the air band",
   heatUpgrade && heatUpgrade.band === "hot" &&
-    heatUpgrade.sentence === "Feels hotter than the air temperature: hot." &&
+    heatUpgrade.sentence === "It feels hot, a step hotter than the air temperature." &&
     !bannedWord.test(heatUpgrade.sentence)
 );
 check(
   "the top feels-like band is named very hot",
-  feel.heatLine(32, 35).sentence === "Feels hotter than the air temperature: very hot."
+  feel.heatLine(32, 35).sentence === "It feels very hot, a step hotter than the air temperature."
 );
 check("the same temperature band has no heat line", feel.heatLine(31, 33) === null);
 check("a cooler feels-like band has no heat line", feel.heatLine(22, 16) === null);
@@ -367,17 +470,17 @@ var heatBands = { weather: "clear_dry", aqi: "low", temp: "warm", apparent: "hot
 check(
   "heat is the activity line when it is the tightest limit",
   feel.activityLine(heatBands).key === "heat" &&
-    feel.activityLine(heatBands).sentence === "The heat is the limit on a long effort."
+    feel.activityLine(heatBands).sentence === "The heat is the main limit on a long effort."
 );
 check(
   "a storm wins over air and heat",
   feel.activityLine({ weather: "stormy", aqi: "very_high", temp: "warm", apparent: "hot" }).sentence ===
-    "The storm is the limit on time outside."
+    "The storm is the main limit on time outside."
 );
 check(
   "heavy precipitation wins over a very high air band",
   feel.activityLine({ weather: "heavy_rain", aqi: "very_high", temp: "mild", apparent: "mild" }).sentence ===
-    "The precipitation is the limit on a long outing."
+    "The heavy precipitation is the main limit on a long outing."
 );
 check(
   "a very high air band wins over heat",
@@ -452,4 +555,66 @@ check(
   "tone labels avoid a forbidden word",
   !bannedWord.test(feel.resultTone(easeBands).label) &&
     !bannedWord.test(feel.resultTone({ weather: "heavy_rain" }).label)
+);
+check(
+  "weather time reads as clock, zone, and date",
+  feel.readableTime("2026-10-31T15:30", "GMT") === "15:30 GMT, 31 Oct 2026"
+);
+check(
+  "weather time without a zone",
+  feel.readableTime("2026-01-05T07:00", null) === "07:00, 5 Jan 2026"
+);
+check(
+  "an unrecognized weather time is shown as sent",
+  feel.readableTime("yesterday", "GMT") === "yesterday GMT" && feel.readableTime("", "GMT") === null
+);
+
+check(
+  "a place link carries the name and the place id",
+  feel.placeLink("Lisbon, Portugal", 2267057) === "/?place=Lisbon%2C%20Portugal&id=2267057"
+);
+check(
+  "a place link refuses a missing or fractional id",
+  feel.placeLink("Lisbon", null) === null && feel.placeLink("Lisbon", 38.7) === null &&
+    feel.placeLink("Lisbon", -1) === null
+);
+check(
+  "a link id wins over the place text",
+  JSON.stringify(feel.placeRequest("?place=Lisbon&id=2267057")) === JSON.stringify({ id: 2267057 })
+);
+check(
+  "a place without an id is a search",
+  JSON.stringify(feel.placeRequest("?place=%20Lisbon%2C%20Portugal%20")) === JSON.stringify({ query: "Lisbon, Portugal" })
+);
+check(
+  "a bad id falls back to the place text, and an empty link is no request",
+  JSON.stringify(feel.placeRequest("?place=Oslo&id=12abc")) === JSON.stringify({ query: "Oslo" }) &&
+    feel.placeRequest("?id=0") === null && feel.placeRequest("") === null && feel.placeRequest("?lat=1&lon=2") === null
+);
+
+var airRows = Object.keys(table).filter(function (key) { return /\|(high|very_high)$/.test(key); });
+check(
+  "every high or very high air row names the air in the sentence",
+  airRows.length > 0 && airRows.every(function (key) {
+    return /\bThe air is unhealthy\b/.test(table[key].feel);
+  })
+);
+check(
+  "a very high air row does not soften to sensitive groups only",
+  airRows.every(function (key) {
+    return /\|very_high$/.test(key) ? table[key].feel.indexOf("sensitive groups") === -1 : true;
+  })
+);
+check(
+  "no advice both praises the outing and cuts it short",
+  Object.keys(table).every(function (key) {
+    var advice = table[key].advice;
+    return !(/good time|ideal|pleasant/i.test(advice) && /keep outdoor time|because of the air/i.test(advice));
+  })
+);
+check(
+  "low and moderate rows keep the air out of the sentence",
+  Object.keys(table).every(function (key) {
+    return /\|(low|moderate)$/.test(key) ? table[key].feel.indexOf("The air is unhealthy") === -1 : true;
+  })
 );

@@ -3,7 +3,7 @@
   Referrer-Policy: no-referrer
   X-Frame-Options: DENY
   Permissions-Policy: geolocation=(self), camera=(), microphone=()
-  Content-Security-Policy: default-src 'self'; img-src 'self'; style-src 'self'; connect-src 'self' https://api.open-meteo.com https://air-quality-api.open-meteo.com https://geocoding-api.open-meteo.com; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; script-src 'self' 'sha256-kcWMfRBbMFeE9Kis+QBuI2iXh7Q0i+NQ1QbFuxtEJFo='
+  Content-Security-Policy: default-src 'self'; img-src 'self'; style-src 'self'; connect-src 'self' https://api.open-meteo.com https://air-quality-api.open-meteo.com https://geocoding-api.open-meteo.com; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; script-src 'self' 'sha256-SvXFeB1mhtxes9Gp7eXH600vecsy4pvCf+Olz2/SAq4='
 
 /feel-table.json
   Cache-Control: public, max-age=3600
@@ -11,5 +11,20 @@
 /bank.json
   Cache-Control: public, max-age=3600
 
+/offer-table.json
+  Cache-Control: public, max-age=3600
+
+/sponsor.json
+  Cache-Control: public, max-age=3600
+
+/
+  Cache-Control: public, max-age=300
+
 /index.html
   Cache-Control: public, max-age=300
+
+/og-image.png
+  Cache-Control: public, max-age=86400
+
+/apple-touch-icon.png
+  Cache-Control: public, max-age=86400

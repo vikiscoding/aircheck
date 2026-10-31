@@ -126,9 +126,31 @@ a:visited {
 }
 
 .site-name {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 44px;
   margin: 0;
+  color: var(--ink);
   font-size: 1.125rem;
   font-weight: 700;
+  text-decoration: none;
+}
+
+.site-name:visited {
+  color: var(--ink);
+}
+
+.site-name:hover {
+  text-decoration: underline;
+}
+
+.site-mark {
+  display: inline-block;
+  width: 0.85rem;
+  height: 0.85rem;
+  border-radius: 50%;
+  background: var(--action);
 }
 
 .support-link {
@@ -169,6 +191,102 @@ p {
 
 .lead {
   font-size: 1.125rem;
+  color: var(--secondary);
+}
+
+.hero {
+  margin-top: 0;
+}
+
+.hero form {
+  margin-top: 1.25rem;
+}
+
+h3 {
+  margin: 1.35rem 0 0.4rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+h2 + h3 {
+  margin-top: 0.5rem;
+}
+
+section + section {
+  margin-top: 2.25rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--hairline);
+}
+
+.sample-card {
+  padding: 1rem 1.1rem;
+  background: var(--card);
+  border: 1px dashed var(--line);
+  border-radius: 6px;
+}
+
+.sample-tag {
+  margin-bottom: 0.5rem;
+  color: var(--secondary);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.example-sun {
+  margin-top: 0.85rem;
+  color: var(--secondary);
+}
+
+.glance {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+  gap: 0.6rem;
+  margin: 1.1rem 0 0;
+}
+
+.tile {
+  padding: 0.65rem 0.8rem;
+  background: var(--page);
+  border: 1px solid var(--hairline);
+  border-radius: 6px;
+}
+
+.tile dt {
+  color: var(--secondary);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.tile dd {
+  margin: 0;
+}
+
+.tile-value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.2;
+  font-variant-numeric: tabular-nums;
+}
+
+.tile-note {
+  color: var(--secondary);
+  font-size: 0.9rem;
+}
+
+.after-reading {
+  margin-top: 0.75rem;
+  color: var(--secondary);
+}
+
+.place-name:focus {
+  outline: none;
+}
+
+#reading[aria-busy="true"] #reading-output {
+  opacity: 0.55;
 }
 
 section {
@@ -217,9 +335,14 @@ section ol + p {
   font-weight: 700;
 }
 
-.sun-note {
+.sun-note,
+.offer-line {
   margin-top: 0.85rem;
   color: var(--secondary);
+}
+
+#sponsor-slot:not(:empty) {
+  margin-top: 0.85rem;
 }
 
 .example-advice,
@@ -234,6 +357,7 @@ section ol + p {
   margin: 0 0 0.65rem;
   font-size: 1.125rem;
   font-weight: 700;
+  line-height: 1.35;
 }
 
 .match-note,
@@ -269,14 +393,30 @@ label {
 }
 
 .skin-type {
-  margin: 1rem 0 0;
+  margin: 0.85rem 0 0;
   padding: 0;
   border: 0;
 }
 
-.skin-type legend {
-  margin-bottom: 0.45rem;
+.skin-type summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.15rem 0.5rem;
+  min-height: 44px;
+  padding: 0.6rem 0;
   font-weight: 700;
+  cursor: pointer;
+}
+
+.summary-note {
+  color: var(--secondary);
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+
+.skin-type[open] summary {
+  margin-bottom: 0.35rem;
 }
 
 select {
@@ -415,10 +555,11 @@ button:disabled {
 
 #reading {
   margin-top: 1rem;
-  padding: 1rem 1.1rem;
+  padding: 1.1rem 1.2rem 1.2rem;
   background: var(--card);
   border: 1px solid var(--line);
-  border-radius: 2px;
+  border-radius: 6px;
+  scroll-margin-top: 1rem;
   overflow-wrap: break-word;
 }
 
@@ -452,8 +593,10 @@ button:disabled {
   font-weight: 700;
 }
 
-#place-choices:not(:empty) + #reading-output:not(:empty) {
-  margin-top: 1rem;
+#reading-output:not(:empty) + .choices-label:not([hidden]) {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--hairline);
 }
 
 #place-choices {

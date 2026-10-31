@@ -26,7 +26,9 @@
 
   var staticPromises = {
     table: null,
-    bank: null
+    bank: null,
+    offer: null,
+    sponsor: null
   };
   var activeRequest = 0;
 
@@ -51,8 +53,12 @@
     var rememberSkin = document.getElementById("remember-skin");
     var lastPaint = null;
     var requestBusy = false;
+    var submitText = submitButton ? submitButton.textContent : "";
 
     restoreSkin();
+    loadStatic("/sponsor.json", "sponsor", "sponsor").then(function (record) {
+      paintSponsor(record);
+    });
     if (skinSelect) skinSelect.addEventListener("change", onSkinChange);
     if (rememberSkin) rememberSkin.addEventListener("change", onSkinChange);
 
@@ -62,6 +68,16 @@
     }
     if (locationButton) {
       locationButton.addEventListener("click", onLocation);
+    }
+
+    var linked = typeof FeelLookup.placeRequest === "function"
+      ? callOrNull(function () { return FeelLookup.placeRequest(window.location.search); })
+      : null;
+    if (linked && linked.id) {
+      runPlaceId(linked.id);
+    } else if (linked && linked.query) {
+      if (input) input.value = linked.query;
+      runSearch(linked.query);
     }
 
     function setStatus(text) {
@@ -117,7 +133,12 @@
 
     function setBusy(isBusy) {
       requestBusy = isBusy;
-      if (submitButton) submitButton.disabled = isBusy;
+      var card = document.getElementById("reading");
+      if (card) card.setAttribute("aria-busy", isBusy ? "true" : "false");
+      if (submitButton) {
+        submitButton.disabled = isBusy;
+        if (submitText) submitButton.textContent = isBusy ? "Checking…" : submitText;
+      }
       if (locationButton) locationButton.disabled = isBusy;
       if (!choices) return;
       var buttons = choices.querySelectorAll("button");
@@ -143,7 +164,10 @@
         setStatus(EMPTY_PLACE);
         return;
       }
+      runSearch(query);
+    }
 
+    function runSearch(query) {
       var serial = ++activeRequest;
       setBusy(true);
       setStatus(CHECKING);
@@ -189,6 +213,34 @@
         setStatus(PLACE_FAILED);
         clearReading(output);
         clearChoices();
+      }).finally(function () {
+        if (serial === activeRequest) setBusy(false);
+      });
+    }
+
+    // A shared link names one geocoded place by id, so the link opens the same place.
+    function runPlaceId(id) {
+      var serial = ++activeRequest;
+      setBusy(true);
+      setStatus(CHECKING);
+      clearReading(output);
+      clearChoices();
+
+      fetch("https://geocoding-api.open-meteo.com/v1/get?id=" + encodeURIComponent(id)).then(function (response) {
+        if (!response.ok) return null;
+        return response.json().catch(function () { return null; });
+      }).then(function (data) {
+        if (serial !== activeRequest) return null;
+        var place = placeFromResult(data);
+        if (!place) {
+          setStatus(NOT_FOUND);
+          return null;
+        }
+        if (input) input.value = place.label;
+        return renderReading(serial, place);
+      }).catch(function () {
+        console.error("geocoding");
+        if (serial === activeRequest) setStatus(PLACE_FAILED);
       }).finally(function () {
         if (serial === activeRequest) setBusy(false);
       });
@@ -248,6 +300,7 @@
         var lon = place.lon;
         var label = place.label;
         var bankKey = place.bankKey;
+        var id = place.id;
         var button = document.createElement("button");
         button.type = "button";
         button.textContent = label;
@@ -260,7 +313,8 @@
             lat: lat,
             lon: lon,
             label: label,
-            bankKey: bankKey
+            bankKey: bankKey,
+            id: id
           }).finally(function () {
             if (serial === activeRequest) setBusy(false);
           });
@@ -289,7 +343,8 @@
           fetchService(weatherUrl, "weather"),
           fetchService(airUrl, "air-quality"),
           loadStatic("/feel-table.json", "feel-table", "table"),
-          loadStatic("/bank.json", "bank", "bank")
+          loadStatic("/bank.json", "bank", "bank"),
+          loadStatic("/offer-table.json", "offer", "offer")
         ]);
       }).then(function (parts) {
         if (!parts || serial !== activeRequest) return;
@@ -297,6 +352,7 @@
         var air = parts[1];
         var table = parts[2];
         var bank = parts[3];
+        var offerTable = parts[4];
 
         if (!weather.ok && !air.ok) {
           setStatus(BOTH_FAILED);
@@ -334,6 +390,10 @@
           label: place.label,
           lookedUp: lookedUp,
           bankText: bankNote(bank, place.bankKey),
+          offer: offerForReading(offerTable, lookedUp.weather, lookedUp.aqiBand, finiteOrNull(current.uv_index)),
+          link: place.id && typeof FeelLookup.placeLink === "function"
+            ? callOrNull(function () { return FeelLookup.placeLink(place.label, place.id); })
+            : null,
           current: current,
           weatherData: weather.data,
           airCurrent: air.ok ? airCurrent : null,
@@ -341,6 +401,7 @@
           skinType: chosenSkin()
         };
         paintReading(output, lastPaint);
+        revealReading(output);
 
         if (!table) setStatus(TABLE_FAILED);
         else if (!air.ok) setStatus(AIR_FAILED);
@@ -389,7 +450,8 @@
       lat: result.latitude,
       lon: result.longitude,
       label: parts.join(", "),
-      bankKey: bankKey
+      bankKey: bankKey,
+      id: isFiniteNumber(result.id) && result.id > 0 && Math.floor(result.id) === result.id ? result.id : null
     };
   }
 
@@ -492,7 +554,9 @@
     if (!output) return;
     clearReading(output);
 
-    output.appendChild(el("p", "place-name", reading.label));
+    var heading = el("h2", "place-name", reading.label);
+    heading.tabIndex = -1;
+    output.appendChild(heading);
 
     var currentForSun = reading.current || {};
     var uvIndex = finiteOrNull(currentForSun.uv_index);
@@ -530,14 +594,36 @@
       }
     }
 
+    if (reading.offer && reading.offer.sentence && reading.offer.href && reading.offer.label) {
+      var offer = el("p", "offer-line", "");
+      offer.appendChild(document.createTextNode(reading.offer.sentence + " "));
+      var offerLink = el("a", "", reading.offer.label);
+      offerLink.href = reading.offer.href;
+      offerLink.rel = "sponsored noopener noreferrer";
+      offer.appendChild(offerLink);
+      offer.appendChild(document.createTextNode(". Affiliate link."));
+      output.appendChild(offer);
+    }
+
     if (reading.bankText) {
       output.appendChild(el("p", "bank-note", reading.bankText));
     }
 
-    var facts = el("dl", "facts", "");
     var current = reading.current || {};
+    var aqiNumber = reading.airCurrent ? finiteOrNull(reading.airCurrent.us_aqi) : null;
+
+    // The three numbers people decide on. Each tile shows only a number that came back.
+    var glance = el("dl", "glance", "");
+    addTile(glance, "Feels like", formatDegrees(apparentC), apparentC === null ? null : "Air " + formatDegrees(reading.tempC));
+    if (aqiNumber !== null) {
+      addTile(glance, "US AQI", formatQuantity(aqiNumber), aqiCategoryText(aqiNumber), AQI_CLASSES[reading.lookedUp.aqiBand] || "");
+    }
+    if (uvIndex !== null) addTile(glance, "UV index", formatQuantity(uvIndex), UV_WORDS[bands.uv] || null);
+    if (glance.childNodes.length) output.appendChild(glance);
+
+    var facts = el("dl", "facts", "");
     addFact(facts, "Temperature", formatTemperature(reading.tempC));
-    addFact(facts, "Feels like", formatTemperature(finiteOrNull(current.apparent_temperature)));
+    addFact(facts, "Feels like", formatTemperature(apparentC));
     addFact(facts, "Humidity", formatHumidity(finiteOrNull(current.relative_humidity_2m)));
     addFact(facts, "Wind", formatWind(finiteOrNull(current.wind_speed_10m)));
     addFact(facts, "Weather", weatherText(finiteOrNull(current.weather_code)));
@@ -546,7 +632,6 @@
     var cloudCover = finiteOrNull(current.cloud_cover);
     if (cloudCover !== null) addFact(facts, "Cloud cover", formatQuantity(cloudCover) + "%");
 
-    var aqiNumber = reading.airCurrent ? finiteOrNull(reading.airCurrent.us_aqi) : null;
     if (aqiNumber !== null) {
       addFact(facts, "US AQI", formatAqi(aqiNumber), AQI_CLASSES[reading.lookedUp.aqiBand] || "");
     }
@@ -568,6 +653,69 @@
     }
 
     output.appendChild(el("p", "citation", CITATION));
+
+    var after = el("p", "after-reading", "");
+    if (reading.link) {
+      var share = el("a", "", "Link to this place");
+      share.href = reading.link;
+      after.appendChild(share);
+    }
+    var support = document.querySelector(".site-header .support-link");
+    if (support && support.href) {
+      if (after.childNodes.length) after.appendChild(document.createTextNode(" · "));
+      after.appendChild(document.createTextNode("Was this useful? "));
+      var supportLink = el("a", "", "Support this free tool");
+      supportLink.href = support.href;
+      supportLink.rel = "noopener noreferrer";
+      after.appendChild(supportLink);
+    }
+    if (after.childNodes.length) output.appendChild(after);
+  }
+
+  // Bring a fresh reading into view and give its heading focus, so a screen reader starts there.
+  function revealReading(output) {
+    var heading = output && output.querySelector(".place-name");
+    var card = document.getElementById("reading");
+    if (!heading || !card) return;
+    try {
+      heading.focus({ preventScroll: true });
+    } catch (err) {
+      heading.focus();
+    }
+    var top = card.getBoundingClientRect().top;
+    if (top < 0 || top > window.innerHeight * 0.6) {
+      var still = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      card.scrollIntoView({ block: "start", behavior: still ? "auto" : "smooth" });
+    }
+  }
+
+  var UV_WORDS = {
+    low: "Low",
+    moderate: "Moderate",
+    high: "High",
+    very_high: "Very high",
+    extreme: "Extreme"
+  };
+
+  function addTile(list, label, value, note, valueClass) {
+    if (value === null || value === undefined || value === "") return;
+    var item = el("div", "tile " + (valueClass || ""), "");
+    item.appendChild(el("dt", "", label));
+    item.appendChild(el("dd", "tile-value", value));
+    if (note) item.appendChild(el("dd", "tile-note", note));
+    list.appendChild(item);
+  }
+
+  function formatDegrees(celsius) {
+    if (celsius === null) return null;
+    var text = formatQuantity(Math.round(celsius));
+    return text === null ? null : text + "°C";
+  }
+
+  function aqiCategoryText(value) {
+    if (typeof FeelLookup.aqiCategory !== "function") return null;
+    var category = callOrNull(function () { return FeelLookup.aqiCategory(value); });
+    return typeof category === "string" && category.trim() ? category : null;
   }
 
   function weatherText(code) {
@@ -597,6 +745,10 @@
       zone = weatherData.timezone_abbreviation;
     } else if (weatherData && typeof weatherData.timezone === "string" && weatherData.timezone) {
       zone = weatherData.timezone;
+    }
+    if (typeof FeelLookup.readableTime === "function") {
+      var readable = callOrNull(function () { return FeelLookup.readableTime(time, zone); });
+      if (typeof readable === "string" && readable) return readable;
     }
     return zone ? time + " " + zone : time;
   }
@@ -637,6 +789,40 @@
     var detail = el("dd", valueClass || "", value);
     list.appendChild(term);
     list.appendChild(detail);
+  }
+
+  function offerForReading(offerTable, weatherBand, aqiBand, uvIndex) {
+    if (!offerTable || typeof FeelLookup.offerLine !== "function") return null;
+    var uv = uvIndex === null || typeof FeelLookup.uvBand !== "function"
+      ? null
+      : callOrNull(function () { return FeelLookup.uvBand(uvIndex); });
+    return callOrNull(function () {
+      return FeelLookup.offerLine(offerTable, { weather: weatherBand, aqi: aqiBand, uv: uv });
+    });
+  }
+
+  function localDate() {
+    var now = new Date();
+    var month = String(now.getMonth() + 1);
+    var day = String(now.getDate());
+    if (month.length < 2) month = "0" + month;
+    if (day.length < 2) day = "0" + day;
+    return now.getFullYear() + "-" + month + "-" + day;
+  }
+
+  function paintSponsor(record) {
+    var slot = document.getElementById("sponsor-slot");
+    if (!slot) return;
+    clearChildren(slot);
+    if (typeof FeelLookup.sponsorLine !== "function") return;
+    var line = callOrNull(function () { return FeelLookup.sponsorLine(record, localDate()); });
+    if (!line) return;
+    slot.appendChild(document.createTextNode("This month's sponsor: "));
+    var link = el("a", "", line.name);
+    link.href = line.href;
+    link.rel = "sponsored noopener noreferrer";
+    slot.appendChild(link);
+    slot.appendChild(document.createTextNode("."));
   }
 
   function bankNote(bank, bankKey) {

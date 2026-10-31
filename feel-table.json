@@ -13,15 +13,15 @@
   },
   "freezing|*|moderate": {
     "feel": "Freezing conditions put a hard strain on the body.",
-    "advice": "Dress for deep cold if you go out. Check the air number before a long outing."
+    "advice": "Dress for deep cold if you go out. If you are sensitive to air pollution, go easier on a long outing."
   },
   "freezing|*|high": {
-    "feel": "Freezing conditions put a hard strain on the body.",
-    "advice": "Dress for deep cold if you go out. Keep time outside shorter, or choose an easier effort."
+    "feel": "Freezing conditions put a hard strain on the body. The air is unhealthy for sensitive groups.",
+    "advice": "Dress for deep cold if you go out. Because of the air, keep outdoor time shorter or the effort easier."
   },
   "freezing|*|very_high": {
-    "feel": "Freezing conditions put a hard strain on the body.",
-    "advice": "Dress for deep cold if you go out. Keep time outside shorter, and choose an easier effort."
+    "feel": "Freezing conditions put a hard strain on the body. The air is unhealthy.",
+    "advice": "Dress for deep cold if you go out. Because of the air, keep outdoor time short and the effort easy."
   },
   "cold|*|*": {
     "feel": "It is cold outside.",
@@ -33,15 +33,15 @@
   },
   "cold|*|moderate": {
     "feel": "It is cold outside.",
-    "advice": "Wear warm layers if you go out. Check the air number before a long outing."
+    "advice": "Wear warm layers if you go out. If you are sensitive to air pollution, go easier on a long outing."
   },
   "cold|*|high": {
-    "feel": "It is cold outside.",
-    "advice": "Wear warm layers if you go out. Keep time outside shorter, or choose an easier effort."
+    "feel": "It is cold outside. The air is unhealthy for sensitive groups.",
+    "advice": "Wear warm layers if you go out. Because of the air, keep outdoor time shorter or the effort easier."
   },
   "cold|*|very_high": {
-    "feel": "It is cold outside.",
-    "advice": "Wear warm layers if you go out. Keep time outside shorter, and choose an easier effort."
+    "feel": "It is cold outside. The air is unhealthy.",
+    "advice": "Wear warm layers if you go out. Because of the air, keep outdoor time short and the effort easy."
   },
   "cool|*|*": {
     "feel": "It is cool outside.",
@@ -53,15 +53,15 @@
   },
   "cool|*|moderate": {
     "feel": "It is cool outside.",
-    "advice": "A light jacket is enough. Check the air number before a long outing."
+    "advice": "A light jacket is enough. If you are sensitive to air pollution, go easier on a long outing."
   },
   "cool|*|high": {
-    "feel": "It is cool outside.",
-    "advice": "A light jacket is enough. Keep time outside shorter, or choose an easier effort."
+    "feel": "It is cool outside. The air is unhealthy for sensitive groups.",
+    "advice": "A light jacket is enough. Because of the air, keep outdoor time shorter or the effort easier."
   },
   "cool|*|very_high": {
-    "feel": "It is cool outside.",
-    "advice": "A light jacket is enough. Keep time outside shorter, and choose an easier effort."
+    "feel": "It is cool outside. The air is unhealthy.",
+    "advice": "A light jacket is enough. Because of the air, keep outdoor time short and the effort easy."
   },
   "mild|*|*": {
     "feel": "The temperature is mild.",
@@ -73,15 +73,15 @@
   },
   "mild|*|moderate": {
     "feel": "The temperature is mild.",
-    "advice": "Ordinary clothes are enough for an easy hour outside. Check the air number before a long outing."
+    "advice": "Ordinary clothes are enough for an easy hour outside. If you are sensitive to air pollution, go easier on a long outing."
   },
   "mild|*|high": {
-    "feel": "The temperature is mild.",
-    "advice": "Ordinary clothes are enough for an easy hour outside. Keep time outside shorter, or choose an easier effort."
+    "feel": "The temperature is mild. The air is unhealthy for sensitive groups.",
+    "advice": "Ordinary clothes are enough for an easy hour outside. Because of the air, keep outdoor time shorter or the effort easier."
   },
   "mild|*|very_high": {
-    "feel": "The temperature is mild.",
-    "advice": "Ordinary clothes are enough for an easy hour outside. Keep time outside shorter, and choose an easier effort."
+    "feel": "The temperature is mild. The air is unhealthy.",
+    "advice": "Ordinary clothes are enough for an easy hour outside. Because of the air, keep outdoor time short and the effort easy."
   },
   "warm|*|*": {
     "feel": "It is warm outside.",
@@ -93,15 +93,15 @@
   },
   "warm|*|moderate": {
     "feel": "It is warm outside.",
-    "advice": "Light clothes should be enough. Check the air number before a long outing."
+    "advice": "Light clothes should be enough. If you are sensitive to air pollution, go easier on a long outing."
   },
   "warm|*|high": {
-    "feel": "It is warm outside.",
-    "advice": "Light clothes should be enough. Keep time outside shorter, or choose an easier effort."
+    "feel": "It is warm outside. The air is unhealthy for sensitive groups.",
+    "advice": "Light clothes should be enough. Because of the air, keep outdoor time shorter or the effort easier."
   },
   "warm|*|very_high": {
-    "feel": "It is warm outside.",
-    "advice": "Light clothes should be enough. Keep time outside shorter, and choose an easier effort."
+    "feel": "It is warm outside. The air is unhealthy.",
+    "advice": "Light clothes should be enough. Because of the air, keep outdoor time short and the effort easy."
   },
   "hot|*|*": {
     "feel": "It is hot outside.",
@@ -113,15 +113,15 @@
   },
   "hot|*|moderate": {
     "feel": "It is hot outside.",
-    "advice": "Take it slower and look for shade. Check the air number before a long outing."
+    "advice": "Take it slower and look for shade. If you are sensitive to air pollution, go easier on a long outing."
   },
   "hot|*|high": {
-    "feel": "It is hot outside.",
-    "advice": "Take it slower and look for shade. Keep time outside shorter, or choose an easier effort."
+    "feel": "It is hot outside. The air is unhealthy for sensitive groups.",
+    "advice": "Take it slower and look for shade. Because of the air, keep outdoor time shorter or the effort easier."
   },
   "hot|*|very_high": {
-    "feel": "It is hot outside.",
-    "advice": "Take it slower and look for shade. Keep time outside shorter, and choose an easier effort."
+    "feel": "It is hot outside. The air is unhealthy.",
+    "advice": "Take it slower and look for shade. Because of the air, keep outdoor time short and the effort easy."
   },
   "very_hot|*|*": {
     "feel": "Very hot conditions put a heavy strain on the body.",
@@ -133,15 +133,15 @@
   },
   "very_hot|*|moderate": {
     "feel": "Very hot conditions put a heavy strain on the body.",
-    "advice": "Keep outdoor effort light and rest often. Check the air number before a long outing."
+    "advice": "Keep outdoor effort light and rest often. If you are sensitive to air pollution, go easier on a long outing."
   },
   "very_hot|*|high": {
-    "feel": "Very hot conditions put a heavy strain on the body.",
-    "advice": "Keep outdoor effort light and rest often. Keep time outside shorter."
+    "feel": "Very hot conditions put a heavy strain on the body. The air is unhealthy for sensitive groups.",
+    "advice": "Keep outdoor effort light and rest often. Because of the air, keep outdoor time shorter."
   },
   "very_hot|*|very_high": {
-    "feel": "Very hot conditions put a heavy strain on the body.",
-    "advice": "Keep outdoor effort light and rest often. Keep time outside shorter."
+    "feel": "Very hot conditions put a heavy strain on the body. The air is unhealthy.",
+    "advice": "Keep outdoor effort light and rest often. Because of the air, keep outdoor time short."
   },
   "freezing|clear_dry|low": {
     "feel": "Freezing, clear, and dry — the cold puts a hard strain on the body.",
@@ -149,15 +149,15 @@
   },
   "freezing|clear_dry|moderate": {
     "feel": "Freezing, clear, and dry — the cold puts a hard strain on the body.",
-    "advice": "Dress for deep cold if you go out. Check the air number before a long outing."
+    "advice": "Dress for deep cold if you go out. If you are sensitive to air pollution, go easier on a long outing."
   },
   "freezing|clear_dry|high": {
-    "feel": "Freezing, clear, and dry — the cold puts a hard strain on the body.",
-    "advice": "Dress for deep cold if you go out. Keep time outside shorter, or choose an easier effort."
+    "feel": "Freezing, clear, and dry — the cold puts a hard strain on the body. The air is unhealthy for sensitive groups.",
+    "advice": "Dress for deep cold if you go out. Because of the air, keep outdoor time shorter or the effort easier."
   },
   "freezing|clear_dry|very_high": {
-    "feel": "Freezing, clear, and dry — the cold puts a hard strain on the body.",
-    "advice": "Dress for deep cold if you go out. Keep time outside shorter, and choose an easier effort."
+    "feel": "Freezing, clear, and dry — the cold puts a hard strain on the body. The air is unhealthy.",
+    "advice": "Dress for deep cold if you go out. Because of the air, keep outdoor time short and the effort easy."
   },
   "cold|clear_dry|low": {
     "feel": "Cold, clear, and dry.",
@@ -165,15 +165,15 @@
   },
   "cold|clear_dry|moderate": {
     "feel": "Cold, clear, and dry.",
-    "advice": "Wear warm layers if you go out. Check the air number before a long outing."
+    "advice": "Wear warm layers if you go out. If you are sensitive to air pollution, go easier on a long outing."
   },
   "cold|clear_dry|high": {
-    "feel": "Cold, clear, and dry.",
-    "advice": "Wear warm layers if you go out. Keep time outside shorter, or choose an easier effort."
+    "feel": "Cold, clear, and dry. The air is unhealthy for sensitive groups.",
+    "advice": "Wear warm layers if you go out. Because of the air, keep outdoor time shorter or the effort easier."
   },
   "cold|clear_dry|very_high": {
-    "feel": "Cold, clear, and dry.",
-    "advice": "Wear warm layers if you go out. Keep time outside shorter, and choose an easier effort."
+    "feel": "Cold, clear, and dry. The air is unhealthy.",
+    "advice": "Wear warm layers if you go out. Because of the air, keep outdoor time short and the effort easy."
   },
   "cool|clear_dry|low": {
     "feel": "Cool, clear, and dry.",
@@ -181,15 +181,15 @@
   },
   "cool|clear_dry|moderate": {
     "feel": "Cool, clear, and dry.",
-    "advice": "A light jacket is enough for most people. Check the air number before a long outing."
+    "advice": "A light jacket is enough for most people. If you are sensitive to air pollution, go easier on a long outing."
   },
   "cool|clear_dry|high": {
-    "feel": "Cool, clear, and dry.",
-    "advice": "A light jacket is enough for most people. Keep time outside shorter, or choose an easier effort."
+    "feel": "Cool, clear, and dry. The air is unhealthy for sensitive groups.",
+    "advice": "A light jacket is enough for most people. Because of the air, keep outdoor time shorter or the effort easier."
   },
   "cool|clear_dry|very_high": {
-    "feel": "Cool, clear, and dry.",
-    "advice": "A light jacket is enough for most people. Keep time outside shorter, and choose an easier effort."
+    "feel": "Cool, clear, and dry. The air is unhealthy.",
+    "advice": "A light jacket is enough for most people. Because of the air, keep outdoor time short and the effort easy."
   },
   "mild|clear_dry|low": {
     "feel": "Mild, clear and dry with low air-quality risk — comfortable for most people.",
@@ -197,15 +197,15 @@
   },
   "mild|clear_dry|moderate": {
     "feel": "Mild, clear, and dry.",
-    "advice": "A good time for a walk or easy time outside. Check the air number before a long outing."
+    "advice": "A good time for a walk or easy time outside. If you are sensitive to air pollution, go easier on a long outing."
   },
   "mild|clear_dry|high": {
-    "feel": "Mild, clear, and dry.",
-    "advice": "A good time for a walk or easy time outside. Keep time outside shorter, or choose an easier effort."
+    "feel": "Mild, clear, and dry. The air is unhealthy for sensitive groups.",
+    "advice": "The weather suits a walk, but the air does not. Keep outdoor time shorter or the effort easier."
   },
   "mild|clear_dry|very_high": {
-    "feel": "Mild, clear, and dry.",
-    "advice": "A good time for a walk or easy time outside. Keep time outside shorter, and choose an easier effort."
+    "feel": "Mild, clear, and dry. The air is unhealthy.",
+    "advice": "The weather suits a walk, but the air does not. Keep outdoor time short and the effort easy."
   },
   "warm|clear_dry|low": {
     "feel": "Warm, clear, and dry.",
@@ -213,15 +213,15 @@
   },
   "warm|clear_dry|moderate": {
     "feel": "Warm, clear, and dry.",
-    "advice": "Light clothes should be enough for time outside. Check the air number before a long outing."
+    "advice": "Light clothes should be enough for time outside. If you are sensitive to air pollution, go easier on a long outing."
   },
   "warm|clear_dry|high": {
-    "feel": "Warm, clear, and dry.",
-    "advice": "Light clothes should be enough for time outside. Keep time outside shorter, or choose an easier effort."
+    "feel": "Warm, clear, and dry. The air is unhealthy for sensitive groups.",
+    "advice": "Light clothes should be enough for time outside. Because of the air, keep outdoor time shorter or the effort easier."
   },
   "warm|clear_dry|very_high": {
-    "feel": "Warm, clear, and dry.",
-    "advice": "Light clothes should be enough for time outside. Keep time outside shorter, and choose an easier effort."
+    "feel": "Warm, clear, and dry. The air is unhealthy.",
+    "advice": "Light clothes should be enough for time outside. Because of the air, keep outdoor time short and the effort easy."
   },
   "hot|clear_dry|low": {
     "feel": "Hot, clear, and dry.",
@@ -229,15 +229,15 @@
   },
   "hot|clear_dry|moderate": {
     "feel": "Hot, clear, and dry.",
-    "advice": "Take it slower and look for shade. Check the air number before a long outing."
+    "advice": "Take it slower and look for shade. If you are sensitive to air pollution, go easier on a long outing."
   },
   "hot|clear_dry|high": {
-    "feel": "Hot, clear, and dry.",
-    "advice": "Take it slower and look for shade. Keep time outside shorter, or choose an easier effort."
+    "feel": "Hot, clear, and dry. The air is unhealthy for sensitive groups.",
+    "advice": "Take it slower and look for shade. Because of the air, keep outdoor time shorter or the effort easier."
   },
   "hot|clear_dry|very_high": {
-    "feel": "Hot, clear, and dry.",
-    "advice": "Take it slower and look for shade. Keep time outside shorter, and choose an easier effort."
+    "feel": "Hot, clear, and dry. The air is unhealthy.",
+    "advice": "Take it slower and look for shade. Because of the air, keep outdoor time short and the effort easy."
   },
   "very_hot|clear_dry|low": {
     "feel": "Very hot, clear, and dry — the heat puts a heavy strain on the body.",
@@ -245,15 +245,15 @@
   },
   "very_hot|clear_dry|moderate": {
     "feel": "Very hot, clear, and dry — the heat puts a heavy strain on the body.",
-    "advice": "Keep outdoor effort light and rest often. Check the air number before a long outing."
+    "advice": "Keep outdoor effort light and rest often. If you are sensitive to air pollution, go easier on a long outing."
   },
   "very_hot|clear_dry|high": {
-    "feel": "Very hot, clear, and dry — the heat puts a heavy strain on the body.",
-    "advice": "Keep outdoor effort light and rest often. Keep time outside shorter."
+    "feel": "Very hot, clear, and dry — the heat puts a heavy strain on the body. The air is unhealthy for sensitive groups.",
+    "advice": "Keep outdoor effort light and rest often. Because of the air, keep outdoor time shorter."
   },
   "very_hot|clear_dry|very_high": {
-    "feel": "Very hot, clear, and dry — the heat puts a heavy strain on the body.",
-    "advice": "Keep outdoor effort light and rest often. Keep time outside shorter."
+    "feel": "Very hot, clear, and dry — the heat puts a heavy strain on the body. The air is unhealthy.",
+    "advice": "Keep outdoor effort light and rest often. Because of the air, keep outdoor time short."
   },
   "freezing|cloudy|low": {
     "feel": "Freezing and cloudy — the cold puts a hard strain on the body.",
@@ -261,15 +261,15 @@
   },
   "freezing|cloudy|moderate": {
     "feel": "Freezing and cloudy — the cold puts a hard strain on the body.",
-    "advice": "Dress for deep cold under the cloudy sky. Check the air number before a long outing."
+    "advice": "Dress for deep cold under the cloudy sky. If you are sensitive to air pollution, go easier on a long outing."
   },
   "freezing|cloudy|high": {
-    "feel": "Freezing and cloudy — the cold puts a hard strain on the body.",
-    "advice": "Dress for deep cold under the cloudy sky. Keep time outside shorter, or choose an easier effort."
+    "feel": "Freezing and cloudy — the cold puts a hard strain on the body. The air is unhealthy for sensitive groups.",
+    "advice": "Dress for deep cold under the cloudy sky. Because of the air, keep outdoor time shorter or the effort easier."
   },
   "freezing|cloudy|very_high": {
-    "feel": "Freezing and cloudy — the cold puts a hard strain on the body.",
-    "advice": "Dress for deep cold under the cloudy sky. Keep time outside shorter, and choose an easier effort."
+    "feel": "Freezing and cloudy — the cold puts a hard strain on the body. The air is unhealthy.",
+    "advice": "Dress for deep cold under the cloudy sky. Because of the air, keep outdoor time short and the effort easy."
   },
   "cold|cloudy|low": {
     "feel": "Cold and cloudy.",
@@ -277,15 +277,15 @@
   },
   "cold|cloudy|moderate": {
     "feel": "Cold and cloudy.",
-    "advice": "Wear warm layers under the cloudy sky. Check the air number before a long outing."
+    "advice": "Wear warm layers under the cloudy sky. If you are sensitive to air pollution, go easier on a long outing."
   },
   "cold|cloudy|high": {
-    "feel": "Cold and cloudy.",
-    "advice": "Wear warm layers under the cloudy sky. Keep time outside shorter, or choose an easier effort."
+    "feel": "Cold and cloudy. The air is unhealthy for sensitive groups.",
+    "advice": "Wear warm layers under the cloudy sky. Because of the air, keep outdoor time shorter or the effort easier."
   },
   "cold|cloudy|very_high": {
-    "feel": "Cold and cloudy.",
-    "advice": "Wear warm layers under the cloudy sky. Keep time outside shorter, and choose an easier effort."
+    "feel": "Cold and cloudy. The air is unhealthy.",
+    "advice": "Wear warm layers under the cloudy sky. Because of the air, keep outdoor time short and the effort easy."
   },
   "cool|cloudy|low": {
     "feel": "Cool and cloudy.",
@@ -293,15 +293,15 @@
   },
   "cool|cloudy|moderate": {
     "feel": "Cool and cloudy.",
-    "advice": "A light jacket is enough under the cloudy sky. Check the air number before a long outing."
+    "advice": "A light jacket is enough under the cloudy sky. If you are sensitive to air pollution, go easier on a long outing."
   },
   "cool|cloudy|high": {
-    "feel": "Cool and cloudy.",
-    "advice": "A light jacket is enough under the cloudy sky. Keep time outside shorter, or choose an easier effort."
+    "feel": "Cool and cloudy. The air is unhealthy for sensitive groups.",
+    "advice": "A light jacket is enough under the cloudy sky. Because of the air, keep outdoor time shorter or the effort easier."
   },
   "cool|cloudy|very_high": {
-    "feel": "Cool and cloudy.",
-    "advice": "A light jacket is enough under the cloudy sky. Keep time outside shorter, and choose an easier effort."
+    "feel": "Cool and cloudy. The air is unhealthy.",
+    "advice": "A light jacket is enough under the cloudy sky. Because of the air, keep outdoor time short and the effort easy."
   },
   "mild|cloudy|low": {
     "feel": "Mild and cloudy.",
@@ -309,15 +309,15 @@
   },
   "mild|cloudy|moderate": {
     "feel": "Mild and cloudy.",
-    "advice": "A walk is still pleasant under the cloudy sky. Check the air number before a long outing."
+    "advice": "A walk is still pleasant under the cloudy sky. If you are sensitive to air pollution, go easier on a long outing."
   },
   "mild|cloudy|high": {
-    "feel": "Mild and cloudy.",
-    "advice": "A walk is still pleasant under the cloudy sky. Keep time outside shorter, or choose an easier effort."
+    "feel": "Mild and cloudy. The air is unhealthy for sensitive groups.",
+    "advice": "The cloudy sky suits a walk, but the air does not. Keep outdoor time shorter or the effort easier."
   },
   "mild|cloudy|very_high": {
-    "feel": "Mild and cloudy.",
-    "advice": "A walk is still pleasant under the cloudy sky. Keep time outside shorter, and choose an easier effort."
+    "feel": "Mild and cloudy. The air is unhealthy.",
+    "advice": "The cloudy sky suits a walk, but the air does not. Keep outdoor time short and the effort easy."
   },
   "warm|cloudy|low": {
     "feel": "Warm and cloudy.",
@@ -325,15 +325,15 @@
   },
   "warm|cloudy|moderate": {
     "feel": "Warm and cloudy.",
-    "advice": "Light clothes should be enough under the cloudy sky. Check the air number before a long outing."
+    "advice": "Light clothes should be enough under the cloudy sky. If you are sensitive to air pollution, go easier on a long outing."
   },
   "warm|cloudy|high": {
-    "feel": "Warm and cloudy.",
-    "advice": "Light clothes should be enough under the cloudy sky. Keep time outside shorter, or choose an easier effort."
+    "feel": "Warm and cloudy. The air is unhealthy for sensitive groups.",
+    "advice": "Light clothes should be enough under the cloudy sky. Because of the air, keep outdoor time shorter or the effort easier."
   },
   "warm|cloudy|very_high": {
-    "feel": "Warm and cloudy.",
-    "advice": "Light clothes should be enough under the cloudy sky. Keep time outside shorter, and choose an easier effort."
+    "feel": "Warm and cloudy. The air is unhealthy.",
+    "advice": "Light clothes should be enough under the cloudy sky. Because of the air, keep outdoor time short and the effort easy."
   },
   "hot|cloudy|low": {
     "feel": "Hot and cloudy.",
@@ -341,15 +341,15 @@
   },
   "hot|cloudy|moderate": {
     "feel": "Hot and cloudy.",
-    "advice": "Look for shade even with the cloudy sky. Check the air number before a long outing."
+    "advice": "Look for shade even with the cloudy sky. If you are sensitive to air pollution, go easier on a long outing."
   },
   "hot|cloudy|high": {
-    "feel": "Hot and cloudy.",
-    "advice": "Look for shade even with the cloudy sky. Keep time outside shorter, or choose an easier effort."
+    "feel": "Hot and cloudy. The air is unhealthy for sensitive groups.",
+    "advice": "Look for shade even with the cloudy sky. Because of the air, keep outdoor time shorter or the effort easier."
   },
   "hot|cloudy|very_high": {
-    "feel": "Hot and cloudy.",
-    "advice": "Look for shade even with the cloudy sky. Keep time outside shorter, and choose an easier effort."
+    "feel": "Hot and cloudy. The air is unhealthy.",
+    "advice": "Look for shade even with the cloudy sky. Because of the air, keep outdoor time short and the effort easy."
   },
   "very_hot|cloudy|low": {
     "feel": "Very hot and cloudy — the heat puts a heavy strain on the body.",
@@ -357,15 +357,15 @@
   },
   "very_hot|cloudy|moderate": {
     "feel": "Very hot and cloudy — the heat puts a heavy strain on the body.",
-    "advice": "Keep outdoor effort light and rest often under the cloudy sky. Check the air number before a long outing."
+    "advice": "Keep outdoor effort light and rest often under the cloudy sky. If you are sensitive to air pollution, go easier on a long outing."
   },
   "very_hot|cloudy|high": {
-    "feel": "Very hot and cloudy — the heat puts a heavy strain on the body.",
-    "advice": "Keep outdoor effort light and rest often under the cloudy sky. Keep time outside shorter."
+    "feel": "Very hot and cloudy — the heat puts a heavy strain on the body. The air is unhealthy for sensitive groups.",
+    "advice": "Keep outdoor effort light and rest often under the cloudy sky. Because of the air, keep outdoor time shorter."
   },
   "very_hot|cloudy|very_high": {
-    "feel": "Very hot and cloudy — the heat puts a heavy strain on the body.",
-    "advice": "Keep outdoor effort light and rest often under the cloudy sky. Keep time outside shorter."
+    "feel": "Very hot and cloudy — the heat puts a heavy strain on the body. The air is unhealthy.",
+    "advice": "Keep outdoor effort light and rest often under the cloudy sky. Because of the air, keep outdoor time short."
   },
   "freezing|light_rain|low": {
     "feel": "Freezing, with precipitation — the cold puts a hard strain on the body.",
@@ -373,15 +373,15 @@
   },
   "freezing|light_rain|moderate": {
     "feel": "Freezing, with precipitation — the cold puts a hard strain on the body.",
-    "advice": "Dress for deep cold in this precipitation. Check the air number before a long outing."
+    "advice": "Dress for deep cold in this precipitation. If you are sensitive to air pollution, go easier on a long outing."
   },
   "freezing|light_rain|high": {
-    "feel": "Freezing, with precipitation — the cold puts a hard strain on the body.",
-    "advice": "Dress for deep cold in this precipitation. Keep time outside shorter, or choose an easier effort."
+    "feel": "Freezing, with precipitation — the cold puts a hard strain on the body. The air is unhealthy for sensitive groups.",
+    "advice": "Dress for deep cold in this precipitation. Because of the air, keep outdoor time shorter or the effort easier."
   },
   "freezing|light_rain|very_high": {
-    "feel": "Freezing, with precipitation — the cold puts a hard strain on the body.",
-    "advice": "Dress for deep cold in this precipitation. Keep time outside shorter, and choose an easier effort."
+    "feel": "Freezing, with precipitation — the cold puts a hard strain on the body. The air is unhealthy.",
+    "advice": "Dress for deep cold in this precipitation. Because of the air, keep outdoor time short and the effort easy."
   },
   "cold|light_rain|low": {
     "feel": "Cold, with precipitation.",
@@ -389,15 +389,15 @@
   },
   "cold|light_rain|moderate": {
     "feel": "Cold, with precipitation.",
-    "advice": "Wear warm layers in this precipitation. Check the air number before a long outing."
+    "advice": "Wear warm layers in this precipitation. If you are sensitive to air pollution, go easier on a long outing."
   },
   "cold|light_rain|high": {
-    "feel": "Cold, with precipitation.",
-    "advice": "Wear warm layers in this precipitation. Keep time outside shorter, or choose an easier effort."
+    "feel": "Cold, with precipitation. The air is unhealthy for sensitive groups.",
+    "advice": "Wear warm layers in this precipitation. Because of the air, keep outdoor time shorter or the effort easier."
   },
   "cold|light_rain|very_high": {
-    "feel": "Cold, with precipitation.",
-    "advice": "Wear warm layers in this precipitation. Keep time outside shorter, and choose an easier effort."
+    "feel": "Cold, with precipitation. The air is unhealthy.",
+    "advice": "Wear warm layers in this precipitation. Because of the air, keep outdoor time short and the effort easy."
   },
   "cool|light_rain|low": {
     "feel": "Cool, with precipitation.",
@@ -405,15 +405,15 @@
   },
   "cool|light_rain|moderate": {
     "feel": "Cool, with precipitation.",
-    "advice": "A waterproof layer is wise in this precipitation. Check the air number before a long outing."
+    "advice": "A waterproof layer is wise in this precipitation. If you are sensitive to air pollution, go easier on a long outing."
   },
   "cool|light_rain|high": {
-    "feel": "Cool, with precipitation.",
-    "advice": "A waterproof layer is wise in this precipitation. Keep time outside shorter, or choose an easier effort."
+    "feel": "Cool, with precipitation. The air is unhealthy for sensitive groups.",
+    "advice": "A waterproof layer is wise in this precipitation. Because of the air, keep outdoor time shorter or the effort easier."
   },
   "cool|light_rain|very_high": {
-    "feel": "Cool, with precipitation.",
-    "advice": "A waterproof layer is wise in this precipitation. Keep time outside shorter, and choose an easier effort."
+    "feel": "Cool, with precipitation. The air is unhealthy.",
+    "advice": "A waterproof layer is wise in this precipitation. Because of the air, keep outdoor time short and the effort easy."
   },
   "mild|light_rain|low": {
     "feel": "Mild, with precipitation.",
@@ -421,15 +421,15 @@
   },
   "mild|light_rain|moderate": {
     "feel": "Mild, with precipitation.",
-    "advice": "A light waterproof layer is enough in this precipitation. Check the air number before a long outing."
+    "advice": "A light waterproof layer is enough in this precipitation. If you are sensitive to air pollution, go easier on a long outing."
   },
   "mild|light_rain|high": {
-    "feel": "Mild, with precipitation.",
-    "advice": "A light waterproof layer is enough in this precipitation. Keep time outside shorter, or choose an easier effort."
+    "feel": "Mild, with precipitation. The air is unhealthy for sensitive groups.",
+    "advice": "A light waterproof layer is enough in this precipitation. Because of the air, keep outdoor time shorter or the effort easier."
   },
   "mild|light_rain|very_high": {
-    "feel": "Mild, with precipitation.",
-    "advice": "A light waterproof layer is enough in this precipitation. Keep time outside shorter, and choose an easier effort."
+    "feel": "Mild, with precipitation. The air is unhealthy.",
+    "advice": "A light waterproof layer is enough in this precipitation. Because of the air, keep outdoor time short and the effort easy."
   },
   "warm|light_rain|low": {
     "feel": "Warm, with precipitation.",
@@ -437,15 +437,15 @@
   },
   "warm|light_rain|moderate": {
     "feel": "Warm, with precipitation.",
-    "advice": "A light waterproof layer should be enough. Check the air number before a long outing."
+    "advice": "A light waterproof layer should be enough. If you are sensitive to air pollution, go easier on a long outing."
   },
   "warm|light_rain|high": {
-    "feel": "Warm, with precipitation.",
-    "advice": "A light waterproof layer should be enough. Keep time outside shorter, or choose an easier effort."
+    "feel": "Warm, with precipitation. The air is unhealthy for sensitive groups.",
+    "advice": "A light waterproof layer should be enough. Because of the air, keep outdoor time shorter or the effort easier."
   },
   "warm|light_rain|very_high": {
-    "feel": "Warm, with precipitation.",
-    "advice": "A light waterproof layer should be enough. Keep time outside shorter, and choose an easier effort."
+    "feel": "Warm, with precipitation. The air is unhealthy.",
+    "advice": "A light waterproof layer should be enough. Because of the air, keep outdoor time short and the effort easy."
   },
   "hot|light_rain|low": {
     "feel": "Hot, with precipitation.",
@@ -453,15 +453,15 @@
   },
   "hot|light_rain|moderate": {
     "feel": "Hot, with precipitation.",
-    "advice": "Take it slower if you go out in this precipitation. Check the air number before a long outing."
+    "advice": "Take it slower if you go out in this precipitation. If you are sensitive to air pollution, go easier on a long outing."
   },
   "hot|light_rain|high": {
-    "feel": "Hot, with precipitation.",
-    "advice": "Take it slower if you go out in this precipitation. Keep time outside shorter, or choose an easier effort."
+    "feel": "Hot, with precipitation. The air is unhealthy for sensitive groups.",
+    "advice": "Take it slower if you go out in this precipitation. Because of the air, keep outdoor time shorter or the effort easier."
   },
   "hot|light_rain|very_high": {
-    "feel": "Hot, with precipitation.",
-    "advice": "Take it slower if you go out in this precipitation. Keep time outside shorter, and choose an easier effort."
+    "feel": "Hot, with precipitation. The air is unhealthy.",
+    "advice": "Take it slower if you go out in this precipitation. Because of the air, keep outdoor time short and the effort easy."
   },
   "very_hot|light_rain|low": {
     "feel": "Very hot, with precipitation — the heat puts a heavy strain on the body.",
@@ -469,15 +469,15 @@
   },
   "very_hot|light_rain|moderate": {
     "feel": "Very hot, with precipitation — the heat puts a heavy strain on the body.",
-    "advice": "Keep outdoor effort light if you go out in this precipitation. Check the air number before a long outing."
+    "advice": "Keep outdoor effort light if you go out in this precipitation. If you are sensitive to air pollution, go easier on a long outing."
   },
   "very_hot|light_rain|high": {
-    "feel": "Very hot, with precipitation — the heat puts a heavy strain on the body.",
-    "advice": "Keep outdoor effort light if you go out in this precipitation. Keep time outside shorter."
+    "feel": "Very hot, with precipitation — the heat puts a heavy strain on the body. The air is unhealthy for sensitive groups.",
+    "advice": "Keep outdoor effort light if you go out in this precipitation. Because of the air, keep outdoor time shorter."
   },
   "very_hot|light_rain|very_high": {
-    "feel": "Very hot, with precipitation — the heat puts a heavy strain on the body.",
-    "advice": "Keep outdoor effort light if you go out in this precipitation. Keep time outside shorter."
+    "feel": "Very hot, with precipitation — the heat puts a heavy strain on the body. The air is unhealthy.",
+    "advice": "Keep outdoor effort light if you go out in this precipitation. Because of the air, keep outdoor time short."
   },
   "freezing|heavy_rain|low": {
     "feel": "Freezing, with heavy precipitation — the cold puts a hard strain on the body.",
@@ -485,15 +485,15 @@
   },
   "freezing|heavy_rain|moderate": {
     "feel": "Freezing, with heavy precipitation — the cold puts a hard strain on the body.",
-    "advice": "Dress for deep cold and keep time in this heavy precipitation short. Check the air number before a long outing."
+    "advice": "Dress for deep cold and keep time in this heavy precipitation short. If you are sensitive to air pollution, go easier on a long outing."
   },
   "freezing|heavy_rain|high": {
-    "feel": "Freezing, with heavy precipitation — the cold puts a hard strain on the body.",
+    "feel": "Freezing, with heavy precipitation — the cold puts a hard strain on the body. The air is unhealthy for sensitive groups.",
     "advice": "Dress for deep cold and keep time in this heavy precipitation short."
   },
   "freezing|heavy_rain|very_high": {
-    "feel": "Freezing, with heavy precipitation — the cold puts a hard strain on the body.",
-    "advice": "Dress for deep cold and keep time in this heavy precipitation short. Choose an easier effort."
+    "feel": "Freezing, with heavy precipitation — the cold puts a hard strain on the body. The air is unhealthy.",
+    "advice": "Dress for deep cold and keep time in this heavy precipitation short. Because of the air, choose an easier effort."
   },
   "cold|heavy_rain|low": {
     "feel": "Cold, with heavy precipitation.",
@@ -501,15 +501,15 @@
   },
   "cold|heavy_rain|moderate": {
     "feel": "Cold, with heavy precipitation.",
-    "advice": "Wear warm layers and keep time in this heavy precipitation short. Check the air number before a long outing."
+    "advice": "Wear warm layers and keep time in this heavy precipitation short. If you are sensitive to air pollution, go easier on a long outing."
   },
   "cold|heavy_rain|high": {
-    "feel": "Cold, with heavy precipitation.",
+    "feel": "Cold, with heavy precipitation. The air is unhealthy for sensitive groups.",
     "advice": "Wear warm layers and keep time in this heavy precipitation short."
   },
   "cold|heavy_rain|very_high": {
-    "feel": "Cold, with heavy precipitation.",
-    "advice": "Wear warm layers and keep time in this heavy precipitation short. Choose an easier effort."
+    "feel": "Cold, with heavy precipitation. The air is unhealthy.",
+    "advice": "Wear warm layers and keep time in this heavy precipitation short. Because of the air, choose an easier effort."
   },
   "cool|heavy_rain|low": {
     "feel": "Cool, with heavy precipitation.",
@@ -517,15 +517,15 @@
   },
   "cool|heavy_rain|moderate": {
     "feel": "Cool, with heavy precipitation.",
-    "advice": "Use a waterproof layer and keep the effort easy. Check the air number before a long outing."
+    "advice": "Use a waterproof layer and keep the effort easy. If you are sensitive to air pollution, go easier on a long outing."
   },
   "cool|heavy_rain|high": {
-    "feel": "Cool, with heavy precipitation.",
-    "advice": "Use a waterproof layer and keep the effort easy. Keep time outside shorter."
+    "feel": "Cool, with heavy precipitation. The air is unhealthy for sensitive groups.",
+    "advice": "Use a waterproof layer and keep the effort easy. Because of the air, keep outdoor time shorter."
   },
   "cool|heavy_rain|very_high": {
-    "feel": "Cool, with heavy precipitation.",
-    "advice": "Use a waterproof layer and keep the effort easy. Keep time outside shorter."
+    "feel": "Cool, with heavy precipitation. The air is unhealthy.",
+    "advice": "Use a waterproof layer and keep the effort easy. Because of the air, keep outdoor time short."
   },
   "mild|heavy_rain|low": {
     "feel": "Mild, with heavy precipitation.",
@@ -533,15 +533,15 @@
   },
   "mild|heavy_rain|moderate": {
     "feel": "Mild, with heavy precipitation.",
-    "advice": "A waterproof layer helps, and keep the effort easy. Check the air number before a long outing."
+    "advice": "A waterproof layer helps, and keep the effort easy. If you are sensitive to air pollution, go easier on a long outing."
   },
   "mild|heavy_rain|high": {
-    "feel": "Mild, with heavy precipitation.",
-    "advice": "A waterproof layer helps, and keep the effort easy. Keep time outside shorter."
+    "feel": "Mild, with heavy precipitation. The air is unhealthy for sensitive groups.",
+    "advice": "A waterproof layer helps, and keep the effort easy. Because of the air, keep outdoor time shorter."
   },
   "mild|heavy_rain|very_high": {
-    "feel": "Mild, with heavy precipitation.",
-    "advice": "A waterproof layer helps, and keep the effort easy. Keep time outside shorter."
+    "feel": "Mild, with heavy precipitation. The air is unhealthy.",
+    "advice": "A waterproof layer helps, and keep the effort easy. Because of the air, keep outdoor time short."
   },
   "warm|heavy_rain|low": {
     "feel": "Warm, with heavy precipitation.",
@@ -549,15 +549,15 @@
   },
   "warm|heavy_rain|moderate": {
     "feel": "Warm, with heavy precipitation.",
-    "advice": "A waterproof layer should be enough, with an easy effort. Check the air number before a long outing."
+    "advice": "A waterproof layer should be enough, with an easy effort. If you are sensitive to air pollution, go easier on a long outing."
   },
   "warm|heavy_rain|high": {
-    "feel": "Warm, with heavy precipitation.",
-    "advice": "A waterproof layer should be enough, with an easy effort. Keep time outside shorter."
+    "feel": "Warm, with heavy precipitation. The air is unhealthy for sensitive groups.",
+    "advice": "A waterproof layer should be enough, with an easy effort. Because of the air, keep outdoor time shorter."
   },
   "warm|heavy_rain|very_high": {
-    "feel": "Warm, with heavy precipitation.",
-    "advice": "A waterproof layer should be enough, with an easy effort. Keep time outside shorter."
+    "feel": "Warm, with heavy precipitation. The air is unhealthy.",
+    "advice": "A waterproof layer should be enough, with an easy effort. Because of the air, keep outdoor time short."
   },
   "hot|heavy_rain|low": {
     "feel": "Hot, with heavy precipitation.",
@@ -565,15 +565,15 @@
   },
   "hot|heavy_rain|moderate": {
     "feel": "Hot, with heavy precipitation.",
-    "advice": "Keep the effort easy in this heavy precipitation. Check the air number before a long outing."
+    "advice": "Keep the effort easy in this heavy precipitation. If you are sensitive to air pollution, go easier on a long outing."
   },
   "hot|heavy_rain|high": {
-    "feel": "Hot, with heavy precipitation.",
-    "advice": "Keep the effort easy in this heavy precipitation. Keep time outside shorter."
+    "feel": "Hot, with heavy precipitation. The air is unhealthy for sensitive groups.",
+    "advice": "Keep the effort easy in this heavy precipitation. Because of the air, keep outdoor time shorter."
   },
   "hot|heavy_rain|very_high": {
-    "feel": "Hot, with heavy precipitation.",
-    "advice": "Keep the effort easy in this heavy precipitation. Keep time outside shorter."
+    "feel": "Hot, with heavy precipitation. The air is unhealthy.",
+    "advice": "Keep the effort easy in this heavy precipitation. Because of the air, keep outdoor time short."
   },
   "very_hot|heavy_rain|low": {
     "feel": "Very hot, with heavy precipitation — the heat puts a heavy strain on the body.",
@@ -581,15 +581,15 @@
   },
   "very_hot|heavy_rain|moderate": {
     "feel": "Very hot, with heavy precipitation — the heat puts a heavy strain on the body.",
-    "advice": "Keep outdoor effort light and rest often in this heavy precipitation. Check the air number before a long outing."
+    "advice": "Keep outdoor effort light and rest often in this heavy precipitation. If you are sensitive to air pollution, go easier on a long outing."
   },
   "very_hot|heavy_rain|high": {
-    "feel": "Very hot, with heavy precipitation — the heat puts a heavy strain on the body.",
-    "advice": "Keep outdoor effort light and rest often in this heavy precipitation. Keep time outside shorter."
+    "feel": "Very hot, with heavy precipitation — the heat puts a heavy strain on the body. The air is unhealthy for sensitive groups.",
+    "advice": "Keep outdoor effort light and rest often in this heavy precipitation. Because of the air, keep outdoor time shorter."
   },
   "very_hot|heavy_rain|very_high": {
-    "feel": "Very hot, with heavy precipitation — the heat puts a heavy strain on the body.",
-    "advice": "Keep outdoor effort light and rest often in this heavy precipitation. Keep time outside shorter."
+    "feel": "Very hot, with heavy precipitation — the heat puts a heavy strain on the body. The air is unhealthy.",
+    "advice": "Keep outdoor effort light and rest often in this heavy precipitation. Because of the air, keep outdoor time short."
   },
   "freezing|stormy|low": {
     "feel": "Freezing and stormy — the cold puts a hard strain on the body.",
@@ -597,15 +597,15 @@
   },
   "freezing|stormy|moderate": {
     "feel": "Freezing and stormy — the cold puts a hard strain on the body.",
-    "advice": "Dress for deep cold and stay near shelter while it is stormy. Check the air number before a long outing."
+    "advice": "Dress for deep cold and stay near shelter while it is stormy. If you are sensitive to air pollution, go easier on a long outing."
   },
   "freezing|stormy|high": {
-    "feel": "Freezing and stormy — the cold puts a hard strain on the body.",
-    "advice": "Dress for deep cold and stay near shelter while it is stormy. Keep time outside shorter, or choose an easier effort."
+    "feel": "Freezing and stormy — the cold puts a hard strain on the body. The air is unhealthy for sensitive groups.",
+    "advice": "Dress for deep cold and stay near shelter while it is stormy. Because of the air, keep outdoor time shorter or the effort easier."
   },
   "freezing|stormy|very_high": {
-    "feel": "Freezing and stormy — the cold puts a hard strain on the body.",
-    "advice": "Dress for deep cold and stay near shelter while it is stormy. Keep time outside shorter, and choose an easier effort."
+    "feel": "Freezing and stormy — the cold puts a hard strain on the body. The air is unhealthy.",
+    "advice": "Dress for deep cold and stay near shelter while it is stormy. Because of the air, keep outdoor time short and the effort easy."
   },
   "cold|stormy|low": {
     "feel": "Cold and stormy.",
@@ -613,15 +613,15 @@
   },
   "cold|stormy|moderate": {
     "feel": "Cold and stormy.",
-    "advice": "Stay near shelter while it is stormy. Check the air number before a long outing."
+    "advice": "Stay near shelter while it is stormy. If you are sensitive to air pollution, go easier on a long outing."
   },
   "cold|stormy|high": {
-    "feel": "Cold and stormy.",
-    "advice": "Stay near shelter while it is stormy. Keep time outside shorter, or choose an easier effort."
+    "feel": "Cold and stormy. The air is unhealthy for sensitive groups.",
+    "advice": "Stay near shelter while it is stormy. Because of the air, keep outdoor time shorter or the effort easier."
   },
   "cold|stormy|very_high": {
-    "feel": "Cold and stormy.",
-    "advice": "Stay near shelter while it is stormy. Keep time outside shorter, and choose an easier effort."
+    "feel": "Cold and stormy. The air is unhealthy.",
+    "advice": "Stay near shelter while it is stormy. Because of the air, keep outdoor time short and the effort easy."
   },
   "cool|stormy|low": {
     "feel": "Cool and stormy.",
@@ -629,15 +629,15 @@
   },
   "cool|stormy|moderate": {
     "feel": "Cool and stormy.",
-    "advice": "Stay near shelter while it is stormy. Check the air number before a long outing."
+    "advice": "Stay near shelter while it is stormy. If you are sensitive to air pollution, go easier on a long outing."
   },
   "cool|stormy|high": {
-    "feel": "Cool and stormy.",
-    "advice": "Stay near shelter while it is stormy. Keep time outside shorter, or choose an easier effort."
+    "feel": "Cool and stormy. The air is unhealthy for sensitive groups.",
+    "advice": "Stay near shelter while it is stormy. Because of the air, keep outdoor time shorter or the effort easier."
   },
   "cool|stormy|very_high": {
-    "feel": "Cool and stormy.",
-    "advice": "Stay near shelter while it is stormy. Keep time outside shorter, and choose an easier effort."
+    "feel": "Cool and stormy. The air is unhealthy.",
+    "advice": "Stay near shelter while it is stormy. Because of the air, keep outdoor time short and the effort easy."
   },
   "mild|stormy|low": {
     "feel": "Mild and stormy.",
@@ -645,15 +645,15 @@
   },
   "mild|stormy|moderate": {
     "feel": "Mild and stormy.",
-    "advice": "Stay near shelter while it is stormy. Check the air number before a long outing."
+    "advice": "Stay near shelter while it is stormy. If you are sensitive to air pollution, go easier on a long outing."
   },
   "mild|stormy|high": {
-    "feel": "Mild and stormy.",
-    "advice": "Stay near shelter while it is stormy. Keep time outside shorter, or choose an easier effort."
+    "feel": "Mild and stormy. The air is unhealthy for sensitive groups.",
+    "advice": "Stay near shelter while it is stormy. Because of the air, keep outdoor time shorter or the effort easier."
   },
   "mild|stormy|very_high": {
-    "feel": "Mild and stormy.",
-    "advice": "Stay near shelter while it is stormy. Keep time outside shorter, and choose an easier effort."
+    "feel": "Mild and stormy. The air is unhealthy.",
+    "advice": "Stay near shelter while it is stormy. Because of the air, keep outdoor time short and the effort easy."
   },
   "warm|stormy|low": {
     "feel": "Warm and stormy.",
@@ -661,15 +661,15 @@
   },
   "warm|stormy|moderate": {
     "feel": "Warm and stormy.",
-    "advice": "Stay near shelter while it is stormy. Check the air number before a long outing."
+    "advice": "Stay near shelter while it is stormy. If you are sensitive to air pollution, go easier on a long outing."
   },
   "warm|stormy|high": {
-    "feel": "Warm and stormy.",
-    "advice": "Stay near shelter while it is stormy. Keep time outside shorter, or choose an easier effort."
+    "feel": "Warm and stormy. The air is unhealthy for sensitive groups.",
+    "advice": "Stay near shelter while it is stormy. Because of the air, keep outdoor time shorter or the effort easier."
   },
   "warm|stormy|very_high": {
-    "feel": "Warm and stormy.",
-    "advice": "Stay near shelter while it is stormy. Keep time outside shorter, and choose an easier effort."
+    "feel": "Warm and stormy. The air is unhealthy.",
+    "advice": "Stay near shelter while it is stormy. Because of the air, keep outdoor time short and the effort easy."
   },
   "hot|stormy|low": {
     "feel": "Hot and stormy.",
@@ -677,15 +677,15 @@
   },
   "hot|stormy|moderate": {
     "feel": "Hot and stormy.",
-    "advice": "Stay near shelter and take the heat slowly. Check the air number before a long outing."
+    "advice": "Stay near shelter and take the heat slowly. If you are sensitive to air pollution, go easier on a long outing."
   },
   "hot|stormy|high": {
-    "feel": "Hot and stormy.",
-    "advice": "Stay near shelter and take the heat slowly. Keep time outside shorter."
+    "feel": "Hot and stormy. The air is unhealthy for sensitive groups.",
+    "advice": "Stay near shelter and take the heat slowly. Because of the air, keep outdoor time shorter."
   },
   "hot|stormy|very_high": {
-    "feel": "Hot and stormy.",
-    "advice": "Stay near shelter and take the heat slowly. Keep time outside shorter."
+    "feel": "Hot and stormy. The air is unhealthy.",
+    "advice": "Stay near shelter and take the heat slowly. Because of the air, keep outdoor time short."
   },
   "very_hot|stormy|low": {
     "feel": "Very hot and stormy — the heat puts a heavy strain on the body.",
@@ -693,15 +693,15 @@
   },
   "very_hot|stormy|moderate": {
     "feel": "Very hot and stormy — the heat puts a heavy strain on the body.",
-    "advice": "Stay near shelter and keep the effort light in this heat. Check the air number before a long outing."
+    "advice": "Stay near shelter and keep the effort light in this heat. If you are sensitive to air pollution, go easier on a long outing."
   },
   "very_hot|stormy|high": {
-    "feel": "Very hot and stormy — the heat puts a heavy strain on the body.",
-    "advice": "Stay near shelter and keep the effort light in this heat. Keep time outside shorter."
+    "feel": "Very hot and stormy — the heat puts a heavy strain on the body. The air is unhealthy for sensitive groups.",
+    "advice": "Stay near shelter and keep the effort light in this heat. Because of the air, keep outdoor time shorter."
   },
   "very_hot|stormy|very_high": {
-    "feel": "Very hot and stormy — the heat puts a heavy strain on the body.",
-    "advice": "Stay near shelter and keep the effort light in this heat. Keep time outside shorter."
+    "feel": "Very hot and stormy — the heat puts a heavy strain on the body. The air is unhealthy.",
+    "advice": "Stay near shelter and keep the effort light in this heat. Because of the air, keep outdoor time short."
   },
   "freezing|windy|low": {
     "feel": "Freezing and windy — the cold puts a hard strain on the body.",
@@ -709,15 +709,15 @@
   },
   "freezing|windy|moderate": {
     "feel": "Freezing and windy — the cold puts a hard strain on the body.",
-    "advice": "Dress for deep cold and a strong wind. Check the air number before a long outing."
+    "advice": "Dress for deep cold and a strong wind. If you are sensitive to air pollution, go easier on a long outing."
   },
   "freezing|windy|high": {
-    "feel": "Freezing and windy — the cold puts a hard strain on the body.",
-    "advice": "Dress for deep cold and a strong wind. Keep time outside shorter, or choose an easier effort."
+    "feel": "Freezing and windy — the cold puts a hard strain on the body. The air is unhealthy for sensitive groups.",
+    "advice": "Dress for deep cold and a strong wind. Because of the air, keep outdoor time shorter or the effort easier."
   },
   "freezing|windy|very_high": {
-    "feel": "Freezing and windy — the cold puts a hard strain on the body.",
-    "advice": "Dress for deep cold and a strong wind. Keep time outside shorter, and choose an easier effort."
+    "feel": "Freezing and windy — the cold puts a hard strain on the body. The air is unhealthy.",
+    "advice": "Dress for deep cold and a strong wind. Because of the air, keep outdoor time short and the effort easy."
   },
   "cold|windy|low": {
     "feel": "Cold and windy.",
@@ -725,15 +725,15 @@
   },
   "cold|windy|moderate": {
     "feel": "Cold and windy.",
-    "advice": "Wear warm layers against the wind. Check the air number before a long outing."
+    "advice": "Wear warm layers against the wind. If you are sensitive to air pollution, go easier on a long outing."
   },
   "cold|windy|high": {
-    "feel": "Cold and windy.",
-    "advice": "Wear warm layers against the wind. Keep time outside shorter, or choose an easier effort."
+    "feel": "Cold and windy. The air is unhealthy for sensitive groups.",
+    "advice": "Wear warm layers against the wind. Because of the air, keep outdoor time shorter or the effort easier."
   },
   "cold|windy|very_high": {
-    "feel": "Cold and windy.",
-    "advice": "Wear warm layers against the wind. Keep time outside shorter, and choose an easier effort."
+    "feel": "Cold and windy. The air is unhealthy.",
+    "advice": "Wear warm layers against the wind. Because of the air, keep outdoor time short and the effort easy."
   },
   "cool|windy|low": {
     "feel": "Cool and windy.",
@@ -741,15 +741,15 @@
   },
   "cool|windy|moderate": {
     "feel": "Cool and windy.",
-    "advice": "A windproof layer is wise. Check the air number before a long outing."
+    "advice": "A windproof layer is wise. If you are sensitive to air pollution, go easier on a long outing."
   },
   "cool|windy|high": {
-    "feel": "Cool and windy.",
-    "advice": "A windproof layer is wise. Keep time outside shorter, or choose an easier effort."
+    "feel": "Cool and windy. The air is unhealthy for sensitive groups.",
+    "advice": "A windproof layer is wise. Because of the air, keep outdoor time shorter or the effort easier."
   },
   "cool|windy|very_high": {
-    "feel": "Cool and windy.",
-    "advice": "A windproof layer is wise. Keep time outside shorter, and choose an easier effort."
+    "feel": "Cool and windy. The air is unhealthy.",
+    "advice": "A windproof layer is wise. Because of the air, keep outdoor time short and the effort easy."
   },
   "mild|windy|low": {
     "feel": "Mild and windy.",
@@ -757,15 +757,15 @@
   },
   "mild|windy|moderate": {
     "feel": "Mild and windy.",
-    "advice": "Hold onto loose items and keep an easy pace. Check the air number before a long outing."
+    "advice": "Hold onto loose items and keep an easy pace. If you are sensitive to air pollution, go easier on a long outing."
   },
   "mild|windy|high": {
-    "feel": "Mild and windy.",
-    "advice": "Hold onto loose items and keep an easy pace. Keep time outside shorter."
+    "feel": "Mild and windy. The air is unhealthy for sensitive groups.",
+    "advice": "Hold onto loose items and keep an easy pace. Because of the air, keep outdoor time shorter."
   },
   "mild|windy|very_high": {
-    "feel": "Mild and windy.",
-    "advice": "Hold onto loose items and keep an easy pace. Keep time outside shorter."
+    "feel": "Mild and windy. The air is unhealthy.",
+    "advice": "Hold onto loose items and keep an easy pace. Because of the air, keep outdoor time short."
   },
   "warm|windy|low": {
     "feel": "Warm and windy.",
@@ -773,15 +773,15 @@
   },
   "warm|windy|moderate": {
     "feel": "Warm and windy.",
-    "advice": "Keep an easy pace in the wind. Check the air number before a long outing."
+    "advice": "Keep an easy pace in the wind. If you are sensitive to air pollution, go easier on a long outing."
   },
   "warm|windy|high": {
-    "feel": "Warm and windy.",
-    "advice": "Keep an easy pace in the wind. Keep time outside shorter."
+    "feel": "Warm and windy. The air is unhealthy for sensitive groups.",
+    "advice": "Keep an easy pace in the wind. Because of the air, keep outdoor time shorter."
   },
   "warm|windy|very_high": {
-    "feel": "Warm and windy.",
-    "advice": "Keep an easy pace in the wind. Keep time outside shorter."
+    "feel": "Warm and windy. The air is unhealthy.",
+    "advice": "Keep an easy pace in the wind. Because of the air, keep outdoor time short."
   },
   "hot|windy|low": {
     "feel": "Hot and windy.",
@@ -789,15 +789,15 @@
   },
   "hot|windy|moderate": {
     "feel": "Hot and windy.",
-    "advice": "Take it slower even if the wind is up. Check the air number before a long outing."
+    "advice": "Take it slower even if the wind is up. If you are sensitive to air pollution, go easier on a long outing."
   },
   "hot|windy|high": {
-    "feel": "Hot and windy.",
-    "advice": "Take it slower even if the wind is up. Keep time outside shorter, or choose an easier effort."
+    "feel": "Hot and windy. The air is unhealthy for sensitive groups.",
+    "advice": "Take it slower even if the wind is up. Because of the air, keep outdoor time shorter or the effort easier."
   },
   "hot|windy|very_high": {
-    "feel": "Hot and windy.",
-    "advice": "Take it slower even if the wind is up. Keep time outside shorter, and choose an easier effort."
+    "feel": "Hot and windy. The air is unhealthy.",
+    "advice": "Take it slower even if the wind is up. Because of the air, keep outdoor time short and the effort easy."
   },
   "very_hot|windy|low": {
     "feel": "Very hot and windy — the heat puts a heavy strain on the body.",
@@ -805,15 +805,15 @@
   },
   "very_hot|windy|moderate": {
     "feel": "Very hot and windy — the heat puts a heavy strain on the body.",
-    "advice": "Keep outdoor effort light, because the wind does not remove the heat strain. Check the air number before a long outing."
+    "advice": "Keep outdoor effort light, because the wind does not remove the heat strain. If you are sensitive to air pollution, go easier on a long outing."
   },
   "very_hot|windy|high": {
-    "feel": "Very hot and windy — the heat puts a heavy strain on the body.",
-    "advice": "Keep outdoor effort light, because the wind does not remove the heat strain. Keep time outside shorter."
+    "feel": "Very hot and windy — the heat puts a heavy strain on the body. The air is unhealthy for sensitive groups.",
+    "advice": "Keep outdoor effort light, because the wind does not remove the heat strain. Because of the air, keep outdoor time shorter."
   },
   "very_hot|windy|very_high": {
-    "feel": "Very hot and windy — the heat puts a heavy strain on the body.",
-    "advice": "Keep outdoor effort light, because the wind does not remove the heat strain. Keep time outside shorter."
+    "feel": "Very hot and windy — the heat puts a heavy strain on the body. The air is unhealthy.",
+    "advice": "Keep outdoor effort light, because the wind does not remove the heat strain. Because of the air, keep outdoor time short."
   },
   "freezing|foggy|low": {
     "feel": "Freezing and foggy — the cold puts a hard strain on the body.",
@@ -821,15 +821,15 @@
   },
   "freezing|foggy|moderate": {
     "feel": "Freezing and foggy — the cold puts a hard strain on the body.",
-    "advice": "Dress for deep cold and leave extra time to see ahead. Check the air number before a long outing."
+    "advice": "Dress for deep cold and leave extra time to see ahead. If you are sensitive to air pollution, go easier on a long outing."
   },
   "freezing|foggy|high": {
-    "feel": "Freezing and foggy — the cold puts a hard strain on the body.",
-    "advice": "Dress for deep cold and leave extra time to see ahead. Keep time outside shorter, or choose an easier effort."
+    "feel": "Freezing and foggy — the cold puts a hard strain on the body. The air is unhealthy for sensitive groups.",
+    "advice": "Dress for deep cold and leave extra time to see ahead. Because of the air, keep outdoor time shorter or the effort easier."
   },
   "freezing|foggy|very_high": {
-    "feel": "Freezing and foggy — the cold puts a hard strain on the body.",
-    "advice": "Dress for deep cold and leave extra time to see ahead. Keep time outside shorter, and choose an easier effort."
+    "feel": "Freezing and foggy — the cold puts a hard strain on the body. The air is unhealthy.",
+    "advice": "Dress for deep cold and leave extra time to see ahead. Because of the air, keep outdoor time short and the effort easy."
   },
   "cold|foggy|low": {
     "feel": "Cold and foggy.",
@@ -837,15 +837,15 @@
   },
   "cold|foggy|moderate": {
     "feel": "Cold and foggy.",
-    "advice": "Wear warm layers and leave extra time to see ahead. Check the air number before a long outing."
+    "advice": "Wear warm layers and leave extra time to see ahead. If you are sensitive to air pollution, go easier on a long outing."
   },
   "cold|foggy|high": {
-    "feel": "Cold and foggy.",
-    "advice": "Wear warm layers and leave extra time to see ahead. Keep time outside shorter, or choose an easier effort."
+    "feel": "Cold and foggy. The air is unhealthy for sensitive groups.",
+    "advice": "Wear warm layers and leave extra time to see ahead. Because of the air, keep outdoor time shorter or the effort easier."
   },
   "cold|foggy|very_high": {
-    "feel": "Cold and foggy.",
-    "advice": "Wear warm layers and leave extra time to see ahead. Keep time outside shorter, and choose an easier effort."
+    "feel": "Cold and foggy. The air is unhealthy.",
+    "advice": "Wear warm layers and leave extra time to see ahead. Because of the air, keep outdoor time short and the effort easy."
   },
   "cool|foggy|low": {
     "feel": "Cool and foggy.",
@@ -853,15 +853,15 @@
   },
   "cool|foggy|moderate": {
     "feel": "Cool and foggy.",
-    "advice": "A light jacket is enough. Leave extra time to see ahead. Check the air number before a long outing."
+    "advice": "A light jacket is enough. Leave extra time to see ahead. If you are sensitive to air pollution, go easier on a long outing."
   },
   "cool|foggy|high": {
-    "feel": "Cool and foggy.",
-    "advice": "A light jacket is enough. Leave extra time to see ahead. Keep time outside shorter, or choose an easier effort."
+    "feel": "Cool and foggy. The air is unhealthy for sensitive groups.",
+    "advice": "A light jacket is enough. Leave extra time to see ahead. Because of the air, keep outdoor time shorter or the effort easier."
   },
   "cool|foggy|very_high": {
-    "feel": "Cool and foggy.",
-    "advice": "A light jacket is enough. Leave extra time to see ahead. Keep time outside shorter, and choose an easier effort."
+    "feel": "Cool and foggy. The air is unhealthy.",
+    "advice": "A light jacket is enough. Leave extra time to see ahead. Because of the air, keep outdoor time short and the effort easy."
   },
   "mild|foggy|low": {
     "feel": "Mild and foggy.",
@@ -869,15 +869,15 @@
   },
   "mild|foggy|moderate": {
     "feel": "Mild and foggy.",
-    "advice": "Leave extra time to see ahead. Check the air number before a long outing."
+    "advice": "Leave extra time to see ahead. If you are sensitive to air pollution, go easier on a long outing."
   },
   "mild|foggy|high": {
-    "feel": "Mild and foggy.",
-    "advice": "Leave extra time to see ahead. Keep time outside shorter, or choose an easier effort."
+    "feel": "Mild and foggy. The air is unhealthy for sensitive groups.",
+    "advice": "Leave extra time to see ahead. Because of the air, keep outdoor time shorter or the effort easier."
   },
   "mild|foggy|very_high": {
-    "feel": "Mild and foggy.",
-    "advice": "Leave extra time to see ahead. Keep time outside shorter, and choose an easier effort."
+    "feel": "Mild and foggy. The air is unhealthy.",
+    "advice": "Leave extra time to see ahead. Because of the air, keep outdoor time short and the effort easy."
   },
   "warm|foggy|low": {
     "feel": "Warm and foggy.",
@@ -885,15 +885,15 @@
   },
   "warm|foggy|moderate": {
     "feel": "Warm and foggy.",
-    "advice": "Leave extra time to see ahead. Check the air number before a long outing."
+    "advice": "Leave extra time to see ahead. If you are sensitive to air pollution, go easier on a long outing."
   },
   "warm|foggy|high": {
-    "feel": "Warm and foggy.",
-    "advice": "Leave extra time to see ahead. Keep time outside shorter, or choose an easier effort."
+    "feel": "Warm and foggy. The air is unhealthy for sensitive groups.",
+    "advice": "Leave extra time to see ahead. Because of the air, keep outdoor time shorter or the effort easier."
   },
   "warm|foggy|very_high": {
-    "feel": "Warm and foggy.",
-    "advice": "Leave extra time to see ahead. Keep time outside shorter, and choose an easier effort."
+    "feel": "Warm and foggy. The air is unhealthy.",
+    "advice": "Leave extra time to see ahead. Because of the air, keep outdoor time short and the effort easy."
   },
   "hot|foggy|low": {
     "feel": "Hot and foggy.",
@@ -901,15 +901,15 @@
   },
   "hot|foggy|moderate": {
     "feel": "Hot and foggy.",
-    "advice": "Take it slower and leave extra time to see ahead. Check the air number before a long outing."
+    "advice": "Take it slower and leave extra time to see ahead. If you are sensitive to air pollution, go easier on a long outing."
   },
   "hot|foggy|high": {
-    "feel": "Hot and foggy.",
-    "advice": "Take it slower and leave extra time to see ahead. Keep time outside shorter, or choose an easier effort."
+    "feel": "Hot and foggy. The air is unhealthy for sensitive groups.",
+    "advice": "Take it slower and leave extra time to see ahead. Because of the air, keep outdoor time shorter or the effort easier."
   },
   "hot|foggy|very_high": {
-    "feel": "Hot and foggy.",
-    "advice": "Take it slower and leave extra time to see ahead. Keep time outside shorter, and choose an easier effort."
+    "feel": "Hot and foggy. The air is unhealthy.",
+    "advice": "Take it slower and leave extra time to see ahead. Because of the air, keep outdoor time short and the effort easy."
   },
   "very_hot|foggy|low": {
     "feel": "Very hot and foggy — the heat puts a heavy strain on the body.",
@@ -917,15 +917,15 @@
   },
   "very_hot|foggy|moderate": {
     "feel": "Very hot and foggy — the heat puts a heavy strain on the body.",
-    "advice": "Keep outdoor effort light and leave extra time to see ahead. Check the air number before a long outing."
+    "advice": "Keep outdoor effort light and leave extra time to see ahead. If you are sensitive to air pollution, go easier on a long outing."
   },
   "very_hot|foggy|high": {
-    "feel": "Very hot and foggy — the heat puts a heavy strain on the body.",
-    "advice": "Keep outdoor effort light and leave extra time to see ahead. Keep time outside shorter."
+    "feel": "Very hot and foggy — the heat puts a heavy strain on the body. The air is unhealthy for sensitive groups.",
+    "advice": "Keep outdoor effort light and leave extra time to see ahead. Because of the air, keep outdoor time shorter."
   },
   "very_hot|foggy|very_high": {
-    "feel": "Very hot and foggy — the heat puts a heavy strain on the body.",
-    "advice": "Keep outdoor effort light and leave extra time to see ahead. Keep time outside shorter."
+    "feel": "Very hot and foggy — the heat puts a heavy strain on the body. The air is unhealthy.",
+    "advice": "Keep outdoor effort light and leave extra time to see ahead. Because of the air, keep outdoor time short."
   },
   "mild|humid|low": {
     "feel": "Mild and humid.",
@@ -933,15 +933,15 @@
   },
   "mild|humid|moderate": {
     "feel": "Mild and humid.",
-    "advice": "Light clothes help in this humid air. Check the air number before a long outing."
+    "advice": "Light clothes help in this humid air. If you are sensitive to air pollution, go easier on a long outing."
   },
   "mild|humid|high": {
-    "feel": "Mild and humid.",
-    "advice": "Light clothes help in this humid air. Keep time outside shorter, or choose an easier effort."
+    "feel": "Mild and humid. The air is unhealthy for sensitive groups.",
+    "advice": "Light clothes help in this humid air. Because of the air, keep outdoor time shorter or the effort easier."
   },
   "mild|humid|very_high": {
-    "feel": "Mild and humid.",
-    "advice": "Light clothes help in this humid air. Keep time outside shorter, and choose an easier effort."
+    "feel": "Mild and humid. The air is unhealthy.",
+    "advice": "Light clothes help in this humid air. Because of the air, keep outdoor time short and the effort easy."
   },
   "warm|humid|low": {
     "feel": "Warm and humid.",
@@ -949,15 +949,15 @@
   },
   "warm|humid|moderate": {
     "feel": "Warm and humid.",
-    "advice": "Light clothes should be enough in this humid air. Check the air number before a long outing."
+    "advice": "Light clothes should be enough in this humid air. If you are sensitive to air pollution, go easier on a long outing."
   },
   "warm|humid|high": {
-    "feel": "Warm and humid.",
-    "advice": "Light clothes should be enough in this humid air. Keep time outside shorter, or choose an easier effort."
+    "feel": "Warm and humid. The air is unhealthy for sensitive groups.",
+    "advice": "Light clothes should be enough in this humid air. Because of the air, keep outdoor time shorter or the effort easier."
   },
   "warm|humid|very_high": {
-    "feel": "Warm and humid.",
-    "advice": "Light clothes should be enough in this humid air. Keep time outside shorter, and choose an easier effort."
+    "feel": "Warm and humid. The air is unhealthy.",
+    "advice": "Light clothes should be enough in this humid air. Because of the air, keep outdoor time short and the effort easy."
   },
   "hot|humid|low": {
     "feel": "Hot and humid.",
@@ -965,15 +965,15 @@
   },
   "hot|humid|moderate": {
     "feel": "Hot and humid.",
-    "advice": "Take it slower, because humid heat feels heavier. Check the air number before a long outing."
+    "advice": "Take it slower, because humid heat feels heavier. If you are sensitive to air pollution, go easier on a long outing."
   },
   "hot|humid|high": {
-    "feel": "Hot and humid.",
-    "advice": "Take it slower, because humid heat feels heavier. Keep time outside shorter, or choose an easier effort."
+    "feel": "Hot and humid. The air is unhealthy for sensitive groups.",
+    "advice": "Take it slower, because humid heat feels heavier. Because of the air, keep outdoor time shorter or the effort easier."
   },
   "hot|humid|very_high": {
-    "feel": "Hot and humid.",
-    "advice": "Take it slower, because humid heat feels heavier. Keep time outside shorter, and choose an easier effort."
+    "feel": "Hot and humid. The air is unhealthy.",
+    "advice": "Take it slower, because humid heat feels heavier. Because of the air, keep outdoor time short and the effort easy."
   },
   "very_hot|humid|low": {
     "feel": "Very hot and humid — the heat puts a heavy strain on the body.",
@@ -981,14 +981,14 @@
   },
   "very_hot|humid|moderate": {
     "feel": "Very hot and humid — the heat puts a heavy strain on the body.",
-    "advice": "Keep outdoor effort light and rest often in this humid heat. Check the air number before a long outing."
+    "advice": "Keep outdoor effort light and rest often in this humid heat. If you are sensitive to air pollution, go easier on a long outing."
   },
   "very_hot|humid|high": {
-    "feel": "Very hot and humid — the heat puts a heavy strain on the body.",
-    "advice": "Keep outdoor effort light and rest often in this humid heat. Keep time outside shorter."
+    "feel": "Very hot and humid — the heat puts a heavy strain on the body. The air is unhealthy for sensitive groups.",
+    "advice": "Keep outdoor effort light and rest often in this humid heat. Because of the air, keep outdoor time shorter."
   },
   "very_hot|humid|very_high": {
-    "feel": "Very hot and humid — the heat puts a heavy strain on the body.",
-    "advice": "Keep outdoor effort light and rest often in this humid heat. Keep time outside shorter."
+    "feel": "Very hot and humid — the heat puts a heavy strain on the body. The air is unhealthy.",
+    "advice": "Keep outdoor effort light and rest often in this humid heat. Because of the air, keep outdoor time short."
   }
 }

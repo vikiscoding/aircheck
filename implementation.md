@@ -64,8 +64,11 @@ Seed at least 30–40 common combinations.
    - Air quality: `https://air-quality-api.open-meteo.com/v1/air-quality?latitude=...&longitude=...&current=us_aqi,pm2_5,pm10,nitrogen_dioxide,ozone&timezone=auto`
 4. Compute the three bands. A separate written rule turns the UV index into a sun line when the rounded index is 3 or higher. Burn time uses the cloud-adjusted `uv_index`. A Fitzpatrick type, if the visitor set one, only refines that range. Clear-sky UV is a displayed number and is not used when `uv_index` is missing. A heat line uses apparent temperature and the same temperature bands, and it appears only when that band is hotter than the air-temperature band. One activity line names the first matching limit: stormy, heavy precipitation, very high US AQI, then heat when the feels-like band is hot or very hot and hotter than the air. The result card is labeled Limiting conditions or Easier conditions only when that written rule matches. A missing UV or AQI number cannot make the easier tint.
 5. Look up feel-table (with fallback). The table keys stay temperature, weather, and air quality.
-6. Render place name, the card label when the tone rule matches, feel sentence + advice, the heat line, the activity line, the sun line when the UV index is 3 or higher, simple facts, timestamp, citation.
-7. Optionally append bank.json entry if present.
+6. Render place name, the card label when the tone rule matches, feel sentence + advice, the heat line, the activity line, the sun line when the UV index is 3 or higher, three glance tiles (feels like, US AQI, UV index) for the numbers that came back, simple facts, a readable timestamp, citation, then a share link for a geocoded place and the contribution link.
+   - A share link is `/?place=<label>&id=<Open-Meteo place id>`. On load, a valid `id` is looked up with the geocoding `get` endpoint. Otherwise `place` is searched. Coordinates never go in a link, and a geolocation reading has no link.
+7. Optionally append one offer line from `offer-table.json`. `cover` wins for `stormy` or `heavy_rain`. Next, `air` wins when the US AQI band is high or very high. Otherwise `sun` wins when the UV band is moderate or higher. The line renders only when that row has a sentence, a label, and an `https` link. Skin type and place are not part of the key.
+8. Optionally append bank.json entry if present.
+9. A sponsor line renders in the support section only when `sponsor.json` has a name, an `https` link, and an `until` date that is today or later.
 
 ## 5. Simple facts display
 Always show alongside the feel sentence:
@@ -82,7 +85,9 @@ Always show alongside the feel sentence:
 
 ## 6. Contribution & monetization
 - Contribution link visible in footer and near result.
-- Monetization placeholders present but inactive (no ads, no tracking).
+- `offer-table.json` has three universal rows, `cover`, `air`, and `sun`. Leave `label` and `href` empty until a brand link exists. An empty link renders nothing.
+- `sponsor.json` holds one name, one `https` link, and an inclusive `until` date (`YYYY-MM-DD`). An empty record renders nothing.
+- No ad script and no tracker. The lines are ordinary links.
 
 ## 7. Privacy & static fallback
 - Privacy statement in static HTML.
