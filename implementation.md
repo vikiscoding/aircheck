@@ -70,6 +70,12 @@ Seed at least 30–40 common combinations.
 8. Optionally append bank.json entry if present.
 9. A sponsor line renders in the support section only when `sponsor.json` has a name, an `https` link, and an `until` date that is today or later.
 
+## 4b. City pages
+- `cities.json` lists slug, name, country, and Open-Meteo place id.
+- `scripts/refresh-cities.mjs` fetches 2023–2025 hourly US AQI and UV (air-quality API) and daily apparent temperature max (archive API), and saves a monthly summary per city in `data/cities/`.
+- `scripts/build-cities.mjs` writes `city-pages/<slug>.html`, the home city list, and `sitemap.xml`. The live form is copied from the `reading:start`/`reading:end` block in `index.html`. Deploy copies the city pages to the site root, so `/delhi` serves `delhi.html`.
+- A city page sets `<main data-place-id>`, and `app.js` loads that place's live reading. Sentences come from fixed rules in `scripts/city-stats.js`. Every number in the yearly section must appear in that city's data file. There is no hour-of-day sentence, because US AQI averages particles over 24 hours.
+
 ## 5. Simple facts display
 Always show alongside the feel sentence:
 - Temperature / feels-like

@@ -1,0 +1,128 @@
+{
+  "slug": "mumbai",
+  "name": "Mumbai",
+  "country": "India",
+  "id": 1275339,
+  "latitude": 19.07283,
+  "longitude": 72.88261,
+  "timezone": "Asia/Kolkata",
+  "from": "2023-01-01",
+  "to": "2025-12-31",
+  "retrieved": "2026-11-01",
+  "sources": [
+    "https://air-quality-api.open-meteo.com/v1/air-quality?latitude=19.07283&longitude=72.88261&hourly=us_aqi,uv_index&start_date=2023-01-01&end_date=2025-12-31&timezone=auto",
+    "https://archive-api.open-meteo.com/v1/archive?latitude=19.07283&longitude=72.88261&daily=apparent_temperature_max&start_date=2023-01-01&end_date=2025-12-31&timezone=auto"
+  ],
+  "summary": {
+    "months": [
+      {
+        "month": 1,
+        "name": "January",
+        "medianAqi": 161,
+        "daysOver150Pct": 94,
+        "peakUv": 6.1,
+        "feelsHighC": 32,
+        "feelsHighF": 89
+      },
+      {
+        "month": 2,
+        "name": "February",
+        "medianAqi": 157,
+        "daysOver150Pct": 87,
+        "peakUv": 8.4,
+        "feelsHighC": 34,
+        "feelsHighF": 93
+      },
+      {
+        "month": 3,
+        "name": "March",
+        "medianAqi": 118,
+        "daysOver150Pct": 72,
+        "peakUv": 9.5,
+        "feelsHighC": 36,
+        "feelsHighF": 97
+      },
+      {
+        "month": 4,
+        "name": "April",
+        "medianAqi": 92,
+        "daysOver150Pct": 46,
+        "peakUv": 9.9,
+        "feelsHighC": 38,
+        "feelsHighF": 101
+      },
+      {
+        "month": 5,
+        "name": "May",
+        "medianAqi": 77,
+        "daysOver150Pct": 15,
+        "peakUv": 9.8,
+        "feelsHighC": 39,
+        "feelsHighF": 102
+      },
+      {
+        "month": 6,
+        "name": "June",
+        "medianAqi": 71,
+        "daysOver150Pct": 1,
+        "peakUv": 8.4,
+        "feelsHighC": 36,
+        "feelsHighF": 96
+      },
+      {
+        "month": 7,
+        "name": "July",
+        "medianAqi": 70,
+        "daysOver150Pct": 0,
+        "peakUv": 5.1,
+        "feelsHighC": 32,
+        "feelsHighF": 90
+      },
+      {
+        "month": 8,
+        "name": "August",
+        "medianAqi": 67,
+        "daysOver150Pct": 0,
+        "peakUv": 7.8,
+        "feelsHighC": 33,
+        "feelsHighF": 92
+      },
+      {
+        "month": 9,
+        "name": "September",
+        "medianAqi": 67,
+        "daysOver150Pct": 2,
+        "peakUv": 7.5,
+        "feelsHighC": 34,
+        "feelsHighF": 93
+      },
+      {
+        "month": 10,
+        "name": "October",
+        "medianAqi": 132,
+        "daysOver150Pct": 69,
+        "peakUv": 7.5,
+        "feelsHighC": 38,
+        "feelsHighF": 100
+      },
+      {
+        "month": 11,
+        "name": "November",
+        "medianAqi": 159,
+        "daysOver150Pct": 91,
+        "peakUv": 6.1,
+        "feelsHighC": 35,
+        "feelsHighF": 95
+      },
+      {
+        "month": 12,
+        "name": "December",
+        "medianAqi": 155,
+        "daysOver150Pct": 94,
+        "peakUv": 5.6,
+        "feelsHighC": 33,
+        "feelsHighF": 92
+      }
+    ]
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "slug": "jakarta",
+  "name": "Jakarta",
+  "country": "Indonesia",
+  "id": 1642911,
+  "latitude": -6.21462,
+  "longitude": 106.84513,
+  "timezone": "Asia/Jakarta",
+  "from": "2023-01-01",
+  "to": "2025-12-31",
+  "retrieved": "2026-11-01",
+  "sources": [
+    "https://air-quality-api.open-meteo.com/v1/air-quality?latitude=-6.21462&longitude=106.84513&hourly=us_aqi,uv_index&start_date=2023-01-01&end_date=2025-12-31&timezone=auto",
+    "https://archive-api.open-meteo.com/v1/archive?latitude=-6.21462&longitude=106.84513&daily=apparent_temperature_max&start_date=2023-01-01&end_date=2025-12-31&timezone=auto"
+  ],
+  "summary": {
+    "months": [
+      {
+        "month": 1,
+        "name": "January",
+        "medianAqi": 99,
+        "daysOver150Pct": 29,
+        "peakUv": 8.3,
+        "feelsHighC": 36,
+        "feelsHighF": 97
+      },
+      {
+        "month": 2,
+        "name": "February",
+        "medianAqi": 111,
+        "daysOver150Pct": 35,
+        "peakUv": 8.2,
+        "feelsHighC": 36,
+        "feelsHighF": 97
+      },
+      {
+        "month": 3,
+        "name": "March",
+        "medianAqi": 131,
+        "daysOver150Pct": 51,
+        "peakUv": 7.7,
+        "feelsHighC": 37,
+        "feelsHighF": 99
+      },
+      {
+        "month": 4,
+        "name": "April",
+        "medianAqi": 158,
+        "daysOver150Pct": 81,
+        "peakUv": 8,
+        "feelsHighC": 39,
+        "feelsHighF": 102
+      },
+      {
+        "month": 5,
+        "name": "May",
+        "medianAqi": 168,
+        "daysOver150Pct": 95,
+        "peakUv": 6.4,
+        "feelsHighC": 39,
+        "feelsHighF": 102
+      },
+      {
+        "month": 6,
+        "name": "June",
+        "medianAqi": 172,
+        "daysOver150Pct": 96,
+        "peakUv": 6.3,
+        "feelsHighC": 38,
+        "feelsHighF": 100
+      },
+      {
+        "month": 7,
+        "name": "July",
+        "medianAqi": 173,
+        "daysOver150Pct": 96,
+        "peakUv": 6.8,
+        "feelsHighC": 37,
+        "feelsHighF": 99
+      },
+      {
+        "month": 8,
+        "name": "August",
+        "medianAqi": 170,
+        "daysOver150Pct": 100,
+        "peakUv": 8.2,
+        "feelsHighC": 38,
+        "feelsHighF": 101
+      },
+      {
+        "month": 9,
+        "name": "September",
+        "medianAqi": 167,
+        "daysOver150Pct": 100,
+        "peakUv": 8.7,
+        "feelsHighC": 38,
+        "feelsHighF": 101
+      },
+      {
+        "month": 10,
+        "name": "October",
+        "medianAqi": 167,
+        "daysOver150Pct": 100,
+        "peakUv": 8.8,
+        "feelsHighC": 40,
+        "feelsHighF": 103
+      },
+      {
+        "month": 11,
+        "name": "November",
+        "medianAqi": 161,
+        "daysOver150Pct": 86,
+        "peakUv": 7.5,
+        "feelsHighC": 39,
+        "feelsHighF": 102
+      },
+      {
+        "month": 12,
+        "name": "December",
+        "medianAqi": 152,
+        "daysOver150Pct": 66,
+        "peakUv": 7.4,
+        "feelsHighC": 37,
+        "feelsHighF": 99
+      }
+    ]
+  }
+}

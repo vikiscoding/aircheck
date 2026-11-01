@@ -1,0 +1,128 @@
+{
+  "slug": "lahore",
+  "name": "Lahore",
+  "country": "Pakistan",
+  "id": 1172451,
+  "latitude": 31.558,
+  "longitude": 74.35071,
+  "timezone": "Asia/Karachi",
+  "from": "2023-01-01",
+  "to": "2025-12-31",
+  "retrieved": "2026-11-01",
+  "sources": [
+    "https://air-quality-api.open-meteo.com/v1/air-quality?latitude=31.558&longitude=74.35071&hourly=us_aqi,uv_index&start_date=2023-01-01&end_date=2025-12-31&timezone=auto",
+    "https://archive-api.open-meteo.com/v1/archive?latitude=31.558&longitude=74.35071&daily=apparent_temperature_max&start_date=2023-01-01&end_date=2025-12-31&timezone=auto"
+  ],
+  "summary": {
+    "months": [
+      {
+        "month": 1,
+        "name": "January",
+        "medianAqi": 218,
+        "daysOver150Pct": 100,
+        "peakUv": 2.4,
+        "feelsHighC": 16,
+        "feelsHighF": 61
+      },
+      {
+        "month": 2,
+        "name": "February",
+        "medianAqi": 156,
+        "daysOver150Pct": 71,
+        "peakUv": 4,
+        "feelsHighC": 21,
+        "feelsHighF": 69
+      },
+      {
+        "month": 3,
+        "name": "March",
+        "medianAqi": 131,
+        "daysOver150Pct": 49,
+        "peakUv": 5.9,
+        "feelsHighC": 28,
+        "feelsHighF": 82
+      },
+      {
+        "month": 4,
+        "name": "April",
+        "medianAqi": 109,
+        "daysOver150Pct": 58,
+        "peakUv": 7.3,
+        "feelsHighC": 34,
+        "feelsHighF": 92
+      },
+      {
+        "month": 5,
+        "name": "May",
+        "medianAqi": 133,
+        "daysOver150Pct": 85,
+        "peakUv": 7.9,
+        "feelsHighC": 39,
+        "feelsHighF": 103
+      },
+      {
+        "month": 6,
+        "name": "June",
+        "medianAqi": 141,
+        "daysOver150Pct": 87,
+        "peakUv": 7.5,
+        "feelsHighC": 42,
+        "feelsHighF": 108
+      },
+      {
+        "month": 7,
+        "name": "July",
+        "medianAqi": 138,
+        "daysOver150Pct": 70,
+        "peakUv": 6.4,
+        "feelsHighC": 41,
+        "feelsHighF": 107
+      },
+      {
+        "month": 8,
+        "name": "August",
+        "medianAqi": 136,
+        "daysOver150Pct": 66,
+        "peakUv": 7.2,
+        "feelsHighC": 41,
+        "feelsHighF": 105
+      },
+      {
+        "month": 9,
+        "name": "September",
+        "medianAqi": 129,
+        "daysOver150Pct": 76,
+        "peakUv": 6.7,
+        "feelsHighC": 39,
+        "feelsHighF": 103
+      },
+      {
+        "month": 10,
+        "name": "October",
+        "medianAqi": 155,
+        "daysOver150Pct": 81,
+        "peakUv": 5.3,
+        "feelsHighC": 33,
+        "feelsHighF": 91
+      },
+      {
+        "month": 11,
+        "name": "November",
+        "medianAqi": 183,
+        "daysOver150Pct": 94,
+        "peakUv": 3.4,
+        "feelsHighC": 24,
+        "feelsHighF": 76
+      },
+      {
+        "month": 12,
+        "name": "December",
+        "medianAqi": 189,
+        "daysOver150Pct": 98,
+        "peakUv": 2.8,
+        "feelsHighC": 19,
+        "feelsHighF": 66
+      }
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+[
+  { "slug": "delhi", "name": "Delhi", "country": "India", "id": 1273294 },
+  { "slug": "lahore", "name": "Lahore", "country": "Pakistan", "id": 1172451 },
+  { "slug": "dhaka", "name": "Dhaka", "country": "Bangladesh", "id": 1185241 },
+  { "slug": "beijing", "name": "Beijing", "country": "China", "id": 1816670 },
+  { "slug": "mumbai", "name": "Mumbai", "country": "India", "id": 1275339 },
+  { "slug": "bangkok", "name": "Bangkok", "country": "Thailand", "id": 1609350 },
+  { "slug": "los-angeles", "name": "Los Angeles", "country": "United States", "id": 5368361 },
+  { "slug": "mexico-city", "name": "Mexico City", "country": "Mexico", "id": 3530597 },
+  { "slug": "jakarta", "name": "Jakarta", "country": "Indonesia", "id": 1642911 },
+  { "slug": "cairo", "name": "Cairo", "country": "Egypt", "id": 360630 }
+]

@@ -1,0 +1,128 @@
+{
+  "slug": "dhaka",
+  "name": "Dhaka",
+  "country": "Bangladesh",
+  "id": 1185241,
+  "latitude": 23.7104,
+  "longitude": 90.40744,
+  "timezone": "Asia/Dhaka",
+  "from": "2023-01-01",
+  "to": "2025-12-31",
+  "retrieved": "2026-11-01",
+  "sources": [
+    "https://air-quality-api.open-meteo.com/v1/air-quality?latitude=23.7104&longitude=90.40744&hourly=us_aqi,uv_index&start_date=2023-01-01&end_date=2025-12-31&timezone=auto",
+    "https://archive-api.open-meteo.com/v1/archive?latitude=23.7104&longitude=90.40744&daily=apparent_temperature_max&start_date=2023-01-01&end_date=2025-12-31&timezone=auto"
+  ],
+  "summary": {
+    "months": [
+      {
+        "month": 1,
+        "name": "January",
+        "medianAqi": 174,
+        "daysOver150Pct": 96,
+        "peakUv": 4.5,
+        "feelsHighC": 25,
+        "feelsHighF": 77
+      },
+      {
+        "month": 2,
+        "name": "February",
+        "medianAqi": 166,
+        "daysOver150Pct": 93,
+        "peakUv": 5.7,
+        "feelsHighC": 29,
+        "feelsHighF": 85
+      },
+      {
+        "month": 3,
+        "name": "March",
+        "medianAqi": 152,
+        "daysOver150Pct": 73,
+        "peakUv": 7,
+        "feelsHighC": 34,
+        "feelsHighF": 93
+      },
+      {
+        "month": 4,
+        "name": "April",
+        "medianAqi": 124,
+        "daysOver150Pct": 53,
+        "peakUv": 7.3,
+        "feelsHighC": 40,
+        "feelsHighF": 103
+      },
+      {
+        "month": 5,
+        "name": "May",
+        "medianAqi": 94,
+        "daysOver150Pct": 38,
+        "peakUv": 7.1,
+        "feelsHighC": 40,
+        "feelsHighF": 104
+      },
+      {
+        "month": 6,
+        "name": "June",
+        "medianAqi": 79,
+        "daysOver150Pct": 10,
+        "peakUv": 6.6,
+        "feelsHighC": 40,
+        "feelsHighF": 103
+      },
+      {
+        "month": 7,
+        "name": "July",
+        "medianAqi": 56,
+        "daysOver150Pct": 0,
+        "peakUv": 7.3,
+        "feelsHighC": 39,
+        "feelsHighF": 101
+      },
+      {
+        "month": 8,
+        "name": "August",
+        "medianAqi": 66,
+        "daysOver150Pct": 3,
+        "peakUv": 6.1,
+        "feelsHighC": 38,
+        "feelsHighF": 100
+      },
+      {
+        "month": 9,
+        "name": "September",
+        "medianAqi": 72,
+        "daysOver150Pct": 22,
+        "peakUv": 7.5,
+        "feelsHighC": 40,
+        "feelsHighF": 104
+      },
+      {
+        "month": 10,
+        "name": "October",
+        "medianAqi": 141,
+        "daysOver150Pct": 57,
+        "peakUv": 5.7,
+        "feelsHighC": 37,
+        "feelsHighF": 99
+      },
+      {
+        "month": 11,
+        "name": "November",
+        "medianAqi": 154,
+        "daysOver150Pct": 68,
+        "peakUv": 5.2,
+        "feelsHighC": 32,
+        "feelsHighF": 89
+      },
+      {
+        "month": 12,
+        "name": "December",
+        "medianAqi": 161,
+        "daysOver150Pct": 82,
+        "peakUv": 4.4,
+        "feelsHighC": 27,
+        "feelsHighF": 80
+      }
+    ]
+  }
+}

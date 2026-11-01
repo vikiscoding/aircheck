@@ -73,6 +73,7 @@
     var linked = typeof FeelLookup.placeRequest === "function"
       ? callOrNull(function () { return FeelLookup.placeRequest(window.location.search); })
       : null;
+    if (!linked) linked = pagePlace();
     if (linked && linked.id) {
       runPlaceId(linked.id);
     } else if (linked && linked.query) {
@@ -413,6 +414,13 @@
         clearReading(output);
       });
     }
+  }
+
+  // A city page names its place on <main data-place-id>. A link in the address bar still wins.
+  function pagePlace() {
+    var main = document.querySelector("main[data-place-id]");
+    var id = main ? main.getAttribute("data-place-id") : "";
+    return /^[1-9]\d{0,11}$/.test(id || "") ? { id: Number(id) } : null;
   }
 
   function findSubmitButton(form, locationButton) {

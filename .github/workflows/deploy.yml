@@ -29,6 +29,9 @@ jobs:
       - name: Check the visit counter
         run: node tests/visits.test.mjs
 
+      - name: Check the city pages
+        run: node tests/city-pages.test.mjs
+
   deploy:
     needs: check
     if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
@@ -40,6 +43,7 @@ jobs:
         run: |
           mkdir site
           cp index.html style.css app.js feel-lookup.js feel-table.json bank.json offer-table.json sponsor.json favicon.svg og-image.png apple-touch-icon.png robots.txt sitemap.xml _headers site/
+          cp city-pages/*.html site/
 
       - name: Publish to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3

@@ -1,0 +1,128 @@
+{
+  "slug": "mexico-city",
+  "name": "Mexico City",
+  "country": "Mexico",
+  "id": 3530597,
+  "latitude": 19.42847,
+  "longitude": -99.12766,
+  "timezone": "America/Mexico_City",
+  "from": "2023-01-01",
+  "to": "2025-12-31",
+  "retrieved": "2026-11-01",
+  "sources": [
+    "https://air-quality-api.open-meteo.com/v1/air-quality?latitude=19.42847&longitude=-99.12766&hourly=us_aqi,uv_index&start_date=2023-01-01&end_date=2025-12-31&timezone=auto",
+    "https://archive-api.open-meteo.com/v1/archive?latitude=19.42847&longitude=-99.12766&daily=apparent_temperature_max&start_date=2023-01-01&end_date=2025-12-31&timezone=auto"
+  ],
+  "summary": {
+    "months": [
+      {
+        "month": 1,
+        "name": "January",
+        "medianAqi": 83,
+        "daysOver150Pct": 26,
+        "peakUv": 8.1,
+        "feelsHighC": 21,
+        "feelsHighF": 70
+      },
+      {
+        "month": 2,
+        "name": "February",
+        "medianAqi": 89,
+        "daysOver150Pct": 41,
+        "peakUv": 10.1,
+        "feelsHighC": 23,
+        "feelsHighF": 74
+      },
+      {
+        "month": 3,
+        "name": "March",
+        "medianAqi": 80,
+        "daysOver150Pct": 47,
+        "peakUv": 12.5,
+        "feelsHighC": 27,
+        "feelsHighF": 80
+      },
+      {
+        "month": 4,
+        "name": "April",
+        "medianAqi": 79,
+        "daysOver150Pct": 49,
+        "peakUv": 13.1,
+        "feelsHighC": 28,
+        "feelsHighF": 82
+      },
+      {
+        "month": 5,
+        "name": "May",
+        "medianAqi": 92,
+        "daysOver150Pct": 61,
+        "peakUv": 11.9,
+        "feelsHighC": 29,
+        "feelsHighF": 84
+      },
+      {
+        "month": 6,
+        "name": "June",
+        "medianAqi": 73,
+        "daysOver150Pct": 19,
+        "peakUv": 11.9,
+        "feelsHighC": 27,
+        "feelsHighF": 81
+      },
+      {
+        "month": 7,
+        "name": "July",
+        "medianAqi": 79,
+        "daysOver150Pct": 16,
+        "peakUv": 10.7,
+        "feelsHighC": 25,
+        "feelsHighF": 78
+      },
+      {
+        "month": 8,
+        "name": "August",
+        "medianAqi": 77,
+        "daysOver150Pct": 13,
+        "peakUv": 11.2,
+        "feelsHighC": 25,
+        "feelsHighF": 77
+      },
+      {
+        "month": 9,
+        "name": "September",
+        "medianAqi": 71,
+        "daysOver150Pct": 8,
+        "peakUv": 10.3,
+        "feelsHighC": 26,
+        "feelsHighF": 78
+      },
+      {
+        "month": 10,
+        "name": "October",
+        "medianAqi": 67,
+        "daysOver150Pct": 8,
+        "peakUv": 9.1,
+        "feelsHighC": 23,
+        "feelsHighF": 73
+      },
+      {
+        "month": 11,
+        "name": "November",
+        "medianAqi": 81,
+        "daysOver150Pct": 8,
+        "peakUv": 8.7,
+        "feelsHighC": 23,
+        "feelsHighF": 74
+      },
+      {
+        "month": 12,
+        "name": "December",
+        "medianAqi": 82,
+        "daysOver150Pct": 4,
+        "peakUv": 7.2,
+        "feelsHighC": 20,
+        "feelsHighF": 67
+      }
+    ]
+  }
+}

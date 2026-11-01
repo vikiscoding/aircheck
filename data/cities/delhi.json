@@ -1,0 +1,128 @@
+{
+  "slug": "delhi",
+  "name": "Delhi",
+  "country": "India",
+  "id": 1273294,
+  "latitude": 28.65195,
+  "longitude": 77.23149,
+  "timezone": "Asia/Kolkata",
+  "from": "2023-01-01",
+  "to": "2025-12-31",
+  "retrieved": "2026-11-01",
+  "sources": [
+    "https://air-quality-api.open-meteo.com/v1/air-quality?latitude=28.65195&longitude=77.23149&hourly=us_aqi,uv_index&start_date=2023-01-01&end_date=2025-12-31&timezone=auto",
+    "https://archive-api.open-meteo.com/v1/archive?latitude=28.65195&longitude=77.23149&daily=apparent_temperature_max&start_date=2023-01-01&end_date=2025-12-31&timezone=auto"
+  ],
+  "summary": {
+    "months": [
+      {
+        "month": 1,
+        "name": "January",
+        "medianAqi": 194,
+        "daysOver150Pct": 99,
+        "peakUv": 3.2,
+        "feelsHighC": 18,
+        "feelsHighF": 64
+      },
+      {
+        "month": 2,
+        "name": "February",
+        "medianAqi": 156,
+        "daysOver150Pct": 74,
+        "peakUv": 5,
+        "feelsHighC": 23,
+        "feelsHighF": 73
+      },
+      {
+        "month": 3,
+        "name": "March",
+        "medianAqi": 156,
+        "daysOver150Pct": 76,
+        "peakUv": 6.9,
+        "feelsHighC": 29,
+        "feelsHighF": 85
+      },
+      {
+        "month": 4,
+        "name": "April",
+        "medianAqi": 137,
+        "daysOver150Pct": 62,
+        "peakUv": 7.7,
+        "feelsHighC": 36,
+        "feelsHighF": 97
+      },
+      {
+        "month": 5,
+        "name": "May",
+        "medianAqi": 157,
+        "daysOver150Pct": 87,
+        "peakUv": 7.8,
+        "feelsHighC": 40,
+        "feelsHighF": 104
+      },
+      {
+        "month": 6,
+        "name": "June",
+        "medianAqi": 153,
+        "daysOver150Pct": 77,
+        "peakUv": 7.3,
+        "feelsHighC": 41,
+        "feelsHighF": 106
+      },
+      {
+        "month": 7,
+        "name": "July",
+        "medianAqi": 134,
+        "daysOver150Pct": 72,
+        "peakUv": 6.7,
+        "feelsHighC": 41,
+        "feelsHighF": 105
+      },
+      {
+        "month": 8,
+        "name": "August",
+        "medianAqi": 131,
+        "daysOver150Pct": 54,
+        "peakUv": 7.1,
+        "feelsHighC": 39,
+        "feelsHighF": 102
+      },
+      {
+        "month": 9,
+        "name": "September",
+        "medianAqi": 123,
+        "daysOver150Pct": 51,
+        "peakUv": 7,
+        "feelsHighC": 39,
+        "feelsHighF": 101
+      },
+      {
+        "month": 10,
+        "name": "October",
+        "medianAqi": 153,
+        "daysOver150Pct": 71,
+        "peakUv": 6.1,
+        "feelsHighC": 33,
+        "feelsHighF": 92
+      },
+      {
+        "month": 11,
+        "name": "November",
+        "medianAqi": 181,
+        "daysOver150Pct": 98,
+        "peakUv": 3.9,
+        "feelsHighC": 25,
+        "feelsHighF": 78
+      },
+      {
+        "month": 12,
+        "name": "December",
+        "medianAqi": 180,
+        "daysOver150Pct": 95,
+        "peakUv": 3.5,
+        "feelsHighC": 21,
+        "feelsHighF": 69
+      }
+    ]
+  }
+}

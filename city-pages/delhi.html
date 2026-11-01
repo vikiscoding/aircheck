@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Delhi air quality, UV and heat: now and by month</title>
+  <meta name="description" content="Live US AQI, UV index and feels-like temperature for Delhi, India, in one plain sentence. In Delhi, the air is usually worst in January, with a median US AQI of 194 (Unhealthy).">
+  <link rel="canonical" href="https://aircheck.fyi/delhi">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#0f6e6b">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://geocoding-api.open-meteo.com" crossorigin>
+  <link rel="preconnect" href="https://api.open-meteo.com" crossorigin>
+  <link rel="preconnect" href="https://air-quality-api.open-meteo.com" crossorigin>
+  <link rel="stylesheet" href="/style.css">
+  <meta property="og:title" content="Delhi air quality, UV and heat: now and by month">
+  <meta property="og:description" content="Live US AQI, UV index and feels-like temperature for Delhi, India, in one plain sentence. In Delhi, the air is usually worst in January, with a median US AQI of 194 (Unhealthy).">
+  <meta property="og:url" content="https://aircheck.fyi/delhi">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="aircheck.fyi">
+  <meta property="og:image" content="https://aircheck.fyi/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://aircheck.fyi/og-image.png">
+</head>
+<body>
+  <a class="skip-link" href="#place-form">Skip to the place form</a>
+  <header class="site-header">
+    <a class="site-name" href="/"><span class="site-mark" aria-hidden="true"></span>aircheck.fyi</a>
+    <a class="support-link" href="https://buy.stripe.com/9B6dR9cXu2Pm5Pyc174sE01" rel="noopener noreferrer">Support this free tool</a>
+  </header>
+  <main data-place-id="1273294">
+    <section class="hero" aria-labelledby="page-title">
+      <p class="crumbs"><a href="/">aircheck.fyi</a> <span aria-hidden="true">›</span> Delhi</p>
+      <h1 id="page-title">How it feels outside in Delhi right now</h1>
+      <p class="lead">The live reading for Delhi, India loads below. Under it is the usual air, UV and heat for each month.</p>
+      <form id="place-form" method="get" action="/" autocomplete="off" tabindex="-1">
+        <label for="place-input">City or place</label>
+        <input id="place-input" name="place" type="text" required maxlength="120" placeholder="Lisbon, Portugal" autocomplete="off" enterkeyhint="search">
+        <div class="form-actions">
+          <button type="submit">Check this place</button>
+          <button type="button" id="use-location">Use my location once</button>
+        </div>
+        <details class="skin-type">
+          <summary>Sun settings <span class="summary-note">optional, for a burn-time range</span></summary>
+          <label for="skin-type">Skin type (Fitzpatrick)</label>
+          <select id="skin-type">
+            <option value="">Not set</option>
+            <option value="I">I, very fair</option>
+            <option value="II">II, fair</option>
+            <option value="III">III, medium</option>
+            <option value="IV">IV, olive</option>
+            <option value="V">V, brown</option>
+            <option value="VI">VI, dark</option>
+          </select>
+          <label class="remember-skin" for="remember-skin">
+            <input id="remember-skin" type="checkbox">
+            Remember this skin type on this device
+          </label>
+          <p class="note">The type only refines the burn-time range. It is not sent with the place.</p>
+        </details>
+      </form>
+      <p id="reading-status" role="status"></p>
+      <div id="reading">
+        <div id="reading-output"></div>
+        <p id="choices-label" class="choices-label" hidden>Did you mean another place?</p>
+        <ul id="place-choices" aria-labelledby="choices-label"></ul>
+      </div>
+    </section>
+
+    <section id="city-year" aria-labelledby="year-title">
+      <h2 id="year-title">Delhi through the year</h2>
+      <ul class="city-facts">
+        <li>In Delhi, the air is usually worst in January, with a median US AQI of 194 (Unhealthy).</li>
+        <li>It is usually cleanest in September, with a median of 123 (Unhealthy for Sensitive Groups).</li>
+        <li>In January, 99% of days had at least one hour above 150 (Unhealthy).</li>
+        <li>UV is highest in May, with a typical daily peak of 7.8 (very high).</li>
+        <li>The hottest-feeling month is June, with typical feels-like highs of 41°C (106°F).</li>
+      </ul>
+      <div class="table-wrap">
+        <table class="month-table">
+          <caption>Typical values by month in Delhi, 2023–2025</caption>
+          <thead>
+            <tr><th scope="col">Month</th><th scope="col">Median US AQI</th><th scope="col">Days with an hour above 150</th><th scope="col">Typical UV peak</th><th scope="col">Typical feels-like high</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Jan</th><td>194</td><td>99%</td><td>3.2</td><td>18°C (64°F)</td></tr>
+            <tr><th scope="row">Feb</th><td>156</td><td>74%</td><td>5</td><td>23°C (73°F)</td></tr>
+            <tr><th scope="row">Mar</th><td>156</td><td>76%</td><td>6.9</td><td>29°C (85°F)</td></tr>
+            <tr><th scope="row">Apr</th><td>137</td><td>62%</td><td>7.7</td><td>36°C (97°F)</td></tr>
+            <tr><th scope="row">May</th><td>157</td><td>87%</td><td>7.8</td><td>40°C (104°F)</td></tr>
+            <tr><th scope="row">Jun</th><td>153</td><td>77%</td><td>7.3</td><td>41°C (106°F)</td></tr>
+            <tr><th scope="row">Jul</th><td>134</td><td>72%</td><td>6.7</td><td>41°C (105°F)</td></tr>
+            <tr><th scope="row">Aug</th><td>131</td><td>54%</td><td>7.1</td><td>39°C (102°F)</td></tr>
+            <tr><th scope="row">Sep</th><td>123</td><td>51%</td><td>7</td><td>39°C (101°F)</td></tr>
+            <tr><th scope="row">Oct</th><td>153</td><td>71%</td><td>6.1</td><td>33°C (92°F)</td></tr>
+            <tr><th scope="row">Nov</th><td>181</td><td>98%</td><td>3.9</td><td>25°C (78°F)</td></tr>
+            <tr><th scope="row">Dec</th><td>180</td><td>95%</td><td>3.5</td><td>21°C (69°F)</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <h3>Where these numbers come from</h3>
+      <p>US AQI and UV index come from the Open-Meteo air-quality API (CAMS global), hour by hour. Feels-like highs come from the Open-Meteo historical weather API, day by day. Each value is the median across 2023–2025, retrieved 1 Nov 2026. CAMS is a model on a grid tens of kilometres wide. It describes the wider city area, not one street, and it can differ from local monitoring stations. Its US AQI averages particles over a day, so a single hour is smoothed. For a health decision, check a local official source.</p>
+    </section>
+
+    <section id="other-cities" aria-labelledby="others-title">
+      <h2 id="others-title">Other cities</h2>
+      <ul class="city-list">
+        <li><a href="/lahore">Lahore, Pakistan</a></li>
+        <li><a href="/dhaka">Dhaka, Bangladesh</a></li>
+        <li><a href="/beijing">Beijing, China</a></li>
+        <li><a href="/mumbai">Mumbai, India</a></li>
+        <li><a href="/bangkok">Bangkok, Thailand</a></li>
+        <li><a href="/los-angeles">Los Angeles, United States</a></li>
+        <li><a href="/mexico-city">Mexico City, Mexico</a></li>
+        <li><a href="/jakarta">Jakarta, Indonesia</a></li>
+        <li><a href="/cairo">Cairo, Egypt</a></li>
+      </ul>
+      <p class="note">Or <a href="/">check any place</a>.</p>
+    </section>
+
+    <section id="privacy" aria-labelledby="privacy-title">
+      <h2 id="privacy-title">Privacy and support</h2>
+      <p>No account. No history. No cookies. The sentence comes from a fixed table, not a model. If you use your location, the coordinates are used once and then discarded. aircheck.fyi has no ads and no trackers. If it helps, <a href="https://buy.stripe.com/9B6dR9cXu2Pm5Pyc174sE01" rel="noopener noreferrer">support this free tool</a>.</p>
+    </section>
+  </main>
+  <footer>
+    <p><a class="support-link" href="https://buy.stripe.com/9B6dR9cXu2Pm5Pyc174sE01" rel="noopener noreferrer">Support this free tool</a></p>
+    <p class="attribution">Weather and air-quality data from <a href="https://open-meteo.com/" rel="noopener noreferrer">Open-Meteo</a> (CAMS global air quality). Not an official government source.</p>
+    <p id="visit-count" class="visit-count">Visit count needs JavaScript.</p>
+  </footer>
+  <script src="/feel-lookup.js" defer></script>
+  <script src="/app.js" defer></script>
+</body>
+</html>

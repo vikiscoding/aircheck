@@ -1,0 +1,128 @@
+{
+  "slug": "beijing",
+  "name": "Beijing",
+  "country": "China",
+  "id": 1816670,
+  "latitude": 39.9075,
+  "longitude": 116.39723,
+  "timezone": "Asia/Shanghai",
+  "from": "2023-01-01",
+  "to": "2025-12-31",
+  "retrieved": "2026-11-01",
+  "sources": [
+    "https://air-quality-api.open-meteo.com/v1/air-quality?latitude=39.9075&longitude=116.39723&hourly=us_aqi,uv_index&start_date=2023-01-01&end_date=2025-12-31&timezone=auto",
+    "https://archive-api.open-meteo.com/v1/archive?latitude=39.9075&longitude=116.39723&daily=apparent_temperature_max&start_date=2023-01-01&end_date=2025-12-31&timezone=auto"
+  ],
+  "summary": {
+    "months": [
+      {
+        "month": 1,
+        "name": "January",
+        "medianAqi": 184,
+        "daysOver150Pct": 87,
+        "peakUv": 1.4,
+        "feelsHighC": -2,
+        "feelsHighF": 29
+      },
+      {
+        "month": 2,
+        "name": "February",
+        "medianAqi": 168,
+        "daysOver150Pct": 86,
+        "peakUv": 2.1,
+        "feelsHighC": 0,
+        "feelsHighF": 33
+      },
+      {
+        "month": 3,
+        "name": "March",
+        "medianAqi": 152,
+        "daysOver150Pct": 73,
+        "peakUv": 3.3,
+        "feelsHighC": 12,
+        "feelsHighF": 53
+      },
+      {
+        "month": 4,
+        "name": "April",
+        "medianAqi": 133,
+        "daysOver150Pct": 58,
+        "peakUv": 4.5,
+        "feelsHighC": 19,
+        "feelsHighF": 66
+      },
+      {
+        "month": 5,
+        "name": "May",
+        "medianAqi": 144,
+        "daysOver150Pct": 61,
+        "peakUv": 5.9,
+        "feelsHighC": 26,
+        "feelsHighF": 79
+      },
+      {
+        "month": 6,
+        "name": "June",
+        "medianAqi": 132,
+        "daysOver150Pct": 59,
+        "peakUv": 6.5,
+        "feelsHighC": 34,
+        "feelsHighF": 93
+      },
+      {
+        "month": 7,
+        "name": "July",
+        "medianAqi": 154,
+        "daysOver150Pct": 80,
+        "peakUv": 6.1,
+        "feelsHighC": 37,
+        "feelsHighF": 98
+      },
+      {
+        "month": 8,
+        "name": "August",
+        "medianAqi": 167,
+        "daysOver150Pct": 92,
+        "peakUv": 5.5,
+        "feelsHighC": 35,
+        "feelsHighF": 96
+      },
+      {
+        "month": 9,
+        "name": "September",
+        "medianAqi": 165,
+        "daysOver150Pct": 93,
+        "peakUv": 4.9,
+        "feelsHighC": 28,
+        "feelsHighF": 82
+      },
+      {
+        "month": 10,
+        "name": "October",
+        "medianAqi": 168,
+        "daysOver150Pct": 85,
+        "peakUv": 3.4,
+        "feelsHighC": 18,
+        "feelsHighF": 64
+      },
+      {
+        "month": 11,
+        "name": "November",
+        "medianAqi": 180,
+        "daysOver150Pct": 90,
+        "peakUv": 1.9,
+        "feelsHighC": 9,
+        "feelsHighF": 48
+      },
+      {
+        "month": 12,
+        "name": "December",
+        "medianAqi": 191,
+        "daysOver150Pct": 97,
+        "peakUv": 1.4,
+        "feelsHighC": -2,
+        "feelsHighF": 29
+      }
+    ]
+  }
+}

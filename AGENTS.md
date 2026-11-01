@@ -12,7 +12,8 @@ Read `implementation.md` for the build. Read `status.md` for what is live. Leave
 
 - Install: none. Static files. No package manager.
 - Preview: `python -m http.server 8000` in this folder, then open http://localhost:8000
-- Check: there is no test command yet. The first change that adds the lookup also adds `node tests/feel-lookup.test.js`. That command must exit 0.
+- Check: `node tests/feel-lookup.test.js`, `node tests/visits.test.mjs`, and `node tests/city-pages.test.mjs`. Each must exit 0.
+- City pages: `node scripts/refresh-cities.mjs` fetches history into `data/cities/` (network, run by hand). `node scripts/build-cities.mjs` rebuilds `city-pages/`, the home city list, and `sitemap.xml` from saved files. Edit `cities.json` or `scripts/`, never the generated HTML.
 
 ## Done
 

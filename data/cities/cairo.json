@@ -1,0 +1,128 @@
+{
+  "slug": "cairo",
+  "name": "Cairo",
+  "country": "Egypt",
+  "id": 360630,
+  "latitude": 30.06263,
+  "longitude": 31.24967,
+  "timezone": "Africa/Cairo",
+  "from": "2023-01-01",
+  "to": "2025-12-31",
+  "retrieved": "2026-11-01",
+  "sources": [
+    "https://air-quality-api.open-meteo.com/v1/air-quality?latitude=30.06263&longitude=31.24967&hourly=us_aqi,uv_index&start_date=2023-01-01&end_date=2025-12-31&timezone=auto",
+    "https://archive-api.open-meteo.com/v1/archive?latitude=30.06263&longitude=31.24967&daily=apparent_temperature_max&start_date=2023-01-01&end_date=2025-12-31&timezone=auto"
+  ],
+  "summary": {
+    "months": [
+      {
+        "month": 1,
+        "name": "January",
+        "medianAqi": 94,
+        "daysOver150Pct": 8,
+        "peakUv": 3.7,
+        "feelsHighC": 19,
+        "feelsHighF": 66
+      },
+      {
+        "month": 2,
+        "name": "February",
+        "medianAqi": 85,
+        "daysOver150Pct": 0,
+        "peakUv": 4.6,
+        "feelsHighC": 17,
+        "feelsHighF": 62
+      },
+      {
+        "month": 3,
+        "name": "March",
+        "medianAqi": 81,
+        "daysOver150Pct": 0,
+        "peakUv": 7.1,
+        "feelsHighC": 23,
+        "feelsHighF": 73
+      },
+      {
+        "month": 4,
+        "name": "April",
+        "medianAqi": 77,
+        "daysOver150Pct": 0,
+        "peakUv": 8.5,
+        "feelsHighC": 29,
+        "feelsHighF": 84
+      },
+      {
+        "month": 5,
+        "name": "May",
+        "medianAqi": 75,
+        "daysOver150Pct": 0,
+        "peakUv": 9.6,
+        "feelsHighC": 32,
+        "feelsHighF": 90
+      },
+      {
+        "month": 6,
+        "name": "June",
+        "medianAqi": 75,
+        "daysOver150Pct": 0,
+        "peakUv": 10.8,
+        "feelsHighC": 38,
+        "feelsHighF": 100
+      },
+      {
+        "month": 7,
+        "name": "July",
+        "medianAqi": 75,
+        "daysOver150Pct": 0,
+        "peakUv": 11.1,
+        "feelsHighC": 40,
+        "feelsHighF": 104
+      },
+      {
+        "month": 8,
+        "name": "August",
+        "medianAqi": 71,
+        "daysOver150Pct": 0,
+        "peakUv": 10.5,
+        "feelsHighC": 39,
+        "feelsHighF": 103
+      },
+      {
+        "month": 9,
+        "name": "September",
+        "medianAqi": 75,
+        "daysOver150Pct": 2,
+        "peakUv": 8.8,
+        "feelsHighC": 36,
+        "feelsHighF": 97
+      },
+      {
+        "month": 10,
+        "name": "October",
+        "medianAqi": 70,
+        "daysOver150Pct": 0,
+        "peakUv": 6.8,
+        "feelsHighC": 31,
+        "feelsHighF": 88
+      },
+      {
+        "month": 11,
+        "name": "November",
+        "medianAqi": 77,
+        "daysOver150Pct": 3,
+        "peakUv": 4.2,
+        "feelsHighC": 25,
+        "feelsHighF": 77
+      },
+      {
+        "month": 12,
+        "name": "December",
+        "medianAqi": 79,
+        "daysOver150Pct": 2,
+        "peakUv": 3.4,
+        "feelsHighC": 20,
+        "feelsHighF": 68
+      }
+    ]
+  }
+}

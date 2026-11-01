@@ -1,0 +1,128 @@
+{
+  "slug": "bangkok",
+  "name": "Bangkok",
+  "country": "Thailand",
+  "id": 1609350,
+  "latitude": 13.75398,
+  "longitude": 100.50144,
+  "timezone": "Asia/Bangkok",
+  "from": "2023-01-01",
+  "to": "2025-12-31",
+  "retrieved": "2026-11-01",
+  "sources": [
+    "https://air-quality-api.open-meteo.com/v1/air-quality?latitude=13.75398&longitude=100.50144&hourly=us_aqi,uv_index&start_date=2023-01-01&end_date=2025-12-31&timezone=auto",
+    "https://archive-api.open-meteo.com/v1/archive?latitude=13.75398&longitude=100.50144&daily=apparent_temperature_max&start_date=2023-01-01&end_date=2025-12-31&timezone=auto"
+  ],
+  "summary": {
+    "months": [
+      {
+        "month": 1,
+        "name": "January",
+        "medianAqi": 139,
+        "daysOver150Pct": 76,
+        "peakUv": 7.9,
+        "feelsHighC": 35,
+        "feelsHighF": 94
+      },
+      {
+        "month": 2,
+        "name": "February",
+        "medianAqi": 112,
+        "daysOver150Pct": 65,
+        "peakUv": 9,
+        "feelsHighC": 37,
+        "feelsHighF": 99
+      },
+      {
+        "month": 3,
+        "name": "March",
+        "medianAqi": 84,
+        "daysOver150Pct": 45,
+        "peakUv": 10.1,
+        "feelsHighC": 39,
+        "feelsHighF": 102
+      },
+      {
+        "month": 4,
+        "name": "April",
+        "medianAqi": 83,
+        "daysOver150Pct": 46,
+        "peakUv": 10.1,
+        "feelsHighC": 41,
+        "feelsHighF": 106
+      },
+      {
+        "month": 5,
+        "name": "May",
+        "medianAqi": 73,
+        "daysOver150Pct": 34,
+        "peakUv": 9.3,
+        "feelsHighC": 40,
+        "feelsHighF": 105
+      },
+      {
+        "month": 6,
+        "name": "June",
+        "medianAqi": 54,
+        "daysOver150Pct": 11,
+        "peakUv": 9.1,
+        "feelsHighC": 39,
+        "feelsHighF": 101
+      },
+      {
+        "month": 7,
+        "name": "July",
+        "medianAqi": 50,
+        "daysOver150Pct": 0,
+        "peakUv": 8.9,
+        "feelsHighC": 37,
+        "feelsHighF": 99
+      },
+      {
+        "month": 8,
+        "name": "August",
+        "medianAqi": 54,
+        "daysOver150Pct": 0,
+        "peakUv": 10.6,
+        "feelsHighC": 38,
+        "feelsHighF": 101
+      },
+      {
+        "month": 9,
+        "name": "September",
+        "medianAqi": 53,
+        "daysOver150Pct": 13,
+        "peakUv": 9.2,
+        "feelsHighC": 38,
+        "feelsHighF": 100
+      },
+      {
+        "month": 10,
+        "name": "October",
+        "medianAqi": 96,
+        "daysOver150Pct": 54,
+        "peakUv": 8.1,
+        "feelsHighC": 38,
+        "feelsHighF": 100
+      },
+      {
+        "month": 11,
+        "name": "November",
+        "medianAqi": 90,
+        "daysOver150Pct": 36,
+        "peakUv": 7.9,
+        "feelsHighC": 36,
+        "feelsHighF": 97
+      },
+      {
+        "month": 12,
+        "name": "December",
+        "medianAqi": 88,
+        "daysOver150Pct": 35,
+        "peakUv": 7.9,
+        "feelsHighC": 35,
+        "feelsHighF": 96
+      }
+    ]
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "slug": "los-angeles",
+  "name": "Los Angeles",
+  "country": "United States",
+  "id": 5368361,
+  "latitude": 34.05223,
+  "longitude": -118.24368,
+  "timezone": "America/Los_Angeles",
+  "from": "2023-01-01",
+  "to": "2025-12-31",
+  "retrieved": "2026-11-01",
+  "sources": [
+    "https://air-quality-api.open-meteo.com/v1/air-quality?latitude=34.05223&longitude=-118.24368&hourly=us_aqi,uv_index&start_date=2023-01-01&end_date=2025-12-31&timezone=auto",
+    "https://archive-api.open-meteo.com/v1/archive?latitude=34.05223&longitude=-118.24368&daily=apparent_temperature_max&start_date=2023-01-01&end_date=2025-12-31&timezone=auto"
+  ],
+  "summary": {
+    "months": [
+      {
+        "month": 1,
+        "name": "January",
+        "medianAqi": 73,
+        "daysOver150Pct": 6,
+        "peakUv": 2.6,
+        "feelsHighC": 15,
+        "feelsHighF": 60
+      },
+      {
+        "month": 2,
+        "name": "February",
+        "medianAqi": 73,
+        "daysOver150Pct": 0,
+        "peakUv": 3.8,
+        "feelsHighC": 17,
+        "feelsHighF": 62
+      },
+      {
+        "month": 3,
+        "name": "March",
+        "medianAqi": 69,
+        "daysOver150Pct": 1,
+        "peakUv": 4.7,
+        "feelsHighC": 17,
+        "feelsHighF": 63
+      },
+      {
+        "month": 4,
+        "name": "April",
+        "medianAqi": 72,
+        "daysOver150Pct": 19,
+        "peakUv": 7.5,
+        "feelsHighC": 23,
+        "feelsHighF": 73
+      },
+      {
+        "month": 5,
+        "name": "May",
+        "medianAqi": 65,
+        "daysOver150Pct": 8,
+        "peakUv": 8.1,
+        "feelsHighC": 24,
+        "feelsHighF": 75
+      },
+      {
+        "month": 6,
+        "name": "June",
+        "medianAqi": 62,
+        "daysOver150Pct": 2,
+        "peakUv": 9.7,
+        "feelsHighC": 28,
+        "feelsHighF": 82
+      },
+      {
+        "month": 7,
+        "name": "July",
+        "medianAqi": 65,
+        "daysOver150Pct": 0,
+        "peakUv": 10.4,
+        "feelsHighC": 32,
+        "feelsHighF": 90
+      },
+      {
+        "month": 8,
+        "name": "August",
+        "medianAqi": 69,
+        "daysOver150Pct": 5,
+        "peakUv": 9.6,
+        "feelsHighC": 34,
+        "feelsHighF": 93
+      },
+      {
+        "month": 9,
+        "name": "September",
+        "medianAqi": 66,
+        "daysOver150Pct": 0,
+        "peakUv": 7.3,
+        "feelsHighC": 29,
+        "feelsHighF": 85
+      },
+      {
+        "month": 10,
+        "name": "October",
+        "medianAqi": 73,
+        "daysOver150Pct": 6,
+        "peakUv": 5.6,
+        "feelsHighC": 28,
+        "feelsHighF": 82
+      },
+      {
+        "month": 11,
+        "name": "November",
+        "medianAqi": 72,
+        "daysOver150Pct": 0,
+        "peakUv": 3.5,
+        "feelsHighC": 21,
+        "feelsHighF": 69
+      },
+      {
+        "month": 12,
+        "name": "December",
+        "medianAqi": 79,
+        "daysOver150Pct": 0,
+        "peakUv": 2.7,
+        "feelsHighC": 18,
+        "feelsHighF": 65
+      }
+    ]
+  }
+}
