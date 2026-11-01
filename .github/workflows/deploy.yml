@@ -45,6 +45,14 @@ jobs:
           cp index.html style.css app.js feel-lookup.js feel-table.json bank.json offer-table.json sponsor.json favicon.svg og-image.png apple-touch-icon.png robots.txt sitemap.xml _headers site/
           cp city-pages/*.html site/
 
+      # Cloudflare keeps scripts and styles in the browser for hours. A versioned
+      # address per deploy makes a returning visitor fetch the new files with the new page.
+      - name: Version the script and style addresses
+        run: |
+          v="${GITHUB_SHA::7}"
+          sed -i -E "s#(src|href)=\"/(app\.js|feel-lookup\.js|style\.css)\"#\1=\"/\2?v=$v\"#g" site/*.html
+          test "$(grep -L "/app.js?v=$v" site/*.html)" = "" || { echo "a page lost its versioned script"; exit 1; }
+
       - name: Publish to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
         with:
