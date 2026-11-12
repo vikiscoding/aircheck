@@ -22,6 +22,6 @@ The command must exit 0.
 
 ## Deploy
 
-Cloudflare Pages project `aircheck` on the vikrant.singh1@outlook.com account. Production is https://aircheck-c4s.pages.dev. The custom hostnames aircheck.fyi and www.aircheck.fyi are attached to that project.
+Cloudflare Pages project `aircheck` on the main Cloudflare account. Production is https://aircheck-c4s.pages.dev. The custom hostnames aircheck.fyi and www.aircheck.fyi are attached to that project.
 
 Pushes to `main` on GitHub run `.github/workflows/deploy.yml`. The workflow runs the lookup test, then publishes the public site files. It does not publish the notes or the tests. The repo secrets are `CLOUDFLARE_API_TOKEN` (Pages edit) and `CLOUDFLARE_ACCOUNT_ID`.
